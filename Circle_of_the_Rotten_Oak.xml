@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <element name="Circle of the Rotten Oak" type="Archetype" source="DOOM HALL" id="ID_DH_ARCHETYPE_ROTTEN_OAK">
+        <supports>Druid Circle</supports>
+        <description>
+            <p>Eski antik yaşamın bekçisi kadim ağaç unutuldu ve geçmişin gizemini içinde barındıran ve zamanla çürüyen bir ağaca dönüştü. Zamanında ulu olan ağacın bekçileri ise meşeyi ayakta tutabilmek için hastalığını üzerine aldılar, paylaştılar. Doğanın ve yaşamın hastalığını üzerinde taşıyan druidler haline geldiler.</p>
+            <div element="ID_DH_ARCHETYPE_FEATURE_ROTTEN_OAK_DECAYING_TOUCH" />
+			<div element="ID_DH_ARCHETYPE_FEATURE_ROTTEN_OAK_OAK_EMPOWER" />
+			<div element="ID_DH_ARCHETYPE_FEATURE_ROTTEN_OAK_VERDANT_WARD" />
+			<div element="ID_DH_ARCHETYPE_FEATURE_ROTTEN_OAK_SOUL_WARDEN" />
+			<div element="ID_DH_ARCHETYPE_FEATURE_ROTTEN_OAK_BLIGHT_VECTOR" />
+        </description>
+        <sheet display="false" />
+		<rules>
+			<grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_ROTTEN_OAK_DECAYING_TOUCH" level="2" />
+			<grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_ROTTEN_OAK_OAK_EMPOWER" level="2" />
+			<grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_ROTTEN_OAK_VERDANT_WARD" level="6" />
+			<grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_ROTTEN_OAK_SOUL_WARDEN" level="10" />
+			<grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_ROTTEN_OAK_BLIGHT_VECTOR" level="14" />
+		</rules>
+    </element>
+    <element name="Decaying Touch" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_ROTTEN_OAK_DECAYING_TOUCH">
+        <description>
+            <p><em>Rotten Oak feature</em></p>
+            <p> Çürümüş Meşe'nin özünü dokunuşunuzla kanalize etme yeteneği kazanırsınız. Aksiyonunuzda dokunuşunuzla erişebildiğiniz bir yaratığa karşı,  yakıncı büyü saldırısı yapabilirsiniz.  Vurduğunuzda, hedef 1d6 nekrotik hasar alır ve büyü kurtma DC'nize karşı bir Dayanıklılık kurtarma zarı atmak zorundadır. Başarısız bir kurtarma sonucunda yaratığın maksimum can puanı, alınan hasar miktarına eşit bir değer kadar azalır ve Çürüme İşareti ile damgalanır.</p>
+            <p class="indent">Çürüme İşareti ile ilgili damgalanmış kişiler iyileştirmelerden yarısı kadar etkilenir ve Strength bazlı ability checkleri dezavantajlı olur. Turda hasar aldıkları ilk saldırıdan 1d6 fazladan nekrotik hasar alırlar.</p>
+            <p class="indent">Bu büyüyü yeniden yapmak, bir öncekini sonlandırır. Lesser restoration veya greater restoration gibi etkilerle çürüme işareti kaldırılabilir.</p>
+        </description>
+        <sheet action="Bonus Aksiyon" usage="{{proficiency}}/Long Rest">
+            <description> Aksiyonunuzdan 5 feetinizdeki birisine melee spell attack roll gerçekleştirirsiniz, başarılı saldırı sonucu  hedef 1d6 nekrotik hasar alır ve büyü kurtma DC'nize karşı bir Dayanıklılık kurtarma zarı atmak zorunda kalır. Başarısız bir kurtarma zarı sonucunda yaratığın maksimum can puanı, alınan hasar miktarına eşit bir değer kadar azalır ve Çürüme İşareti ile damgalanır. 
+            • Çürüme İşareti ile ilgili damgalanmış kişiler iyileştirmelerden yarısı kadar etkilenir ve Strength bazlı ability checkleri dezavantajlı olur. Turda hasar aldıkları ilk saldırıdan 1d6 fazladan nekrotik hasar alırlar.
+            • Bu büyüyü yeniden yapmak, bir öncekini sonlandırır. Lesser restoration veya greater restoration gibi etkilerle çürüme işareti kaldırılabilir.</description>
+        </sheet>
+    </element>
+    <element name="Oak Empower" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_ROTTEN_OAK_OAK_EMPOWER">
+        <description>
+            <p><em>Rotten Oak feature</em></p>
+            <p> Martial weaponlara profciency kazanırsınız.</p>
+            <p class="indent">Wild shape özelliği hakkınızdan harcayarak Meşe Güçlendirmesi kullanabilirsiniz, meşe güçlendirmesi derinizi bir ağaç kabuğu gibi kaplar ve sana 10 dakika boyunca veya yeniden bir Oak Empower yada Wild Shape kullanana kadar güçlendirmeler sağlar;</p>
+            <p class="indent">Max HP değeriniz Druid Leveliniz + 2d4 kadar artar.</p>
+            <p class="indent">AC değeriniz (en az 1 olucak ve yukarıya yuvarlanacak şekilde) Druid Leveliniz/ 4 kadar artar. (AC sabitleyen barkskin gibi büyülerin de üzerine ekstra sağlar.)</p>
+            <p class="indent">10. Seviyeden itibaren Meşe Güçlendirmesi etikisi altındayken her tur Wisdom modifier değeriniz kadar can yenilersiniz.</p>
+        </description>
+        <sheet action="Bonus Aksiyon" usage="2/Long Rest">
+            <description> Wild shape özelliği hakkınızdan harcayarak Meşe Güçlendirmesi kullanabilirsiniz, meşe güçlendirmesi derinizi bir ağaç kabuğu gibi kaplar ve sana 10 dakika boyunca veya yeniden bir Oak Empower yada Wild Shape kullanana kadar güçlendirmeler sağlar; 
+            • Max HP değeriniz 2d4+{{level:druid}} değeriniz kadar artar.
+            • Bu büyüyü yeniden yapmak, bir öncekini sonlandırır. Lesser restoration veya greater restoration gibi etkilerle çürüme işareti kaldırılabilir.
+            • AC değeriniz (en az 1 olucak ve yukarıya yuvarlanacak şekilde) {{oak ac:count}} kadar artar. (AC sabitleyen barkskin gibi büyülerin de üzerine ekstra sağlar.)</description>
+        </sheet>
+        <rules>
+            <stat name="oak ac:count" value="1" bonus="base" />
+		    <stat name="oak ac:count" value="2" level="5" bonus="base" />
+			<stat name="oak ac:count" value="3" level="9" bonus="base" />
+			<stat name="oak ac:count" value="4" level="13" bonus="base" />
+			<stat name="oak ac:count" value="5" level="17" bonus="base" />
+        </rules>
+    </element>
+    <element name="Verdant Ward" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_ROTTEN_OAK_VERDANT_WARD">
+        <description>
+            <p><em>Rotten Oak feature</em></p>
+            <p> Çürümüş Meşe ile olan bağınız; dallanıp budaklanmış asmalardan oluşan dikenli koruyucu bir bariyer oluşturmanızı sağlar. Her ne zaman 30 feetinizdeki bir dostunuz veya siz hasara maruz kalırsanız, reaksiyondan ''Verdant Ward'' özelliğiniz ile alacakları hasarı indirgeyebilirsiniz. Azaltılan hasar ''Druid Leveliniz'' kadar 1d4'tür. </p>
+            <p class="indent">Bu özelliği long restler arasında Wisdom Modifier değeriniz kadar kullanabilirsiniz.</p>
+            <p class="indent">Speak with dead büyüsü sizin için hak harcamadan, hazırlanmış druid büyülerinden bir tanesi olarak sayılır ve günde bir kere bedavadan büyüyü yapabilirsiniz.</p>
+        </description>
+        <sheet action="Bonus Aksiyon" usage="{{verdant ward:usage}}/Long Rest">
+            <description> Çürümüş Meşe ile olan bağınız; dallanıp budaklanmış asmalardan oluşan dikenli koruyucu bir bariyer oluşturmanızı sağlar. Her ne zaman 30 feetinizdeki bir dostunuz veya siz hasara maruz kalırsanız, reaksiyondan ''Verdant Ward'' özelliğiniz ile alacakları hasarı indirgeyebilirsiniz. Azaltılan hasar ''Druid Leveliniz'' kadar 1d4'tür. 
+            • Spek with dead büyüsünü long restler arasında bir kereliğine bedavadan yapabilirsiniz.</description>
+        </sheet>
+        <rules>
+            <stat name="verdant ward:usage" value="1" bonus="base" />
+			<stat name="verdant ward:usage" value="wisdom:modifier" bonus="base" />
+            <grant type="Spell" id="ID_PHB_SPELL_SPEAK_WITH_DEAD" spellcasting="Druid" prepared="true" />
+        </rules>
+    </element>
+    <element name="Soul Warden" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_ROTTEN_OAK_SOUL_WARDEN">
+        <description>
+            <p><em>Rotten Oak feature</em></p>
+            <p> Kuşanmış olduğunuz martial silah ölümün gücüyle kutsanır. Decaying Touch etkisi altındaki kişilere yapacağınız saldırılar avantajlı olur.</p>
+            <p class="indent"> Arbede silahınızla yapacağınız saldırılar ekstradan 2d8 nekrotik hasar uygular, bu nekrotik hasara turunda ilk kez maruz kalan kişi, charisma saving throw atmaya zorlanır geçemezse 2d8 daha nekrotik hasar alır ve o kadar da iyileşirsiniz, fazlalık hpler temporary hp olarak yansır.</p>
+            <p class="indent">Decaying Touch etkisi altındaki kişiler ölürse bonus aksiyondan sizin hizmetinizde Putrid türünden 3. summon undead büyü seviyesinden yapılmış gibi Undead Spirit olarak diriltebilirsiniz. 1 saat sonra dirilmiş Undead Spirit yok olur.</p>
+        </description>
+        <sheet>
+            <description> Decaying Touch etkisi altındaki kişilere yapacağınız saldırılar avantajlı olur. 
+            • Arbede silahınızla yapacağınız saldırılar ekstradan 2d8 nekrotik hasar uygular, bu nekrotik hasara turunda ilk kez maruz kalan kişi, charisma saving throw atmaya zorlanır geçemezse 2d8 daha nekrotik hasar alır ve o kadar da iyileşirsiniz, fazlalık hpler temporary hp olarak yansır.
+            • Decaying Touch etkisi altındaki kişiler ölürse bonus aksiyondan sizin hizmetinizde Putrid türünden 3. summon undead büyü seviyesinden yapılmış gibi Undead Spirit olarak diriltebilirsiniz. 1 saat sonra dirilmiş Undead Spirit yok olur.</description>
+        </sheet>
+    </element>
+    <element name="Blight Vector" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_ROTTEN_OAK_BLIGHT_VECTOR">
+        <description>
+            <p><em>Rotten Oak feature</em></p>
+            <p>Disease immunity kazanırsınız.</p>
+            <p class="indent">Her ne zaman meşe formuna dönüşüm geçirirseniz 10 feetinize bir çürüyük gaz bulutu yayılır. Turuna 10 feetinizde başlayan veya alanınıza giren kişiler spell save DC'nize  CON saving throw atmaya zorlanırlar, geçemezlerse hastalık süresince yapacakları STR,DEX,CON bazlı tüm saving throwları, ability checkleri ve attack rolları dezavantajlı olur. Hastalık lesser restoration gibi büyüler tarafından kaldırılana kadar kişiler üzerinden geçmez.</p>
+            <p class="indent">Gaz bulutunu meşe formunuz boyunca istediğiniz zaman bonus aksiyondan açıp, kapatabilirsiniz.</p>
+        </description>
+        <sheet action="Bonus Aksiyon">
+            <description> Her ne zaman meşe formuna dönüşüm geçirirseniz 10 feetinize bir çürüyük gaz bulutu yayılır. Turuna 10 feetinizde başlayan veya alanınıza giren kişiler spell save DC'nize  CON saving throw atmaya zorlanırlar, geçemezlerse hastalık süresince yapacakları STR,DEX,CON bazlı tüm saving throwları, ability checkleri ve attack rolları dezavantajlı olur. Hastalık lesser restoration gibi büyüler tarafından kaldırılana kadar kişiler üzerinden geçmez. 
+            • Gaz bulutunu meşe formunuz boyunca istediğiniz zaman bonus aksiyondan açıp, kapatabilirsiniz.
+            • Disease immunity kazanırsınız.</description>
+        </sheet>
+    </element>
+</elements>
+        

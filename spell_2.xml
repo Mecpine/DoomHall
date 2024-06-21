@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <element name="Devouring Infliction" type="Spell" source="DOOM HALL" id="ID_DH_SPELL_DEVOURING_INFLICTION">
+        <supports>Cleric</supports>
+        <description>
+            <p>Karanlık bir enerji dalgasını menzilinizde bulunan bir hedefe doğru yönelterek ranged spell attack gerçekleştirirsiniz. Başarılı darbe sonucunda kişi  3d8 nekrotik hasar alır ve constitution  throw atmaya zorlanır, geçmezse bedeninde yaralar oluşmaya başlayan kişi bu hastalıktan kurtulana dek tüm konsantrasyon zarlarını ve constitution saving throwlarını dezavantajlı atar. Hastalık lesser restoration gibi büyülerle veya long rest alındığında kaybolur. Hastalık bağışıklığı olan kişiler büyüden etkilenmezler.</p>
+            <p class="indent"><b><i>Üst Seviyeden Yapımda:</i></b>Büyününün vermiş olduğu hasar değeri 3 ve üzeri seviyelerde, her bir artan seviye başına 1d8 artar.   </p>
+        </description>
+        <setters>
+            <set name="level">2</set>
+			<set name="school">Necromancy</set>
+			<set name="time">Aksiyon</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+            <set name="materialComponent">küf mantarı</set>
+			<set name="duration">Anlık</set>
+			<set name="isConcentration">false</set> 
+        </setters>
+    </element>
+    <element name="Inner Focus" type="Spell" source="DOOM HALL" id="ID_DH_SPELL_INNER_FOCUS">
+        <supports>Cleric,Bard</supports>
+        <description>
+            <p>Bir kişinin yapacağı bir sonraki eyleme kutsal müdahale ile odaklanmasını sağlayarak iç odağını ortaya çıkarırsın. Bu müdahele sonucunda kişi yapacağı bir sonraki attack roll roll öncesinde inner focus hakkını tüketerek, kritik zar sonucu onun için 18-20 aralığında sayılır. Eğer kutsal müdahalen başarılı bir şekilde sonuç verirse başarısına göre güç geri kazanırsın.
+18-19 arasında geler kritik zar sonucunda, 1. seviye klasının spell slotunu yenilersin. 20 geldiği takdirde yenilenen spell slotun 1 yerine 2 olur. </p>
+        </description>
+        <setters>
+            <set name="level">3</set>
+			<set name="school">Divination</set>
+			<set name="time">Aksiyon</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">false</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="duration">1 dakika</set>
+			<set name="isConcentration">false</set> 
+        </setters>
+    </element>
+    <element name="Power Infusion" type="Spell" source="DOOM HALL" id="ID_DH_SPELL_POWER_INFUSION">
+        <supports>Cleric,Bard,Wizard</supports>
+        <description>
+            <p>Büyü akımını güçlendirici bir büyü ile her zamankinden daha kolay bir şekilde büyü yapılmasını sağlarsınız. Büyü menzilinde bir hedefi belirleyerek bir turda en fazla 2. mertebeden olmak koşulu ile ikinci bir büyü yapabilmesini sağlayan aksiyon kazandırırsınız. Büyünün konsantrasyonu süresi bitmeden sonlanırsa, güçlendirilmiş kişi 1 tur boyunca büyü yapamaz.</p>
+            <p class="indent"><b><i>Üst Seviyeden Yapımda:</i></b>Normal seviyesinden her iki mertebe yukarıdan yapıldığında,  yapılan büyü seviyesi ve konsantrasyon bozulunca büyü yapamama tur sayısı 1 artar. 6. Seviyede 3. mertebe ve 2 tur yapamama, 8. Seviyede 4. mertebe ve 3 tur büyü yapamama.</p>
+        </description>
+        <setters>
+            <set name="level">4</set>
+			<set name="school">Transmutation</set>
+			<set name="time">Aksiyon</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="duration">1 dakika</set>
+			<set name="isConcentration">true</set> 
+        </setters>
+    </element>
+    <element name="Shadow Word: Whispering Touch" type="Spell" source="DOOM HALL" id="ID_DH_SPELL_SW_WHISPERING_TOUCH">
+        <supports>Cleric</supports>
+        <description>
+            <p>Menzilinde bir hedefin zihnine ürpertici fısıltılar yayarsın. Kişi Wisdom saving throw atmaya zorlanır yoksa belirtilere maruz kalır:
+            Her tur 1d8 psişik hasar alır.
+            Her turunun başında yapacağı aksiyon eylemi için D4 atar
+            1: Aksiyonu harcanır ancak bir şey yapamaz
+            2: Aksiyonu harcanır fakat eylem isteği dışında bir yere 
+            doğru gerçekleşir
+            3: Aksiyondan dash alarak büyü kaynağından uzaklaşır
+            4: Aksiyonu dezavantajlı yapar
+            Eğer ki büyü sorunsuz şekilde 1 dakika boyunca sürerse, büyünün seviyesinden spell slot yenilenir.</p>
+            <p class="indent"><b><i>Üst Seviyeden Yapımda:</i></b>6 ve üzeri seviyeden yapıldığında ikinci bir hedefe yapılabilir.</p>
+        </description>
+        <setters>
+            <set name="level">5</set>
+			<set name="school">Necromancy</set>
+			<set name="time">Aksiyon</set>
+			<set name="range">90 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="duration">1 dakika</set>
+			<set name="isConcentration">true</set> 
+        </setters>
+    </element>
+    <element name="Mind Flay" type="Spell" source="DOOM HALL" id="ID_DH_SPELL_MIND_FLAY">
+        <supports>Cleric Shadow Domain</supports>
+        <description>
+            <p>Görüş mesafenizdeki hedefe doğru psişik bir enerji doğrultarak saldırırsınız. Hedefe karşı ranged spell attack gerçekleştirirsiniz, isabet durumunda hedef 1d8 psişik hasar alır ve hareket hızı 10 azalır. Devam eden turlarda konsantrasyonunuzu sürdürdüğünüz zihne hasar veren enerji dalganızı   her turunuzun başında aksiyondan tekrardan ranged spell attack yaparak gerçekleştirirsiniz. Eğer ki aksiyonunuzu başka bir şey yapmak için harcarsanız büyü sonlanır. Aynı zamanda hedef büyü menzili dışına çıkarsa da büyü sonlanır. Eğer ki kişi frightened effect aldıysa ekstradan 1d6 daha hasar alır. </p>
+            <p class="indent"><b><i>Üst Seviyeden Yapımda:</i></b> 2 veya daha üzeri seviyeden yapıldığında büyünün hasar değeri 1d8 ve frightened altındakiler için de 1d6 artar.</p>
+        </description>
+        <setters>
+            <set name="level">1</set>
+			<set name="school">Evocation</set>
+			<set name="time">Aksiyon</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="duration">1 dakika</set>
+			<set name="isConcentration">true</set> 
+        </setters>
+    </element>
+    <element name="Terror Wave" type="Spell" source="DOOM HALL" id="ID_DH_SPELL_TERROR_WAVE">
+        <supports>Cleric Shadow Domain</supports>
+        <description>
+            <p>Büyünün menzilinde 25 feet yarıçaplık bir alana korku dolu bir psişik enerji yönlendirirsin. Alanda bulunan kişiler büyünüze karşı wisdom saving throw atmaya zorlanır, geçemezlerse 5d6 psişik hasar alırlar ve korkmuş duruma düşerler. Saving throw geçerlerse sadece hasarın yarısı alınır. Korkma durumundan kurtulmak için her tur geçene kadar wisdom saving throw atarlar. Sizi görebilecek bir açısı kalmazsa frightened etkisi sonlanır. </p>
+            <p class="indent"><b><i>Üst Seviyeden Yapımda:</i></b> 4 veya daha üzeri seviyeden yapıldığında artan seviye başına büyünün hasar değeri 1d6 artar.</p>
+        </description>
+        <setters>
+            <set name="level">3</set>
+			<set name="school">Enchantment</set>
+			<set name="time">Aksiyon</set>
+			<set name="range">90 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+            <set name="materialComponent">ametist</set>
+			<set name="duration">Anlık</set>
+			<set name="isConcentration">false</set> 
+        </setters>
+    </element>
+    <element name="Rejuvenation" type="Spell" source="DOOM HALL" id="ID_DH_SPELL_REJUVENATION">
+        <supports>Druid</supports>
+        <description>
+            <p>Doğanın canlandırıcı gücünü menzilinde bir canlıya kanalize edersin. Bu süre boyunca hedef her turunun başında canını yeniler. İyileştirilen can miktarı 1d6 + senin Wisdom modifierın kadardır.  Sonraki turlarında bonus aksiyonundan hedefinin menzilinde başka bir canlıya aktarabilirsin, aktardığına etki bir önceki kişi üzerinden kaybolur. Aktarmalar büyünün süresini uzatmaz</p>
+            <p class="indent"><b><i>Üst Seviyeden Yapıldığında:</i></b>Yapılan iyileştirme değeri 3 ve üzeri seviyede artan seviye başına 1d6 artar</p>
+        </description>
+        <setters>
+            <set name="level">2</set>
+			<set name="school">Evocation</set>
+			<set name="time">Bonus Aksiyon</set>
+			<set name="range">30 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+            <set name="duration">1 dakika</set>
+            <set name="isConcentration">true</set>
+        </setters>
+    </element>
+    <element name="Sandstorm" type="Spell" source="DOOM HALL" id="ID_DH_SPELL_SANDSTORM">
+        <supports>Druid</supports>
+        <description>
+            <p>Merkezi sen olucak şekilde, merkezinin etrafında 10 feet yarı çapa uzanan bir kumdan bir çepher etrafında uçuşup dönmeye başlar. Kum fırtınasının içerisi zor görülür alan olur. Her kim turuna kum fırtınasının içerisinde başlarsa STR saving throw atmaya zorlanır geçmezse 3d6 bludgeoning hasar alır ve alan onun için difficult tertain sayılır, geçtiği takdirde hasarın sadece yarısını uygulanır.</p>
+            <p class="indent"><b><i>Üst Seviyeden Yapıldığında:</i></b> 4 ve üzeri seviyeden yapıldığında hasar değeri artan seviye başına 1d6 artar.</p>
+        </description>
+        <setters>
+            <set name="level">3</set>
+			<set name="school">Evocation</set>
+			<set name="time">Aksiyon</set>
+			<set name="range">Self, 10 feet yarı çap</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+            <set name="materialComponent">bir avuç kum</set>
+            <set name="duration">1 dakika</set>
+            <set name="isConcentration">true</set>
+        </setters>
+    </element>
+    <element name="Sylvan Sanctuary" type="Spell" source="DOOM HALL" id="ID_DH_SPELL_SYLVAN_SANCTUARY">
+        <supports>Druid</supports>
+        <description>
+            <p>30 feet yarı çaplık bir alanda spectral sarmaşık ve dikenlerle çevrili koruyucu bir bariyer oluşturursun. Bu sığınağın içerisindeki seçtiğin kimseler büyü sonlanana dek, psişik ve force hasarı dışında tüm hasar türlerine karşı resistance kazanırlar.</p>
+        </description>
+        <setters>
+            <set name="level">3</set>
+			<set name="school">Abjuration</set>
+			<set name="time">Aksiyon</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+            <set name="materialComponent">bir adet kozalak</set>
+            <set name="duration">1 dakika</set>
+            <set name="isConcentration">false</set>
+        </setters>
+    </element>
+    <element name="Baby Warden" type="Spell" source="DOOM HALL" id="ID_DH_SPELL_BABY_WARDEN">
+        <supports>Druid</supports>
+        <description>
+            <p>Senin emirlerine uyan bir Treant Sapling çağırırsın. Büyü bitene yada ağaç ölene kadar tekrar atılamaz.</p>
+            <p class="indent"><b><i>Üst Seviyeden Yapıldığında:</i></b>4. seviyede 1 hafta boyunca kalır, 5. seviyede kalıcı olur ve yeni bir treant sappling çağırmak büyüyü bozmaz.</p>
+        </description>
+        <setters>
+            <set name="level">3</set>
+			<set name="school">Conjuration</set>
+			<set name="time">Aksiyon</set>
+			<set name="range">30 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+            <set name="materialComponent">bir adet meşe dalık</set>
+            <set name="duration">24 saat</set>
+            <set name="isConcentration">false</set>
+        </setters>
+    </element>
+    <element name="Oasis of Restoration" type="Spell" source="DOOM HALL" id="ID_DH_SPELL_OASIS_OF_RESTORATION">
+        <supports>Druid</supports>
+        <description>
+            <p>Ellerini doğrulttuğun 150 feet yarı çaplık bir alanda ufak bir vaha oluşur. Vaha; serin, ferahlatıcı su ve gölge sağlar. Bu alanda ekstrem sıcak sonucu oluşan etkilerinden ve aşırı sıcaktan kurtulursun. Bu alanda dinlenmeyi bitiren kimseler, dinlenme sonrası büyünün seviyesi x 4 temporary HP kazanırlar.
+            Bu büyüyü 8 saat boyunca yaparsan kalıcı olur.</p>
+        </description>
+        <setters>
+            <set name="level">4</set>
+			<set name="school">Conjuration</set>
+			<set name="time">15 dakika, ritüel</set>
+			<set name="range">30 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+            <set name="materialComponent">bir şişe arındırılmış su, palmiye yaprağı</set>
+            <set name="duration">24 saat</set>
+            <set name="isConcentration">false</set>
+        </setters>
+    </element>
+    <element name="Storm Orb" type="Spell" source="DOOM HALL" id="ID_DH_SPELL_STORM_ORB">
+        <supports>Druid, Wizard, Sorcerer</supports>
+        <description>
+            <p>Menzilinizde 20 feet yarıçaplık bir alanı etkileyen yıldırım yüklü bir küre oluşturursunuz. Alanında bulunan kişiler; büyü yapıldığı an, turlarının başında veya büyünün alanına girerlerse CON saving throw atmaya zorlanırlar geçemezlerse 3d12 hasar alırlar ve stunlanırlar. Saving throwu başarıyla geçenler hasarın sadece yarısından etkilenir.
+            Bu küreyi her tur bonus aksiyonunuzdan 30 feet hareket ettirebilirsiniz.</p>
+            <p class="indent"><b><i>Üst Seviyeden Yapıldığında:</i></b> Büyü 5 veya daha üzeri seviyeden yapıldığında, artan seviye başına hasar değeri 1d12 artar.</p>
+        </description>
+        <setters>
+            <set name="level">4</set>
+			<set name="school">Evocation</set>
+			<set name="time">Aksiyon</set>
+			<set name="range">120 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+            <set name="duration">1 dakikaya kadar konsantrasyon</set>
+            <set name="isConcentration">true</set>
+        </setters>
+    </element>
+    <element name="Warden of the Wilds" type="Spell" source="DOOM HALL" id="ID_DH_SPELL_WARDEN_OF_THE_WILDS">
+        <supports>Druid</supports>
+        <description>
+            <p> Senin komutlarını dinleyen antik bir treant çağırırsın. Yeni bir treant çağırmak bir öncekini kaldırır.</p>
+            <p class="indent"><b><i>Üst Seviyeden Yapıldığında:</i></b>7 .  seviyeden yapıldığında  büyü süresi 1 güne uzar, 8. Seviyede 1 hafta sürer, 9. Seviyede büyü kalıcı olur ve yenisini çağırmak bir öncekini yoketmez.</p>
+        </description>
+        <setters>
+            <set name="level">6</set>
+			<set name="school">Conjuration</set>
+			<set name="time">Aksiyon</set>
+			<set name="range">Self</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+            <set name="materialComponent">olgunlaşmış bir meşe ağacının kabuğu</set>
+            <set name="duration">1 saat</set>
+            <set name="isConcentration">false</set>
+        </setters>
+    </element>
+    <element name="Starfall" type="Spell" source="DOOM HALL" id="ID_DH_SPELL_STARFALL">
+        <supports>Druid</supports>
+        <description>
+            <p> Yıldızların gücünü etrafına toplarsın. Gökyüzünde bulut varsa dağılır, hava aydınlıksa kararır. Gökyüzünde yıldızlar belirip sıralandığında, hepsi birer birer büyünün alanındaki düşmanlarına doğru çarpmak suretiyle iner. Alanda bulunan düşmanlar DEX saving throw atmaya zorlanır ve geçemezlerse 3d10 radiant, 3d10 bludgeoning hasar alır, geçerlerse hasarın yarısı alınır. Yıldızlar düştükleri noktada 10 feet yarı çaplık bir patlama oluşturur ve patlama alanındakiler 2d8 ateş, 2d8 radiant, 2d8 bludgeoning hasar alır. Yıldızların çarptıkları yerde 10 feet genişliğinde kraterler oluşur.  Her turunun başında yıldızlar yeniden o alandaki düşmanlar üzerine iner. Büyü sonlandığında büyü yapanın isteğine bağlı hava tekrardan büyüden önceki haline dönebilir. Büyü kapalı alanda yapıldıysa, hedeflere inene kadar yıldızlar aradaki yapıları delip geçer.</p>
+        </description>
+        <setters>
+            <set name="level">9</set>
+			<set name="school">Evocation</set>
+			<set name="time">Aksiyon</set>
+			<set name="range">Self,(50 feet yarıçap)</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+            <set name="duration">10 dakikalığına konsantrasyon</set>
+            <set name="isConcentration">true</set>
+        </setters>
+    </element>
+    <element name="Blightsurge" type="Spell" source="DOOM HALL" id="ID_DH_SPELL_BLIGHTSURGE">
+        <supports>Druid</supports>
+        <description>
+            <p> Çürüme dalgası ile toprağın ve yaşayan varlıkların özünü bozarsın. Başlangıç olarak belirlediğin 5 feetlik bir topraklık alanda yer çürür ve küf kokulu turuncu bir hava toprağın üzerinde asılı kalır. Bu hava her 10 dakikada 15 feet etrafına doğru yayılır. Havanın yayılma mesafesi merkezinden en fazla 50 mil kadar uzaklaşabilir. 
+            Havanın üzerinden geçtiği doğal çevre; hastalanır, bitkiler solar, su bulanıklaşır ve havayla karışarak turuncu bir renk alır, zemin  zorlu  araziye dönüşür, görüş alanı heavyily obscured alan olarak sayılır, ayrıca buranın lanetli havası yenilenme gibi iyileştirme  etkilerini azaltır ve greater restoration,  ve lesser restoration gibi büyüleri geçersiz kılar yine de büyü yapılmış sayılır.
+            Alana giren veya turlarına alanda başlayan kişiler soludukları hava sebebiyle  CON saving throw atmaya zorlanır. Geçemedikleri takdirde blight rot hastalığına yakalanırlar. 
+            Hastalığa yakalanan kişiler geçen her geçen gün başına 1d4 Max HP kaybederler eğer ki büyü alanın içerisindelerse kaybedecekleri can miktarı artarak 1d6 olur. Kişinin Max HP değeri yarıya inmişse STR veya DEX bazlı yapacakları tüm ability check, saving throw ve attack rollar dezavantajlı olur.
+            Kişi bu hastalığa maruzken öldüğünde zombie olarak dirilir, bu halde dirilenlerin can değerleri normalinin yarısı kadar olur ve caster levelleri yarı sayılır. Bu alan onların ölmesine izin vermez, öldüklerinde 1 gün sonra tekrardan canlanırlar.
+            Bu alanın ancak merkezindeki wraithroot tree parçasına yapılan dispel magic büyüsü veya büyülü bir silah yapılan saldırı ile alanın varlığına son verilebilir. Hava zamanla dağılır fakat alanın toprak üzerindeki etkisi varlığını korumaya devam eder.
+            Solunum yapmayan canlılar hastalıktan etkilenmezler.</p>
+        </description>
+        <setters>
+            <set name="level">9</set>
+			<set name="school">Conjuration</set>
+			<set name="time">1gün, (ritüel)</set>
+			<set name="range">5 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+            <set name="materialComponent">wraith root'un parçası</set>
+            <set name="duration">Kalıcı</set>
+            <set name="isConcentration">false</set>
+        </setters>
+    </element>
+    <element name="Blessing of Wisdom" type="Spell" source="DOOM HALL" id="ID_DH_SPELL_BLESSING_OF_WISDOM">
+        <supports>Paladin</supports>
+        <description>
+            <p>Melee silahını bilgelikle kutsarsın. Wisdom modifier değerin büyü süresince +1 kazanır. 
+            Saldırı zarının sonucunda gelen sayı 18-20 ise büyü yapıldığı seviyeden veya daha aşağıda spell slot yeniler. Zar aralığı başlangıcı 17 olmak üzere wisdom modifier değerin kadar azalır ve o aralıkta spell slot yenilersin.
+            Örneğin +3 wisdom modifier değerin için saldırıların 15-20 aralığında spell slot yeniler.
+            Bu kutsama başka sınıflar tarafından alınamaz.
+            Yenilen spell slot değerleri her zaman seviyesine uygun olabilecek şekilde en üst seviyeden başlar.
+            Aynı anda en fazla bir tane blessing büyüsü etkisi altında olabilirsin.</p>
+            <p class="indent"><b><i>Üst Seviyeden Yapıldığında:</i></b>2 veya daha üzeri seviyeden yapıldığında wisdom modifier değerin artan seviye başına +1 kazanır.</p>
+        </description>
+        <setters>
+            <set name="level">1</set>
+			<set name="school">Evocation</set>
+			<set name="time">Bonus Aksiyon</set>
+			<set name="range">Self</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+            <set name="materialComponent">kuşanmış olduğun arbede silah</set>
+            <set name="duration">1 dakika</set>
+            <set name="isConcentration">false</set>
+        </setters>
+    </element>
+    <element name="Blessing of Power" type="Spell" source="DOOM HALL" id="ID_DH_SPELL_BLESSING_OF_POWER">
+        <supports>Paladin</supports>
+        <description>
+            <p>Kendini kutsal büyünün gücüyle güçlendirirsin ve Strength modifier değerin +1 kazanır. Bu süre boyunca yapacağın Strength temelli saldırılar için kritik menzili 1 azalır. 
+            Aynı anda en fazla bir tane blessing büyüsü etkisi altında olabilirsin.</p>
+            <p class="indent"><b><i>Üst Seviyeden Yapıldığında:</i></b>3 veya daha üzeri seviyeden yapıldığında kritik menzili artan her bir seviye başına 1 düşer ve STR modifier değeri de 1 artar.
+            5. seviyeden daha üst seviyede bu büyü yapılamaz.</p>
+        </description>
+        <setters>
+            <set name="level">2</set>
+			<set name="school">Transmutation</set>
+			<set name="time">Bonus Aksiyon</set>
+			<set name="range">Self</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+            <set name="materialComponent">kuşanmış olduğun arbede silah</set>
+            <set name="duration">1 dakika</set>
+            <set name="isConcentration">false</set>
+        </setters>
+    </element>
+    <element name="Blessing of Justicar" type="Spell" source="DOOM HALL" id="ID_DH_SPELL_BLESSING_OF_JUSTICAR">
+        <supports>Paladin</supports>
+        <description>
+            <p>Adaletinin gücünü dışarı yansıtarak hiçbir şeyin adaletinden kaçamayacağından emin olursun. Kesmek için bilenmiş kutsal gücün seni kutsar.
+            Charisma modifier değerin +3 kazanır. 
+            Silahınla yapacağın saldırılar ekstradan charisma modifier bonusun kadar hasar verir ve silahının hasar türü radiant olur, evil alignmentlı kimseler için hasar türü necrotic olabilir. Silahından hasar almış kişiler aldıkları her bir hasar sonrası charisma saving throw atarlar geçemezlerse sonraki turlarının başına kadar senden uzaklaşamazlar.
+            Aynı anda en fazla bir tane blessing büyüsü etkisi altında olabilirsin.</p>
+            <p class="indent"><b><i>Üst Seviyeden Yapıldığında:</i></b> 5. Seviyeden yapıldığında charisma modifier değerin +1 kazanır </p>
+        </description>
+        <setters>
+            <set name="level">4</set>
+			<set name="school">Transmutation</set>
+			<set name="time">Bonus Aksiyon</set>
+			<set name="range">Self</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+            <set name="materialComponent">kuşanmış olduğun arbede silah</set>
+            <set name="duration">1 dakika</set>
+            <set name="isConcentration">false</set>
+        </setters>
+    </element>
+    <element name="Blessing of Sacred Knight" type="Spell" source="DOOM HALL" id="ID_DH_SPELL_BLESSING_OF_SACRED_KNIGHT">
+        <supports>Paladin</supports>
+        <description>
+            <p>Gücün açığa çıkarak tamamıyla seni her bakımdan kuşatır. Bu süre boyunca tüm statlarının modifier değeri +2 kazanır.
+            HP degerin 0'a düşmeden önce reaksiyondan lay on hands hakkından 10 veya daha fazla harcayarak ölüme karşı gelip, harcadığın miktar kadar iyileeşbilirsin.
+            Bu sürede auralarının menzili 15 feet artar.
+            Aynı anda en fazla bir tane blessing büyüsü etkisi altında olabilirsin.</p>
+        </description>
+        <setters>
+            <set name="level">5</set>
+			<set name="school">Transmutation</set>
+			<set name="time">Bonus Aksiyon</set>
+			<set name="range">Self</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+            <set name="duration">1 dakika</set>
+            <set name="isConcentration">false</set>
+        </setters>
+    </element>
+    <element name="Aspect of Wind" type="Spell" source="DOOM HALL" id="ID_DH_SPELL_ASPECT_OF_WIND">
+        <supports>Ranger</supports>
+        <description>
+            <p>Rüzgarın gücü etrafında yoğunlaştırarak gücünden faydalanırsın. Güçlenmiş durumdayken Dexterity modifier değerin +1 kazanır, hareket hızın 10 artar ve yapacağın bütün dexterity saving throwların avantajlı olur.</p>
+            <p class="indent"><b><i>Üst Seviyeden Yapıldığında:</i></b> 4 veya 5. seviyeden yapıldığında artan seviye başına dexterity modifier değeri +1 kazanır.</p>
+        </description>
+        <setters>
+            <set name="level">3</set>
+			<set name="school">Transmutation</set>
+			<set name="time">Bonus Aksiyon</set>
+			<set name="range">Self</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+            <set name="duration">1 dakika</set>
+            <set name="isConcentration">false</set>
+        </setters>
+    </element>
+    <element name="Sorcerous Blast" type="Spell" source="DOOM HALL" id="ID_DH_SPELL_SORCEROUS_BLAST">
+        <supports>Sorcerer</supports>
+        <description>
+            <p>Menzilinizde bir canlıya veya objeye büyü gücünüzle dolu bir menzilli büyü saldırısı yaparsınız. Hedef yapacağınız saldırı sonucunda 1d6 hasar alır. Eğer ki hasar zarından 6 atarsanız, hasarına bir d6 daha eklersiniz. Ekleme miktarı en fazla spellcasting modifierınız kadar olabilir. 
+            Her ne zaman bu büyü ile hasar verirseniz, hasarınızı türünü; asit, soğuk, ateş, yıldırım, psişik veya ses türlerinden birisi olucak şekilde seçersiniz.</p>
+            <p class="indent"><b><i>Cantrip Yükselmesi:</i></b> Büyünün hasarı belirli sorcerer seviyelerine geldiğinizde 1d6 artar. Sorcerer seviyleri: 5. seviye(2d6), 11. seviye(3d6), 17. Seviye(4d6)</p>
+        </description>
+        <setters>
+            <set name="level">0</set>
+			<set name="school">Evocation</set>
+			<set name="time">Aksiyon</set>
+			<set name="range">Self</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+            <set name="duration">Anlık</set>
+            <set name="isConcentration">false</set>
+        </setters>
+    </element>
+    <element name="Mental Barrier" type="Spell" source="DOOM HALL" id="ID_DH_SPELL_MENTAL_BARRIER">
+        <supports>Wizard, Cleric, Sorcerer, Warlock</supports>
+        <description>
+            <p>Zihnini bir döngüye alınmış şekilde korursun ve oraya nüfuz etmeye çalışan şeyi bu döngüyle birlikte dağıtırsın. Anlık atacağın saving throw ve sonraki turunun sonuna kadar, intelligence, wisdom ve charisma saving throwların avantajlı olur. Psişik hasara resistance kazanırsın.</p>
+        </description>
+        <setters>
+            <set name="level">2</set>
+			<set name="school">Abjuration</set>
+			<set name="time">Reaksiyon; intelligence , wisdom veya charisma saving throw atmaya zorlandığında</set>
+			<set name="range">Self</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">false</set>
+			<set name="hasMaterialComponent">false</set>
+            <set name="duration">1 tur</set>
+            <set name="isConcentration">false</set>
+        </setters>
+    </element>
+    <element name="Mage Weapon" type="Spell" source="DOOM HALL" id="ID_DH_SPELL_MAGE_WEAPON">
+        <supports>Wizard, Sorcerer</supports>
+        <description>
+            <p>Proficiency bonusunuzun olduğu bir silaha arcane gücünüzü aktarırsınız. Gücünüzü üzerinizde bulundurmuş olduğunuz silahı kontrol ederken büyünüzün yardımıyla silahı normal statı yerine spellcasting modifier değerinizle kullanırsınız. Bu büyü bir başka silaha uygulamak isterseniz öncekisinden kaybolur ve yeni silaha aktarılır.</p>
+        </description>
+        <setters>
+            <set name="level">2</set>
+			<set name="school">Transmutation</set>
+			<set name="time">Reaksiyon; intelligence , wisdom veya charisma saving throw atmaya zorlandığında</set>
+			<set name="range">Touch</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+            <set name="materialComponent">arbede silah</set>
+            <set name="duration">Bir sonraki long reste kadar</set>
+            <set name="isConcentration">false</set>
+        </setters>
+    </element>
+    <element name="Arcane Eruption" type="Spell" source="DOOM HALL" id="ID_DH_SPELL_ARCANE_ERUPTION">
+        <supports>Sorcerer</supports>
+        <description>
+            <p>20 feet yarı-çaplık bir alandaki büyü enerjisini çalkalandırıp patlatırsınız. Bu büyüyü yaparken vuracağı hasar türünü: Ateş, Soğuk, Ses, Yıldırım, Zehir, Asit, Psişik türlerinden birisi olucak şekilde seçersiniz. Çapın içerisinde bulunan herkes CON saving throw geçmeye zorlanır. Geçemezlerse seçilen hasar türünde 6d6 hasar alırlar, geçerlerse hasarın sadece yarısını alırlar.
+
+Bir d6 yollarsınız ve gelen sonuca göre canlılar sonraki turunuzun sonuna kadar belirlenen kondisyon efektine maruz kalırlar.
+
+<strong>(1):</strong> Incapacitated
+<strong>(2):</strong> Blinded
+<strong>(3):</strong> Frightened
+<strong>(4):</strong> Poisoned
+<strong>(5):</strong> Charmed
+<strong>(6):</strong> Deafened</p>
+            <p class="indent"><b><i>Üst Seviyeden Yapıldığında:</i></b> 5 veya daha üzeri seviyeden yapıldığında, büyünün hasar değeri artan seviye başına 1d6 artar.</p>
+        </description>
+        <setters>
+            <set name="level">4</set>
+			<set name="school">Evocation</set>
+			<set name="time">Aksiyon</set>
+			<set name="range">120 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+            <set name="duration">Anlık</set>
+            <set name="isConcentration">false</set>
+        </setters>
+    </element>
+    <element name="Sands of Time" type="Spell" source="DOOM HALL" id="ID_DH_SPELL_SANDS_OF_TIME">
+        <supports>Sorcerer, Warlock, Wizard</supports>
+        <description>
+            <p>Antik çöllerin sırlarına ve bilgilerine kadir olmuşsundur. Bu sırlar sana mistik zamanı yönetebilme gücü bahşeder. Alttaki özellikleri kazanırsın:
+            <strong>Temporal Manipulation:</strong> Merkezi senden başlayacak şekilde, 100 feet yarı çaplık bir alanda var olan canlıların zamanını  şekillendirirsin.  Bonus aksiyonundan bir efekt seçersin;
+            <strong>Acceleration:</strong> Seçtiğin kişiler için zaman olduğundan daha hızlı akar; dexterity saving throw ve attack roll avantajlı olur. Kişiye turunda ekstradan bir aksiyon daha alma şansı tanır, hareket hızı değeri iki katına çıkar.
+            <strong>Deceleration:</strong> Seçmiş olduğun kişiler için zaman  yavaşlar ve turları boyunca yapacakları; Dexterity saving throw, attack roll dezavantajlı olur ve hareket hızı yarılanır değeri ve turunda sadece tek bir aksiyon alabilir.
+            <strong>Time Echo:</strong> Büyünün süresi boyunca, gelecek veya geçmişten kendi ekonu oluşturabilirsin. Bu eko senden bağımsız bir şekilde hareket eder, senin statbloğunu, yeteneklerini, büyülerini kullanır. Turunu senle aynı anda oynar.
+            <strong>Temporal Shield:</strong> Reaksiyondan, etrafını sarmalayan koruyucu bir bariyer oluşturursun, bu bariyer sonraki turunun başına kadar seni hedefleyen menzilli saldırıları havada durdurur.</p>
+        </description>
+        <setters>
+            <set name="level">9</set>
+			<set name="school">Transmutation</set>
+			<set name="time">2 tur</set>
+			<set name="range">Self</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+            <set name="materialComponent">altın kulma dolu süslü bir kum saati</set>
+            <set name="duration">1 saatliğine konsantrasyon</set>
+            <set name="isConcentration">true</set>
+        </setters>
+    </element>
+    <element name="Corruption" type="Spell" source="DOOM HALL" id="ID_DH_SPELL_CORRUPTION">
+        <supports>Warlock</supports>
+        <description>
+            <p>Menzilinde görmüş olduğun bir yaratığın üzerine; karanlık, yozlaşmış bir hastalık bulaştırırsın. 
+            Seçmiş olduğun hedef CON saving throw atmaya zorlanır ve geçemezse her tur 1d6 necrotic hasar alır. 
+            Hastalık canlının bedenini zayıflatır ve her ne zaman silahlı saldırıdan hasar alırsa, almış olduğu hasara ek olarak 1d4 daha necrotic hasar alır. Kişi saving throwu her turunun sonunda tekrardan gerçekleştirir.
+            Disease immunitysi olan kişiler  kişiler  bu etkiden etkilenmezler.</p>
+            <p class="indent"><b><i>Üst Seviyeden Yapıldığında:</i></b> 3 ve üzeri seviyeden yapıldığında, turluk aldığı hasar 1d6 artar.</p>
+        </description>
+        <setters>
+            <set name="level">2</set>
+			<set name="school">Transmutation</set>
+			<set name="time">Aksiyon</set>
+			<set name="range">90 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+            <set name="materialComponent">küf</set>
+            <set name="duration">5 tur</set>
+            <set name="isConcentration">false</set>
+        </setters>
+    </element>
+    <element name="Curse of Weakness" type="Spell" source="DOOM HALL" id="ID_DH_SPELL_CURSE_OF_WEAKNESS">
+        <supports>Warlock</supports>
+        <description>
+            <p>Bir kişinin üzerine zayıflama laneti yerleştirmek üzere karanlık bir ağırlık çöktürürsün. 
+            Menzilinde hedeflemiş olduğun kişi CON saving throw atar ve geçemediği zaman
+            Yapmış olduğu silahlı saldırılar 2d6 daha az hasar uygular.
+            AC değeri 3 azalır</p>
+            <p class="indent"><b><i>Üst Seviyeden Yapıldığında:</i></b> 5. Seviyeden yapıldığında hasar değeri azaltmış olduğu hasar miktarı 3d6, AC değeri 4 olur.</p>
+        </description>
+        <setters>
+            <set name="level">4</set>
+			<set name="school">Necromancy</set>
+			<set name="time">Bonus aksiyon</set>
+			<set name="range">30 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">false</set>
+			<set name="hasMaterialComponent">false</set>
+            <set name="duration">1 dakika</set>
+            <set name="isConcentration">false</set>
+        </setters>
+    </element>
+    <element name="Unstable Affliction" type="Spell" source="DOOM HALL" id="ID_DH_SPELL_UNSTABLE_AFFLICTION">
+        <supports>Warlock</supports>
+        <description>
+            <p>Hedefinde görmüş olduğun bir kişiyi lanetlersin. Kişi CON saving throw atmaya zorlanır yoksa belirtilere maruz kalır:
+            *Başarısız saving throw sonucu kişi her tur 3d10 necrotic hasar alır.
+            *Hareket hızı değeri 10 azalır.
+            *Büyü zamanından önce sonlanırsa 1 turluğuna kişi silence etkisi altında sayılır, eğer ki bir başkası büyü yardımı ile kişi üzerinden büyüyü kaldırırsa hem kaldıran hem de kaldırılan 1 turluğuna silence etkisi altında sayılır.
+            *Büyünün erken sonlanması sonucunda kalan süre/2 kadar hasar alır ve büyü öyle kalkar. Bir başka birisi sonlandırırsa hasar ikisi arasında paylaşılır.
+            Saving throw turunun sonunda tekrar atılır.</p>
+            <p class="indent"><b><i>Üst Seviyeden Yapıldığında:</i></b> 5. Seviyeden yapıldığında hasar değeri 1d10 artar.</p>
+        </description>
+        <setters>
+            <set name="level">4</set>
+			<set name="school">Necromancy</set>
+			<set name="time">Bonus aksiyon</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+            <set name="materialComponent">göğüsgeren otu</set>
+            <set name="duration">1 dakika</set>
+            <set name="isConcentration">false</set>
+        </setters>
+    </element>
+    <element name="Buried Ruin" type="Spell" source="DOOM HALL" id="ID_DH_SPELL_BURIED_RUIN">
+        <supports>Warlock, Wizard</supports>
+        <description>
+            <p>Antik uygarlıkların kalıntılarını tekrardan oluşturursun ve harabeler yeniden şekillenmeye başlar. 
+            Eski yıkılmış bir yerleşkeye gittiğinde, zemine dokunarak oranın yıkılmamış halini  tekrardan oluşturursun. Yıkılmadan önceki halinde nasılsa öyle gözükür. Burası bir; tapınak, kale, şehir gibi herhangi bir yerleşke olabilir.
+            Oluşturduğunda burayı önceden koruyan heykel muhafızlar, ele geçirilmemiş hazineler, tuzaklar vb. şeyler de yerlerinde olurlar. 
+            Büyü sonlandığında yerden çıkan binalar yok olur, büyünün süresi tekrardan yapılarak uzatılabilir..</p>
+        </description>
+        <setters>
+            <set name="level">5</set>
+			<set name="school">Divination</set>
+			<set name="time">1 dakika</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+            <set name="duration">8 saat</set>
+            <set name="isConcentration">false</set>
+        </setters>
+    </element>
+</elements>
+   
+    

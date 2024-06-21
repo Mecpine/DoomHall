@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="Hellwanderer" type="Archetype" source="DOOM HALL" id="ID_DH_PHB_ARCHETYPE_RANGER_HELLWANDERER">
+        <supports>Ranger Archetype</supports>
+        <description>
+            <p>Hellwanderer yolunu seçen kimseler Preshalon da hayatta kalma yönetemlerini öğrenirler. Oradaki yoksun ruhlarla geçirdikleri zaman ve çorak topraklarda yaşanan kuru his. İç görülerini ve darbelerinden yansir.</p>
+            <div element="ID_DH_ARCHETYPEFEATURE_RANGER_HELLISH_FLAME" />
+            <div element="ID_DH_ARCHETYPEFEATURE_RANGER_LOST_PREY" />
+            <div element="ID_DH_ARCHETYPEFEATURE_RANGER_IRON_WILL" />
+            <div element="ID_DH_ARCHETYPEFEATURE_RANGER_JUDGE_OF_MEN" />
+            <div element="ID_DH_ARCHETYPEFEATURE_RANGER_SHARPENED_REFLEX" />
+        </description>
+        <sheet display="false">
+            <description>Hellwanderer yolunu seçen kimseler Preshalon da hayatta kalma yönetemlerini öğrenirler.</description>
+        </sheet>    
+        <rules>
+            <grant type="Archetype Feature" id="ID_DH_ARCHETYPEFEATURE_RANGER_HELLISH_FLAME" level="3" />
+            <grant type="Archetype Feature" id="ID_DH_ARCHETYPEFEATURE_RANGER_LOST_PREY" level="3" />
+            <grant type="Archetype Feature" id="ID_DH_ARCHETYPEFEATURE_RANGER_IRON_WILL" level="7" />
+            <grant type="Archetype Feature" id="ID_DH_ARCHETYPEFEATURE_RANGER_JUDGE_OF_MEN" level="11" />
+            <grant type="Archetype Feature" id="ID_DH_ARCHETYPEFEATURE_RANGER_SHARPENED_REFLEX" level="15" />
+        </rules>
+    </element>
+    
+    <element name="Hellish Flame" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPEFEATURE_RANGER_HELLISH_FLAME">
+        <requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_RANGER_HUNTER_LOST_PREY</requirements>
+        <description>
+            <p><em>3. seviye Hellwanderer özelliği</em></p>
+            <p>Preshalon'un bir parçası haline gelmiş olan bu subclass oranın özelliklerini taşır. Silahlarını istediği zaman oranın alevleri ile çevreleyebilir.</p>
+            <p>One handed silahlar 1d4, archery 1d6 ve two handed silahlar ise 1d8 fazladan ateş hasarı uygular.</p>
+            <p>Bu etki 1 dakika aktif kalır ve short rest arasında 1 kere uygulayabilirsin.</p>
+            <p>Bonus aksiyondan aynı anda iki silahı da tetikler.</p>
+        </description>
+        <sheet usage="1/short rest" action="Bonus Aksiyon">
+        <description>Bonus aksiyondan silahlarını 1 dakikalığına ateşle efsunlarsın; one handed silahlar 1d4, archery 1d6 ve two handed silahlar ise 1d8 fazladan ateş hasarı uygular. Bonus aksiyondan kullanıldığnda her iki silahında da görülebilir.</description>,
+        </sheet>
+    </element>
+        
+
+    
+    <element name="Lost Prey" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPEFEATURE_RANGER_LOST_PREY">
+        <requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_RANGER_HUNTER_LOST_PREY</requirements>
+        <description>
+            <p><em>3. seviye Hellwanderer özelliği</em></p>
+            <p>Hunter's Mark büyüsü bildiğin büyülerden birisi olur ve bu büyü Hunter's Prey büyüsüne yükselir. Yükseldiğinde bu büyü istediğin zaman yapabildiğin bir büyü haline gelir ve cast a spell action hakkini kapamaz. Ancak hala spell slotunu yer.</p>
+            <h5 class="caption">Hellwanderer spells</h5>
+            <table>
+                <thead>
+                    <tr><td>Ranger level</td><td>Spells</td></tr>
+                </thead>
+                <tr><td>3rd</td><td><em>hunter's mark</em></td></tr>
+            </table>
+        </description>
+        <sheet>
+        <description>Hunter's Mark büyüsü bildiğin büyülerden birisi olur ve bu büyü Hunter's Prey büyüsüne yükselir. Yükseldiğinde bu büyü istediğin zaman yapabildiğin bir büyü haline gelir ve cast a spell action hakkını kapamaz. Ancak hala spell slotunu yer.</description>
+        </sheet>
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_HUNTERS_MARK" level="3" spellcasting="Ranger" />
+        </rules>
+    </element>   
+   
+    <element name="Iron Will" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPEFEATURE_RANGER_IRON_WILL">
+        <requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_RANGER_HUNTER_IRON_WILL</requirements>
+        <description>
+            <p><em>7. seviye Hellwanderer özelliği</em></p>
+            <p>Charm,sleep zarlarina karşi avantajli zar rollanir. Wisdom saving throwlarina proficiencyin olur. İnsiyatif rollarina wisdom eklersin.</p>
+        </description>
+        <sheet>
+            <description>Charm,sleep zarlarina karşi avantajli zar rollanir. Wisdom saving throwlarina proficiencyin olur. İnsiyatif rollarina wisdom eklersin.</description>
+        </sheet>
+        <rules>
+            <stat name="initiative" value="wisdom:modifier" bonus="wisdom" />
+            <select type="Proficiency" name="Saving Throw Proficiency (Hellwanderer)" supports="ID_PROFICIENCY_SAVINGTHROW_INTELLIGENCE|ID_PROFICIENCY_SAVINGTHROW_WISDOM|ID_PROFICIENCY_SAVINGTHROW_CHARISMA" default="ID_PROFICIENCY_SAVINGTHROW_WISDOM" />
+        </rules>
+    </element>
+   
+    <element name="Judge of Men" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPEFEATURE_RANGER_JUDGE_OF_MEN">
+        <requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_RANGER_HUNTER_JUDGE_OF_MEN</requirements>
+        <description>
+            <p><em>11. seviye Hellwanderer özelliği</em></p>
+            <p>Aksiyondan 10 feetindeki birsinin aurasini okursun ve o kişinin alignmentini ne olduğunu bilirsin. Aura gizleme veya zihin koruma gibi büyüler bunu geçersiz kilar ancak bu tarz şeyler korunuyorsa neyle olduğunu bilebilmeni sağlar.</p>
+            <p class="indent">Bu kişiyi 1 dakika boyunca incelersen veya karşilikli 5 tur savaşirsaniz o kişiye karşi +2 AC ve +2 tutturma kazanirsin.</p>
+        </description>
+        <sheet action="Aksiyon">
+            <description>Aksiyondan 10 feetindeki birsinin aurasini okursun ve o kişinin alignmentini ne olduğunu bilirsin. Aura gizleme veya zihin koruma gibi büyüler bunu geçersiz kilar ancak bu tarz şeyler korunuyorsa neyle olduğunu bilebilmeni sağlar.
+            Bu kişiyi 1 dakika boyunca incelersen veya karşilikli 5 tur savaşirsaniz o kişiye karşi +2 AC ve +2 tutturma kazanirsin.</description>
+        </sheet>  
+    </element>
+   
+    <element name="Sharpened Reflex" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPEFEATURE_RANGER_SHARPENED_REFLEX">
+        <requirements>!ID_DH_ARCHETYPEFEATURE_RANGER_SHARPENED_REFLEX</requirements>
+        <description>
+            <p><em>15. seviyede Hellwanderer özelliği</em></p>
+            <p>Surprised duruma düşürülemezsin, eğer ki Favored Terrain içerisindeysen sana saldiran gizli olsa bile tam olarak yerini, mesafesini bilirsin</p>
+            <p class="indent">Reaksiyondan başarisiz saldirmiş birisine saldiri gerçekleştirebilirsin ve bu zarin krit araliği 18-20 olur.</p>
+            <p class="indent">Hareket değerin 10 feet kadar artar.</p>
+        </description>
+        <sheet>
+            <description>15. seviyede hareket değerin 10 feet kadar artar. Surprised duruma düşürülemezsin, eğer ki Favored Terrain içerisindeysen sana saldiran gizli olsa bile tam olarak yerini, mesafesini bilirsin.
+            Reaksiyondan başarisiz saldirmiş birisine saldiri gerçekleştirebilirsin ve bu zarin krit araliği 18-20 olur.</description>
+        </sheet>
+        <rules>
+            <stat name="innate speed:misc" value="10" />
+        </rules>
+    </element>
+
+</elements>    
+       
+
+
+
+
+
+        

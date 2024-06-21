@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <element name="Wrath of Nature" type="Archetype" source="DOOM HALL" id="ID_DH_ARCHETYPE_WRATH_OF_NATURE">
+        <supports>Druid Circle</supports>
+        <description>
+            <p>Doğanın kadim koruyucuları, bunca zaman varlıklarına dair bir bilgi bile yoktu. Ulu centaurlar ile birlikte zamanlarını geçirip, doğa ile bir olmuş bu kişiler artık kendilerini günyüzüne çıkardılar. Circlelar birer birer düşüp, ormanlara bela musallat oldu. Bunca zaman kendilerine  tehdit oluşturmamış olan kötülük, geçirince karanlık dişlerini artık onlar da bu duruma kayıtsız kalmadı.</p>
+                Doğada tarafsızlığı bir kenara atıp karıştığında dünyaya
+                Bir çocuk doğacak yeryüzünde ilk yarık açıldığında
+                Odur anahtarı iki diyarın
+                Fakat zamanı gelince o da ihanet edicek insanlara.
+            <div element="ID_DH_ARCHETYPE_FEATURE_WRATH_OF_NATURE_MAGIC_OF_WILDERNESS" />
+			<div element="ID_DH_ARCHETYPE_FEATURE_WRATH_OF_NATURE_WILD_SURGE" />
+			<div element="ID_DH_ARCHETYPE_FEATURE_WRATH_OF_NATURE_MAGIC_PASS" />
+			<div element="ID_DH_ARCHETYPE_FEATURE_WRATH_OF_NATURE_TAP_MAGIC" />
+			<div element="ID_DH_ARCHETYPE_FEATURE_WRATH_OF_NATURE_SPELL_FLUX" />
+        </description>
+        <sheet display="false" />
+		<rules>
+			<grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_WRATH_OF_NATURE_MAGIC_OF_WILDERNESS" level="2" />
+			<grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_WRATH_OF_NATURE_WILD_SURGE" level="2" />
+			<grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_WRATH_OF_NATURE_MAGIC_PASS" level="6" />
+			<grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_WRATH_OF_NATURE_TAP_MAGIC" level="10" />
+			<grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_WRATH_OF_NATURE_SPELL_FLUX" level="14" />
+		</rules>
+    </element>
+    <element name="Magic of Wilderness" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_WRATH_OF_NATURE_MAGIC_OF_WILDERNESS">
+        <description>
+            <p><em>Wrath of Nature feature</em></p>
+            <p>Doğanın ve ormanın büyüsüyle yeşermiş bu kişi, orman veya seçmiş olduğu bir doğal bölgenin içerisindeyken summon büyüleri haricinde iki Konsantrasyon tutabilir, 12 Levelda ulaştığında bu etki ortam farketmeksizin görülür. İki konsantrasyon tutuyorken, konsantrasyon kurtarış zarlarını dezavantajlı atarsın.</p>
+            <p class="indent">Ağaçlarla ve bitkilerle iletişim kurabilirsin ancak bu seni arkadaş olarak görmelerini sağlamaz. Seçeceğin; nature, arcana, survival skill checklerinden birisine profciency kazanırsın.</p>
+        </description>
+        <sheet>
+            <description> Orman veya seçmiş olduğu bir doğal bölgenin içerisindeyken summon büyüleri haricinde iki Konsantrasyon tutabilir, 12 Levelda ulaştığında bu etki ortam farketmeksizin görülür. İki konsantrasyon tutuyorken, konsantrasyon kurtarış zarlarını dezavantajlı atarsın.
+            • Ağaçlarla ve bitkilerle iletişim kurabilirsin ancak bu seni arkadaş olarak görmelerini sağlamaz.</description>
+        </sheet>
+        <rules>
+            <select type="Proficiency" name="Magic of Wilderness" supports="ID_PROFICIENCY_SKILL_ARCANA|ID_PROFICIENCY_SKILL_NATURE|ID_PROFICIENCY_SKILL_SURVIVAL" />
+        </rules>
+    </element>
+    <element name="Wild Surge" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_WRATH_OF_NATURE_WILD_SURGE">
+        <description>
+            <p><em>2nd-level Wrath of Nature feature</em></p>
+            <p>Wild shape hakkından harcayarak wild power güçlerini kullanabilirsin;</p>
+            <p class="indent"> O an yapmış olduğun bir büyüyü üst seviyeden yapabilirsin. Bunu kullanmak aksiyon harcamaz.</p>
+            <p class="indent"> Büyüyü orijinal halinde büyünün kuralları içerisinde bir kere daha yapabilirsin. Çok hedefli büyülerle bu etki çalışmaz.(free action)</p>
+            <p class="indent"> Druid levelın/3(aşağı yuvarlanıcak şekilde)  kadar spell yenileme puanın olur.(2. Levelda 1 tane vardır) Bu puanlar ise yenileyeceğin büyünün seviyesi ile eşdeğer olucak şekilde harcanır.</p>
+        </description>
+        <sheet usage="2/Short Rest">
+           <description>Wild shape hakkından harcayarak wild power güçlerini kullanabilirsin;
+           • O an yapmış olduğun bir büyüyü üst seviyeden yapabilirsin. Bunu kullanmak aksiyon harcamaz.
+           • Büyüyü orijinal halinde büyünün kuralları içerisinde bir kere daha yapabilirsin. Çok hedefli büyülerle bu etki çalışmaz.(free action)
+           • {{wild surge:count}} kadar spell yenileme puanın olur.(2. Levelda 1 tane vardır) Bu puanlar ise yenileyeceğin büyünün seviyesi ile eşdeğer olucak şekilde harcanır.</description>
+        </sheet>
+        <rules>
+            <stat name="wild surge:count" value="1" bonus="base" />
+		    <stat name="wild surge:count" value="2" level="6" bonus="base" />
+			<stat name="wild surge:count" value="3" level="9" bonus="base" />
+			<stat name="wild surge:count" value="4" level="12" bonus="base" />
+			<stat name="wild surge:count" value="5" level="15" bonus="base" />
+			<stat name="wild surge:count" value="6" level="18" bonus="base" />
+        </rules>
+    </element>
+    <element name="Magic Pass" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_WRATH_OF_NATURE_MAGIC_PASS">
+        <description>
+            <p><em>6th-level Wrath of Nature feature</em></p>
+            <p>6-10-14-18 seviyelerinde 1 tane büyüyü wizard sınıfından  öğrenebilirsin. Bu büyüler senin için druid büyüsü olarak sayılır.</p>
+        </description>
+        <sheet display="false"/>
+        <rules>
+            <select type="Spell" name="Magic Pass" supports="Wizard,0, $(spellcasting:slots)" number="1" level="6" spellcasting="Druid"/>
+            <select type="Spell" name="Magic Pass" supports="Wizard,0, $(spellcasting:slots)" number="1" level="10" spellcasting="Druid"/>
+            <select type="Spell" name="Magic Pass" supports="Wizard,0, $(spellcasting:slots)" number="1" level="14" spellcasting="Druid"/>
+            <select type="Spell" name="Magic Pass" supports="Wizard,0, $(spellcasting:slots)" number="1" level="18" spellcasting="Druid"/>
+        </rules>
+    </element>
+    <element name="Tap Magic" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_WRATH_OF_NATURE_TAP_MAGIC">
+        <description>
+            <p><em>10th-level Wrath of Nature feature</em></p>
+            <p>Her ne zaman siz veya 30 feetinizde bir dostunuz bir büyü ile hedeflenecek olursanız, bu büyünün enerjisiyle oynamak için bir bağ kurabilirsiniz. Kurduğunuz bağ sonucu büyünün enerjisini kendi büyü gücünüzle baskılarsınız. Bu özellikle yalnızca 5 level ve altındaki büyüleri yansıtabilirsiniz, daha üst seviye büyüleri yansıtabilmek için 10 + büyün seviyesi DC'ye karşı wisdom modifier check atarsınız, geçerseniz büyüyü başarıyla yansıtabilirsiniz geçemedeiğiniz takdirde büyü normal bir şekilde gerçekleşir.</p>
+            <p class="indent">Bu özelliği long restler arasında en az 1 olucak şeiklde, wisdom modifier değeriniz kadar kullanabilirsiniz.</p>
+        </description>
+        <sheet action="Reaksiyon" usage="{{tap magic:usage}}/Long Rest">
+            <description>Her ne zaman siz veya 30 feetinizde bir dostunuz bir büyü ile hedeflenecek olursanız, bu büyünün enerjisiyle oynamak için bir bağ kurabilirsiniz. Kurduğunuz bağ sonucu büyünün enerjisini kendi büyü gücünüzle baskılarsınız
+            • 5. seviye ve altındaki büyünün kontrolü tamamen size geçer ve büyüyü kullanıcısına, alan etkiliyse kaynağının olduğu yer merkez olucak şekilde, geri yansıtırsınız. 5. seviye ve daha üzeri büyüleri yansıtabilmek için, DC 10 + büyünün seviyesi değerini geçmek için wisdom check atarsınız, geçerseniz büyüyü yansıtabilirsiniz.</description>
+        </sheet>
+        <rules>
+            <stat name="tap magic:usage" value="1" bonus="base" />
+			<stat name="tap magic:usage" value="wisdom:modifier" bonus="base" />
+        </rules>
+    </element>
+    <element name="Spell Flux" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_WRATH_OF_NATURE_SPELL_FLUX">
+        <description>
+            <p><em>14th-level Wrath of Nature feature</em></p>
+            <p>Büyünün doğasına var olan bağınız yaptığınız büyülerin dayanıklıklara üstün gelmesini sağlar. Bu üstün geliş spell resistancelar için de geçerlidir. (Yapmış olduğunuz  büyüler rakiplerin saving throwlara var olan avantajlarını yoksayar.)</p>
+            <p class="indent">Ayrıca etrafınız yoğunlaşmış olan büyüye olan bağınız size spell resistance kazandırır. (Yapacağınız spell saving throwlar avantajlı olur.)</p>
+        </description>
+        <sheet>
+            <description>Büyünün doğasına var olan bağınız yaptığınız büyülerin dayanıklıklara üstün gelmesini sağlar. Bu üstün geliş spell resistancelar için de geçerlidir.(Yapmış olduğunuz  büyüler rakiplerin saving throwlara var olan avantajlarını yoksayar.)
+            • Ayrıca etrafınız yoğunlaşmış olan büyüye olan bağınız size spell resistance kazandırır.(Yapacağınız spell saving throwlar avantajlı olur.)</description>
+        </sheet>
+    </element>
+</elements>
+
+         
+
+
+
+
+
+
+
+            
+          
+
+

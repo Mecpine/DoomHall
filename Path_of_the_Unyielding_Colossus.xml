@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <!-- Path of the Unyielding Colossus -->
+    <element name="Path of the Unyielding Colossus" type="Archetype" source="DOOM HALL" id="ID_DH_ARCHETYPE_PATH_OF_THE_UNYIELDING_COLOSSUS">
+        <supports>Primal Path</supports>
+        <description>
+            <p>Elementellerin öfkesini, gazabını ve bilgeiğini taşıyan primordail barbar, diğer barbarların aksine öfkesini evrenin en temel elementleriyle yönlendirmeyi öğrenir.</p>
+            <div element="ID_DH_ARCHETYPE_FEATURE_COLOSSUS_UNARMORED_FURY" />
+            <div element="ID_DH_ARCHETYPE_FEATURE_COLOSSUS_STEELSKIN" />
+            <div element="ID_DH_ARCHETYPE_FEATURE_COLOSSUS_HARD_HEADED" />
+            <div element="ID_DH_ARCHETYPE_FEATURE_COLOSSUS_UNLEASHED_FISTS" />
+            <div element="ID_DH_ARCHETYPE_FEATURE_COLOSSUS_HAYMAKER" />
+        </description>
+        <sheet dsiplay="false" />
+        <rules>
+            <grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_COLOSSUS_UNARMORED_FURY" level="3" />
+            <grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_COLOSSUS_STEELSKIN" level="3" />
+            <grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_COLOSSUS_HARD_HEADED" level="6" />
+            <grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_COLOSSUS_UNLEASHED_FISTS" level="11" />
+            <grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_COLOSSUS_HAYMAKER" level="14" />
+        </rules>
+    </element>
+    <element name="Unarmored Fury" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_COLOSSUS_UNARMORED_FURY">
+        <description>
+            <p>3. seviyeden itibaren, unarmored saldırının normal hasarı yerine 1d6 hasar vurursun. Bu hasar; 6. seviyede d8, 12. seviyede d10, 18. Seviyede d12 olur.</p>
+            <p class="indent">Unarmored hasarların ekstradan Strength modifierın kadar hasar vurur. Eğer ki saldırı için strength kulanmışsan strength değerin bir yerine iki kere hasar zarı sonucuna eklenir.</p>
+        </description>
+        <sheet>
+            <description>Unarmored saldırının normal hasarı yerine 1d{{unarmored:attack}} hasar vurursun.Unarmored hasarların ekstradan {{strength:modifier}} hasar vurur. Eğer ki saldırı için strength kulanmışsan strength değerin bir yerine iki kere hasar zarı sonucuna eklenir.</description>
+        </sheet>
+        <rules>
+            <stat name="unarmored:attack" value="6" bonus="base" />
+            <stat name="unarmored:attack" value="8" level="6" bonus="base" />
+            <stat name="unarmored:attack" value="10" level="12" bonus="base" />
+            <stat name="unarmored:attack" value="12" level="18" bonus="base" />
+        </rules>
+    </element>
+    <element name="Steelskin" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_COLOSSUS_STEELSKIN">
+        <description>
+            <p>Öfken etrafına bir patlama gibi yayılır ve her ne zaman rage durumuna girersen 10 feetinde bulunan kişiler barbar spell save DC'ne (8+STR+Proficiency Bonusun) karşı STR saving throw atmaya zorlanırlar, geçemezlerse barbar levelin kadar hasar alıp, 15 feet geriye yuvarlanırlar ve prone olurlar. Saving throw geçerlerse  veya senden 2 ebat büyüklerse etkilenmezler.</p>
+            <p class="indent">Ragede olduğun süre boyunca AC değerin Strength modifier değerin kadar artar, poision effect ve conditionlara karşı atacağın saving throwlar avantajlı olur ve zehirden yarı hasar alırsın.</p>
+        </description>
+        <sheet>
+            <description>Her ne zaman rage durumuna girersen 10 feetinde bulunan kişiler DC {{colossus:dc}} Strength saving throw atmaya zorlanırlar, geçemezlerse {{level:barbarian}} kadar thunder hasar alıp, 15 feet geriye yuvarlanırlar ve prone olurlar. Saving throw geçerlerse  veya senden 2 ebat büyüklerse etkilenmezler.
+            • Ragede olduğun süre boyunca AC değerin {{strength:modifier}} kadar artar, poision effect ve conditionlara karşı atacağın saving throwlar avantajlı olur ve zehirden yarı hasar alırsın.</description>
+        </sheet>
+        <rules>
+            <stat name="colossus:dc" value="8"/>
+            <stat name="colossus:dc" value="proficiency" />
+            <stat name="colossus:dc" value="strength:modifier" />
+        </rules>
+    </element>
+    <element name="Hard-Headed" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_COLOSSUS_HARD_HEADED">
+        <description>
+            <p>6. seviyeden itibaren, rage anında; paralize, stun ya da restrained durumlara düşmemek için atacağın zarlar avantajlı olur. Paralize veya stun efekti altındaysan reaksiyondan avantaj almadan CON saving throw atarak belirtilmiş etkilerden birisinden kurtulmaya çalışabilirsin.</p>
+            <p class="indent">Yumrukların magical sayılır, nonmagical resistanceın üstesinden gelir.</p>
+        </description>
+        <sheet>
+            <description>Rage anında; paralize, stun ya da restrained durumlara düşmemek için atacağın zarlar avantajlı olur. Paralize veya stun efekti altındaysan reaksiyondan avantaj almadan CON saving throw atarak belirtilmiş etkilerden birisinden kurtulmaya çalışabilirsin.
+            • Yumrukların magical sayılır, nonmagical resistanceın üstesinden gelir.</description>
+        </sheet> 
+    </element>
+    <element name="Unleashed Fists" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_COLOSSUS_UNLEASHED_FISTS">
+        <description>
+            <p>Reckless attack kullandığında aksiyonundan attack action aldıysan, attack aksiyonunun parçası olarak fazladan bir kere daha unarmored attack gerçekleştirebilirsin bu turda yalnızca bir kere gerçekleşir.</p>
+            <p class="indent">Unarmored attackların isabet halinde rakipleri 5 feet geri iter. Başarılı unarmored attack sonrası  geri itmiş olduğun rakiplere darbenden hemen sonra olmak kaydıyla ilerlemek hareket hızını tüketmez, reaksiyondan üzerine doğru ilerlediğin rakibe bir kere daha saldırabilirsin.</p>
+        </description>
+        <sheet>
+            <description>Reckless attack kullandığında aksiyonundan attack action aldıysan, attack aksiyonunun parçası olarak fazladan bir kere daha unarmored attack gerçekleştirebilirsin bu turda yalnızca bir kere gerçekleşir.
+            • Unarmored attackların isabet halinde rakipleri 5 feet geri iter. Başarılı unarmored attack sonrası  geri itmiş olduğun rakiplere darbenden hemen sonra olmak kaydıyla ilerlemek hareket hızını tüketmez, reaksiyondan üzerine doğru ilerlediğin rakibe bir kere daha saldırabilirsin.</description>
+        </sheet>
+    </element>
+    <element name="Haymaker" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_COLOSSUS_HAYMAKER">
+        <description>
+            <p>Artık 14. seviyeye gelmenle birlikte yumruklarına maruz kalanlar en derinden sarsılırlar.</p>
+            <p class="indent">Birisine karşı gerçekleştirmiş olduğun başarılı unarmored attacklardan sonra rakipler CON saving throw atmaya zorlanır eğer ki geçemezlerse "daze" duruma düşerler. Bu durumdayken kişiler; hareket hızlarının yarısını kaybeder, reaksiyon alamazlar ve konsantrasyon tutamazlar. Bu etki kişilerin turlarının sonuna kadar sürer.</p>
+        </description>
+        <sheet>
+            <description>Birisine karşı gerçekleştirmiş olduğun başarılı unarmored attacklardan sonra rakipler CON saving throw atmaya zorlanır eğer ki geçemezlerse "daze" duruma düşerler. Bu durumdayken kişiler; hareket hızlarının yarısını kaybeder, reaksiyon alamazlar ve konsantrasyon tutamazlar. Bu etki kişilerin turlarının sonuna kadar sürer.</description>
+        </sheet>
+    </element>
+</elements>
+
+

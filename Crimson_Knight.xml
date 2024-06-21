@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="Crimson Knight" type="Archetype" source="DOOM HALL" id="ID_DH_ARCHETYPE_CRIMSON_KNIGHT">
+        <supports>Martial Archetype</supports>
+        <description>
+            <p>Savaşın durmaksızın akışı ve dökülen kanlarının dehşetiyle daha da güçlenip kana dökme arzusuyla yanıp tutuşan ve tüm bunları barbarın aksine savaş teknikleri ile savaş alanına döken bir savaşçı.</p>
+			<div element="ID_DH_ARCHETYPE_FEATURE_BLOOD_ARMOR"/>
+			<div element="ID_DH_ARCHETYPE_FEATURE_BLOODTHIRST"/>
+			<div element="ID_DH_ARCHETYPE_FEATURE_RELENTLESS_FIGHTER"/>
+			<div element="ID_DH_ARCHETYPE_FEATURE_BLOODSIPHON"/>
+			<div element="ID_DH_ARCHETYPE_FEATURE_SUPREME_BLOODREAVER"/>
+            <div element="ID_DH_ARCHETYPE_FEATURE_CRIMSON_SLAUGHTERER"/>
+        </description>
+        <sheet display="false">
+            <description>Kan ve vahşetini teknikleri ile bileyen bir savaşçı.</description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_BLOOD_ARMOR" level="3" />
+			<grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_BLOODTHIRST" level="3" />
+			<grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_RELENTLESS_FIGHTER" level="7" />
+			<grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_BLOODSIPHON" level="10" />
+			<grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_SUPREME_BLOODREAVER" level="15" />
+            <grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_CRIMSON_SLAUGHTERER" level="18" />
+        </rules>
+    </element>
+    <element name="Blood Armor" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_BLOOD_ARMOR">
+        <requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_FIGHTER_CRIMSON_KNIGHT_BLOOD_ARMOR</requirements>
+        <description>
+            <p><em>3. seviye Crimson Knight Özelliği</em></p>
+            <p>Kana olan bağlılığınız ve arzunuz içinizdeki kanı manipüle etmenize yol açmıştır. Kanınızı sizi koruyan bir zırh gibi, bedeninizin veya kuşanmış olduğunuz zırhınızın üzerinde çevreleyerek dış etkenlere karşı korumasını sağlarsınız.</p>
+            <p class="indent">En fazla maksimum canınızın yarısı kadar olucak şekilde canınızı feda ederek, feda etmiş olduğunuz can kadar hasar absorbe eden bir zırh kazanırsınız. Bu zırh psişik haricinde tüm hasarlara karşı dayanıklılığa sahiptir. Zırh eğer ki yok edilirse dışarıya doğru infilak ederek 15 feetinizdeki herekesi fighter DC'nize (8 + profciency bonus+ constitution modifier) karşı DEX saving throw atmaya zorlar ve geçemeyenlere fighter levelinizin iki katı kadar necrotic hasar vurur, saving throwu geçenler hasardan etkilenmezler.</p>
+        </description>
+        <sheet action="Bonus Aksiyon" usage="3/Long Rest">
+            <description>En fazla maksimum canınızın yarısı kadar olucak şekilde canınızı feda ederek, feda etmiş olduğunuz can kadar hasar absorbe eden bir zırh kazanırsınız. Bu zırh psişik haricinde tüm hasarlara karşı dayanıklılığa sahiptir. Zırh eğer ki yok edilirse dışarıya doğru infilak ederek 15 feetinizdeki herekesi {{blood armor:dc}} DC DEX saving throw atmaya zorlar ve geçemeyenlere {{blood armor:pool}} necrotic hasar vurur, saving throwu geçenler hasardan etkilenmezler.</description>
+        </sheet>
+        <rules>
+            <stat name="blood armor:dc" value="8" />
+            <stat name="blood armor:dc" value="profciency" />
+            <stat name="blood armor:dc" value="constitution:modifier" />
+            <stat name="blood armor:pool" value="level:fighter" />
+            <stat name="blood armor:pool" value="level:fighter" />
+            <stat name="blood armor:pool" value="level:fighter" />
+        </rules>
+    </element>
+
+    <element name="Bloodthirst" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_BLOODTHIRST">
+        <requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_FIGHTER_CRIMSON_KNIGHT_BLOODTHIRST</requirements>
+        <description>
+            <p><em>3. seviye Crimson Knight Özelliği</em></p>
+            <p>  Savaşın kanlı dehşeti ve dökülen kanlarınla birlikte, kan dökmeye olan isteğini coşturur. Anlık can değerin maksimum can değerinin yarısı ve aşağısına düştüğünde  "Bloodthirst" durumuna geçersin.</p>
+            <p class="indent">Bloodthirst'e geçmiş olduğun tur ve sonrasındaki 2 tur boyunca yapmış olduğun yakın dövüş ve silahsız saldırıları, hasar zarın kadar seni iyileştirir.</p>
+            <p class="indent">Can değerin, max hp değerinin çeyreği veya daha azı durumda yapacağın tüm saldırılar avantajlı olur.</p>
+            <p class="indent">Bu özellik long restte bi defa kullanılabilir.</p>
+        </description>
+        <sheet usage="1/Long Rest">
+            <description>Anlık can değerin MAX HP'nin yarısı ve daha aşağısına düştüğünde, Bloodthirst durumuna geçersin. Geçmiş olduğun tur ve sonrasındaki 2 tur boyunca yapmış olduğun yakın dövüş ve silahsız saldırıları, hasar zarın kadar seni iyileştirir. Can değerin, max hp değerinin çeyreği veya daha azı durumda yapacağın tüm saldırılar avantajlı olur.</description>
+        </sheet>
+    </element>
+
+    <element name="Relentless Fighter" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_RELENTLESS_FIGHTER">
+        <requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_FIGHTER_CRIMSON_KNIGHT_RELENTLESS_FIGHTER</requirements>
+        <description>
+            <p><em>7. seviye Crimson Knight Özelliği</em></p>
+            <p>Korku dolu savaş şeklin duruşuna da yansır. Yapmış olduğun intimidation checklerine STR modifierını eklersin. Frightened duruma karşı atacağın saving throwlar avantajlı olur. Eğer ki frightened kondisyonu altındaysa bonus aksiyondan bu durumu üzerinden kaldırabilirsin.</p>
+        </description>
+        <sheet action="Bonus Aksiyon">
+            <description>Frightened duruma karşı atacağın saving throwlar avantajlı olur. Eğer ki frightened kondisyonu altındaysan bonus aksiyondan bu durumu üzerinden kaldırabilirsin.</description>
+        </sheet>
+        <rules>
+            <stat name="intimidation:misc" value="strength:modifier"/>
+        </rules>
+    </element>
+
+    <element name="Bloodsiphon" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_BLOODSIPHON">
+        <requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_FIGHTER_CRIMSON_KNIGHT_BLOODSIPHON</requirements>
+        <description>
+            <p><em>10. seviye Crimson Knight Özelliği</em></p>
+            <p>Crimson Knight, kan büyüsüne olan bağlantısını kullanarak kendi yaşam enerjisiyle kılıcını tam potansiyeliyle kullanabilir. Bu yetenek, iki farklı mod arasında geçiş yapmasına izin verir, her biri kendi özel bonuslarını içerir. Her tur yalnızca bir mod aktif olabilir ve yenilenen her tur hangi modda saldırı yapılacagı tekrardan belirlenir:</p>
+            <p class="indent"><strong><em>Vampiric Annihilation:</em></strong> Bu modda Crimson Knight'ın kılıcı, düşmanlarının yaşam enerjisinin açlığıyla yanıp tutuşur ve her başarılı vuruşla dökmüş olduğu kanları kendisine doğru çekerek  can emer. İyileştirilen can değeri başarılı her bir saldırı için 1d6'tır. Fazlalık iyileştirmeler temporary HP olarak yansır.</p>
+            <p class="indent"><strong><em>Sanguine Siphon:</em></strong> Crimson Knight, bu modda iken yapmış olduğu saldırılarına kendi yaşam enerjisini de aktararak rakiplerini ezip geçen saldırı güçlendirmesi elde edebilir. Yapmış olduğunuz saldırılarda 2d6 canınızdan feda edip, feda etmiş olduğunuz can kadarını hasarına ekleyebilirsiniz.</p>
+        </description>
+        <sheet> Her tur başında silahınla hangi şekilde saldıracağını belirlersin, 
+            <description>Her tur başında silahınla hangi şekilde saldıracağını belirlersin:
+            • <strong><em>Vampiric Annihilation:</em></strong>Bu modda silahınla yapacağın her bir başarılı saldırı sonrası 1d6 can yenilersin. Fazlalık iyileştirmeler sonraki turunuzun başına kadar temporary hp olarak birikir.
+            • <strong><em>Sanguine Siphon:</em></strong>Yapmış olduğunuz saldırılarda 2d6 canınızdan feda edip, feda etmiş olduğunuz can kadarını hasarına ekleyebilirsiniz.</description>
+        </sheet>
+    </element>
+
+    <element name="Supreme Bloodreaver" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_SUPREME_BLOODREAVER">
+        <requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_FIGHTER_CRIMSON_KNIGHT_SUPREME_BLOODREAVER</requirements>
+        <description>
+            <p><em>15. seviye Crimson Knight Özelliği</em></p>
+            <p>İnsiyatif zarı attığında,  bloodthirst hakkın yoksa 1 kullanımlık hak kazanırsın. Bu özelliği short restte 1 kere yapabilirsin.</p>
+            <p class="indent">İnanılmaz bir güç ile her iki elinde de great weaponlarla savaşabilirsin. Silahları dual wield şeklinde kuşandığında 2d6 ve 1d12 hasar zarı olan silahlar 1d10, 1d10 hasar zarı olan great silahlar ise 1d8 hasar zarına düşer.</p>
+        </description>
+        <sheet usage="1/short rest">
+            <description>İnsiyatif zarı attığında,  bloodthirst hakkın yoksa 1 kullanımlık hak kazanırsın. Bu özelliği short restte 1 kere yapabilirsin.
+            • İnanılmaz bir güç ile her iki elinde de great weaponlarla savaşabilirsin. Silahları dual wield şeklinde kuşandığında 2d6 ve 1d12 hasar zarı olan silahlar 1d10, 1d10 hasar zarı olan great silahlar ise 1d8 hasar zarına düşer.</description>
+        </sheet>
+    </element>
+
+    <element name="Crimson Slaughterer" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_CRIMSON_SLAUGHTERER">
+        <requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_FIGHTER_CRIMSON_KNIGHT_CRIMSON_SLAUGHTERER</requirements>
+        <description>
+            <p><em>18. seviye Crimson Knight Özelliği</em></p>
+            <p>Tüm kanları üzerinde bir giysi gibi kuşanan Kızıl Kasap, bunca zaman dökmüş olduğu tüm kanlarla birlikte güç bağının son evresine erişmiştir. Great silahları dual wield şeklinde kuşandığında var olan hasar azaltması kalkar.</p>
+            <p class="indent"> Long restler arasında 1 kereliğine bonus aksiyondan Kızıl Kasap'ın dürtülerini açığa çıkarabilirsiniz, aşağıdaki özelliklere erişirsiniz:
+            <strong>Bloodmonger:</strong> Kanını dökmüş olduğunuz kişilere karşı yapacağınız tüm saldırılar avantajlı olur.
+            <strong>Crimson Aura:</strong> Aura içindeki tüm düşman yaratıklar, her turun başında fighter DC'nize (8 + PB + Charisma modifer) karşı bir Wisdom kurtuluş zarı atmalıdır veya 1 dakika boyunca korkmuş hale gelirler. Her turlarının sonunda kurtuluş zarını yenileyerek bu etkiyi sona erdirebilirler ve başarılı bir kurtuluş sonrası, Crimson Aura'nıza karşı 24 saat boyunca bağışık olurlar. Frightened kişiler her turlarının başında fighter levelinizin yarısı kadar psişik hasar alırlar.
+            <strong>Tainted Blood:</strong> Silahlarınızla yapmış olduğunuz saldırılar kanı olan kişileri çarptırarak 1 dakikalığına delirtmeye zorlar. Hasar alan kişiler DC'nize (8+PB+Charisma modifer) karşı CON saving throw atmaya zorlanır geçemezlerse kudurarak; hayatta kalan tek gördüğü kişi siz olana kadar, siz hariç en yakınındaki kişiye karşı attack akisyonu alarak saldırmaya başlar. Hastalığın etkisi sonlanana kadar gördüğü her şeyi öldürmeye çalışır. 1 dakika sonrasına hastalık sona erer. Saving throw geçerse veya 1 kere hastalanırsa 24 saat boyunca bundan etkilenemez. Disease bağışıklığı olan kişiler bu durumdan etkilenmezler.</p>
+        </description>
+        <sheet action="Bonus Aksiyon" usage="1/Long Rest">
+            <description>Great silahları dual wield şeklinde kuşandığında var olan hasar azaltması kalkar. Long restler arasında 1 kereliğine bonus aksiyondan Kızıl Kasap'ın dürtülerini açığa çıkarabilirsiniz:
+            • <strong><em>Bloodmonger:</em></strong> Kanı dökülmüş olan kişilere karşı yapacağınız tüm saldırılar avantajlı olur.
+            • <strong><em>Crimson Aura:</em></strong> Aura içindeki tüm düşman yaratıklar, her turun başında bir Wisdom kurtuluş zarı atmalıdır veya 1 dakika boyunca korkmuş hale gelirler. Her turlarının sonunda kurtuluş zarını yenileyerek bu etkiyi sona erdirebilirler ve başarılı bir kurtuluş sonrası, Crimson Aura'nıza karşı 24 saat boyunca bağışık olurlar. Frightened kişiler her turlarının başında fighter levelinizin yarısı kadar psişik hasar alırlar.
+            • <strong><em>Tainted Blood:</em></strong> Silahlarınızla yapmış olduğunuz saldırılar kanı olan kişileri çarptırarak 1 dakikalığına delirtmeye zorlar. Hasar alan kişiler DC'nize (8+PB+Charisma modifer) karşı CON saving throw atmaya zorlanır geçemezlerse kudurarak, hayatta kalan tek gördüğü kişi siz olana kadar siz hariç en yakınındaki kişiye karşı attack akisyonu alarak saldırmaya başlar. Hastalığın etkisi sonlanana kadar gördüğü her şeyi öldürmeye çalışır. 1 dakika sonrasına hastalık sona erer. Saving throw geçerse veya 1 kere hastalanırsa 24 saat boyunca bundan etkilenemez
+           </description>
+        </sheet>
+    </element>
+</elements>
+
+
+
+
+        
+        
+    

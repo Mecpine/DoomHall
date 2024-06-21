@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="Heart of Forge" type="Archetype" source="DOOM HALL" id="ID_DH_ARCHETYPE_ARTIFICER_HEART_OF_FORGE">
+        <supports>Artificer Specialist</supports>
+        <description>
+            <p>Ocağın kalbi olan ateş gücünün temelini oluşturmuştur. Onun büyüsü içine işlemiş ve bu işlenmiş gücü ise ezici silahlarınla şekillenmişsindir.</p>
+            <div element="ID_DH_ARCHETYPE_FEATURE_FORGER_PROFICIENCY" />
+            <div element="ID_DH_ARCHETYPE_FEATURE_HEART_OF_FORGE_SPELLS" />
+            <div element="ID_DH_ARCHETYPE_FEATURE_STEAM_WEAPONS" />
+            <div element="ID_DH_ARCHETYPE_FEATURE_VAPOR_TECH" />
+            <div element="ID_DH_ARCHETYPE_FEATURE_EXTRA_ATTACK" />
+            <div element="ID_DH_ARCHETYPE_FEATURE_VAPOR_MODIFICATION" />
+            <div element="ID_DH_ARCHETYPE_FEATURE_MASTER_OF_FORGE" />
+        </description>
+            <sheet display="false" />
+        <rules>
+            <grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_FORGER_PROFICIENCY" level="3" />
+			<grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_HEART_OF_FORGE_SPELLS" level="3" />
+			<grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_STEAM_WEAPONS" level="3" />
+			<grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_VAPOR_TECH" level="3" />
+			<grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_EXTRA_ATTACK" level="5" />
+			<grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_VAPOR_MODIFICATION" level="9" />
+			<grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_MASTER_OF_FORGE" level="15" />
+        </rules>
+    </element>
+    
+    <element name="Forger Proficiency" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_FORGER_PROFICIENCY">
+        <description>
+            <p><em>3. Seviye Heart of Forge Özelliği</em></p>
+            <p>Smith tool ve firearm proficiency kazanırsın. Eğer Smith tool profun varsa yerine başka bir tool proficiency alabilirsin.</p>
+            <p class="indent">Heavy Armor ve martial silahlarına proficiency kazanırsın.</p>
+            <p class="indent">Seviye başına can değerin 1  artar</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_MARTIAL_WEAPONS" />
+            <grant type="Profciency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_HEAVY_ARMOR" />
+            <stat name="hp" value="level:artificer" />
+            <select type="Proficiency" name="Tool Proficiency, Forger Proficiency" supports="Artisan tools" default="ID_PROFICIENCY_TOOL_PROFICIENCY_SMITHS_TOOLS" />
+        </rules>
+    </element>
+    <element name="Heart of Forge Spells" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_HEART_OF_FORGE_SPELLS">
+        <description>
+            <p><em>3. Seviye Heart of Forge Özelliği</em></p>
+            <p>Bu subclassta belirli seviyelere geldiğinde, Heart of Forge büyü listesinde göreceğin büyülere erişirsin. Bunlar senin için artificer büyüsü olarak sayılır ancak hazırladığın artificer büyüleri ile sayılmaz.</p>
+            <h5 class="caption">Heart of Forge Büyüleri</h5>
+            <table>
+                <thead>
+                    <tr><td>Artificer Level</td><td>Spells</td></tr>
+                </thead>
+                <tr><td>3rd</td><td><em>Burning Hands, Heroism</em></td></tr>
+				<tr><td>5th</td><td><em>Heat Metal, Shatter</em></td></tr>
+				<tr><td>9th</td><td><em>Aura of Vitality, Erupting Earth</em></td></tr>
+				<tr><td>13th</td><td><em>Fire Shield, Wall of Fire</em></td></tr>
+				<tr><td>17th</td><td><em>Tremor Wave, Immolation</em></td></tr>
+            </table>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_BURNING_HANDS" spellcasting="Artificer" level="3" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_HEROISM" spellcasting="Artificer" level="3" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_HEAT_METAL" spellcasting="Artificer" level="5" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_SHATTER" spellcasting="Artificer" level="5" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_AURA_OF_VITALITY" spellcasting="Artificer" level="9" prepared="true" />
+			<grant type="Spell" id="ID_XGTE_SPELL_ERUPTING_EARTH" spellcasting="Artificer" level="9" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_FIRE_SHIELD" spellcasting="Artificer" level="13" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_WALL_OF_FIRE" spellcasting="Artificer" level="13" prepared="true" />
+			<grant type="Spell" id="ID_DH_SPELL_TREMOR_WAVE" spellcasting="Artificer" level="17" prepared="true" />
+			<grant type="Spell" id="ID_XGTE_SPELL_IMMOLATION" spellcasting="Artificer" level="17" prepared="true" />
+        </rules>
+    </element>
+
+    <element name="Steam Weapons" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_STEAM_WEAPONS">
+        <description>
+            <p>3. seviyeden itibaren buhar basıncı, sıcaklık, enerji dalgaları ve büyü becerilerin sana yeni silahını oluşturmanda yardımcı oldu. Profciencysine sahip olduğun  silahlarından kuşandığın birisini aksiyonundan elinde smith toolun varken Steam Weapon haline getirirsin.</p> 
+            <p class="indent">Silahını arcane spellcasting focus olarak kullanabilirsin.</p>
+            <p class="indent">Silah sana bağlanmıştır ve disarmlanamaz, Silahın magical sayılır.</p>
+            <p class="indent">Bu silah üzerindeki etki; sen yeni bir silaha uygulayana, kapatana veya ölene kadar sürer.</p>
+            <p class="indent">Uzuvlarından kolun yoksa kolunla birleşik bir şekilde yapılabilir. Eğer ki yaptığın silah maul ise hala iki elle kullanmak gerekir.</p>
+        </description>
+        <sheet action="Aksiyon">
+            <description>Profciencysine sahip olduğun silahlarından kuşandığın birisini aksiyonundan elinde smith toolun varken Steam Weapon haline getirirsin;
+            • Silahını arcane spellcasting focus olarak kullanabilirsin.
+            • Silah sana bağlanmıştır ve disarmlanamaz, silahın magical sayılır.
+            • Bu silah üzerindeki etki; sen yeni bir silaha uygulayana, kapatana veya ölene kadar sürer.
+            • Uzuvlarından kolun yoksa kolunla birleşik bir şekilde yapılabilir. Eğer ki yaptığın silah maul ise hala iki elle kullanmak gerekir.</description>
+        </sheet>
+    </element>
+
+    <element name="Vapor Tech" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_VAPOR_TECH">
+        <description>
+            <p>3. seviyeden itibaren silahını kostümüze edebilirsin. Kostümüze ederken short veya long restte değiştirebildiğin 3 seçeneğin olur; Tremor, Shaker, Steam.</p>
+            <p class="indent">Silahınla saldırırken STR veya DEX yerine INT kullanabilirsin.</p>
+            <p class="indent"><strong><em>Tremor:</em></strong> Silahın sismik enerji ile yüklüdür, her bir darben rakibe tek elli ise 1d6 çift elli ise 1d8 thunder damage uygular ve STR save geçemezse 5 feet geriye doğru prone düşer.  Silahın artificer seviyenin iki katı kadar thunder hasarı emer. Thunder damage resistanceın vardır. Eğer ki emilen hasar limitini aşmışsa, silahın aşırı-doz durumuna geçer ve bu durumda daha fazla hasar ememez. Aşırı-doz durumunayken saldırıların ekstradan 1d8 thunder damage sahip olur ve sonraki turunun sonunda  aşırı-doz durumu sonlanır.</p>
+            <p class="indent"><strong><em>Shaker:</em></strong> Silahın güç modundadır ve basıncı artmıştır. Bu mod aktif olduğu sürece her bir darben tek elli silahtan geliyorsa  ekstradan  1d6, çift elliden geliyorsa 1d8 bludgeoning hasara sahiptir. Her bir darbe sonrası rakibe CON save attırırsın geçemezlerse 5 feet geriye itilirler ve sonraki turlarının sonuna kadar reaksiyon gösteremezler. Silahın seviyenin iki katı kadar bludgeoning hasarı emer. Bludgeoning hasar türüne resistance kazanırsın. Eğer ki emilen hasar limiti aşmışsa, silahın aşırı doz durumuna geçer ve daha fazla hasar ememez. Aşırı-doz durumunayken saldırıların ekstradan 1d8 bludgeoning hasara sahip olur ve sonraki turunun sonunda aşırı-doz durumu sonlanır.</p>
+            <p class="indent"><strong><em>Steam:</em></strong> Silahın içerisindeki buhar basıncı dışarı yansır ve silahın ısınıp buhar salar. Her bir darben tek elli silahtan geliyorsa ekstradan 1d6, çift elliden geliyorsa 1d8 ateş hasarına sahiptir. Her bir darbe sonrası rakip yanık durumuna karşı CON save atar, geçemezse her tur 1d4 ateş hasarı alır, başarmış olduğu her bir saving throw ateş yükünü bir azaltır. Yanık durumu 5'e kadar birikebilir ve her bir birikmede turda verilen hasar bir üst seviyeye çıkar.(1d4, 1d6, 1d8, 1d10, 1d12) 5. yanık yükünde rakibin fire hasara karşı zaafı oluşur, ateş hasarına bağışıklığı olan kişiler yanık etkisinden etkilenmezler. Silah ateş hasarını seviyen kadar emer. Fire resistance kazanırsın. Eğer ki emilen hasar limiti aşmışsa, silahın aşırı-doz  durumuna geçer ve daha fazla  hasar ememez. Aşırı-doz durumunayken saldırıların ekstradan 1d8 ateş hasarına sahip olur ve sonraki turunun sonunda aşırı-doz durumu sonlanır.</p>
+        </description>
+        <sheet>
+            <description>Vapor ekipmanlarını kişiselleştirebilirsin. Her bir modelin kendine has özelliği vardır. Vapor silahınla saldırırken, hasar ve tutturma zarlarına bonus olark DEX yerine INT modifierını kullanabilirsin. 
+            Short veya long restte, elinde smith toolun varken ekipmanlarının modelini değiştirebilirsin.</description>
+        </sheet>
+        <rules>
+            <select type="Archetype Feature" name="Vapor Tech, Heart of Forge" supports="Vapor Tech" optional="True" />
+            <stat name="vapor tech:dc" value="8"/>
+            <stat name="vapor tech:dc" value="proficiency" />
+            <stat name="vapor tech:dc" value="intelligence:modifier" />
+            <stat name="damage absorb:value" value="level:artificer"/>
+            <stat name="damage absorb:value" value="level:artificer"/>
+        </rules>
+    </element>
+    <element name="Shaker" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_VAPOR_TECH_SHAKER">
+        <compendium display="false" />
+        <supports>Vapor Tech</supports>
+        <description>
+            <p>Silahın güç modundadır ve basıncı artmıştır. Alttaki özelliklere sahiptir:</p>
+            <p class="indent">Her bir darben tek elli silahtan geliyorsa  ekstradan  1d6, çift elliden geliyorsa 1d8 bludgeoning hasara sahiptir. Her bir darbe sonrası rakibe  Constitution save attırırsın geçemezlerse 5 feet geriye itilirler ve sonraki turlarının sonuna kadar reaksiyon gösteremezler.</p>
+            <p class="indent">Silahın seviyenin iki katı kadar bludgeoning hasarı emer. Bludgeoning hasar türüne resistance kazanırsın.</p>
+            <p class="indent">Emilen hasar limiti aşmışsa, silahın aşırı doz durumuna geçer ve daha fazla hasar ememez. Aşırı-doz durumunayken saldırıların ekstradan 1d8 bludgeoning hasara sahip olur ve sonraki turunun sonunda aşırı-doz durumu sonlanır.</p>
+        </description>
+        <sheet usage="Vapor Tech">
+            <description>Ekipmanlarını gazın basıncı ile dizayn etmişsindir;
+            • Her bir darben tek elli silahtan geliyorsa  ekstradan  1d6, çift elliden geliyorsa 1d8 bludgeoning hasara sahiptir. Her bir darbe sonrası rakibe DC{{vapor tech:dc}} Constitution save attırırsın geçemezlerse 5 feet geriye itilirler ve sonraki turlarının sonuna kadar reaksiyon gösteremezler.
+            • Silahın {{damage absorb:value}} bludgeoning hasarı emer. Bludgeoning hasar türüne resistance kazanırsın.
+            • Emilen hasar limiti aşmışsa, silahın aşırı doz durumuna geçer ve daha fazla hasar ememez. Aşırı-doz durumunayken saldırıların ekstradan 1d8 bludgeoning hasara sahip olur ve sonraki turunun sonunda aşırı-doz durumu sonlanır.</description>
+        </sheet>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_BLUDGEONING" />
+        </rules>
+    </element>
+    <element name="Steam" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_VAPOR_TECH_STEAM">
+        <compendium display="false" />
+        <supports>Vapor Tech</supports>
+        <description>
+            <p>Silahın içerisindeki buhar basıncı dışarı yansır ve silahın ısınıp buhar salar:</p>
+            <p class="indent">Her bir darben tek elli silahtan geliyorsa ekstradan 1d6, çift elliden geliyorsa 1d8 ateş hasarına sahiptir.</p>
+            <p class="indent">Her bir darbe sonrası rakip yanık durumuna karşı CON save atar, geçemezse 2 tur boyunca 1d4 ateş hasarı alır, başarmış olduğu her bir saving throw ateş yükünü bir azaltır. Yanık durumu 5'e kadar birikebilir ve her bir birikmede turda verilen hasar bir üst seviyeye çıkar.(1d4,1d6,1d8,1d10,1d12) 5. yanık yükünde rakibin fire hasara karşı zaafı oluşur, ateş hasarına bağışıklığı olan kişiler yanık etkisinden etkilenmezler.</p>
+            <p class="indent">Silahın seviyenin iki katı kadar ateş hasarı emer. Eğer ki emilen hasar limiti aşmışsa, silahın aşırı-doz  durumuna geçer ve daha fazla  hasar ememez. Aşırı-doz  durumunayken saldırıların ekstradan 1d8 ateş hasarına sahip olur ve sonraki turunun sonunda aşırı-doz durumu sonlanır.</p>
+        </description>
+        <sheet usage="Vapor Tech">
+            <description>Ekipmanlarını elektriğin akımıyla dizayn etmişsindir;
+            • Her bir darben tek elli silahtan geliyorsa ekstradan 1d6, çift elliden geliyorsa 1d8 ateş hasarına sahiptir.
+            • Her bir darbe sonrası rakip yanık durumuna karşı DC{{vapor tech:dc}} CON save atar, geçemezse 2 tur boyunca 1d4 ateş hasarı alır, başarmış olduğu her bir saving throw ateş yükünü bir azaltır. Yanık durumu 5'e kadar birikebilir ve her bir birikmede turda verilen hasar bir üst seviyeye çıkar.(1d4,1d6,1d8,1d10,1d12) 5. yanık yükünde rakibin fire hasara karşı zaafı oluşur, ateş hasarına bağışıklığı olan kişiler yanık etkisinden etkilenmezler.
+            • Silahın {{damage absorb:value}} ateş hasarı emer. Eğer ki emilen hasar limiti aşmışsa, silahın aşırı-doz  durumuna geçer ve daha fazla  hasar ememez. Aşırı-doz  durumunayken saldırıların ekstradan 1d8 ateş hasarına sahip olur ve sonraki turunun sonunda aşırı-doz durumu sonlanır.</description>
+        </sheet>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FIRE" />
+        </rules>
+    </element>
+    <element name="Tremor" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_VAPOR_TECH_TREMOR">
+        <compendium display="false" />
+        <supports>Vapor Tech</supports>
+        <description>
+            <p>Silahın sismik enerji ile yüklüdür:</p>
+            <p class="indent">Her bir darben rakibe tek elliden geliyor 1d6, çift elliden geliyorsa 1d8 thunder damage uygular.</p>
+            <p class="indent">Her bir darbe sonrası hedefini Strength saving throw atmaya zorlarsın, geçemezse 5 feet geriye doğru prone düşer, eğer heavy armor veya kalkan giyiyorlarsa AC değerleri en fazla 2'ye kadar olucak kadar düşer.</p>
+            <p class="indent">Silahın seviyenin iki katı kadar thunder hasarı emer. Eğer ki emilen hasar limiti aşmışsa, silahın aşırı-doz  durumuna geçer ve daha fazla  hasar ememez. Aşırı-doz  durumunayken saldırıların ekstradan 1d8 ateş hasarına sahip olur ve sonraki turunun sonunda aşırı-doz durumu sonlanır.</p>
+        </description>
+        <sheet usage="Vapor Tech">
+            <description>Ekipmanlarını buharın gücü ile dizayn etmişsindir.
+            • Her bir darben rakibe tek elliden geliyor 1d6, çift elliden geliyorsa 1d8 thunder damage uygular.
+            • Her bir darbe sonrası hedefini  DC{{vapor tech:dc}} Strength saving throw atmaya zorlarsın, geçemezse 5 feet geriye doğru prone düşer, eğer heavy armor veya kalkan giyiyorlarsa AC değerleri en fazla 2'ye kadar olucak kadar düşer.
+            • Silahın {{damage absorb:value}} thunder hasarı emer. Eğer ki emilen hasar limiti aşmışsa, silahın aşırı-doz  durumuna geçer ve daha fazla  hasar ememez. Aşırı-doz  durumunayken saldırıların ekstradan 1d8 ateş hasarına sahip olur ve sonraki turunun sonunda aşırı-doz durumu sonlanır.</description>
+        </sheet>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_BLUDGEONING" />
+        </rules>
+    </element>
+    <element name="Extra Attack" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_EXTRA_ATTACK">
+		<description>
+			<p><em>5. Seviye Artificer Özelliği</em></p>
+			<p>Turunda attack aksiyonu almışsan bir yerine iki kere saldırabilirsin.</p>
+		</description>
+		<sheet>
+			<description>Turunda attack aksiyonu almışsan bir yerine iki kere saldırabilirsin.</description>
+		</sheet>
+		<rules>
+			<stat name="extra attack:count" value="2" level="5" bonus="extra attack" />
+		</rules>
+	</element>
+    <element name="Vapor Modification" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_VAPOR_MODIFICATION">
+        <description>
+			<p>Artık kalkanına da Vapor Weapon etkilerden birisini işleyebilirsin. Bonus aksiyonun ile kalkanınla saldırabilirsin, shield hasar 1d4 + STR modifi kadardır, Vapor haline gelmiş shieldlar STR yerine INT modifi ile hasar verebilir. Silahların ve kalkanların infuse item özelliği kuralları için ayrı ekipmanlar olarak sayılır. "Her biri, Steam Silahları özelliği ile silah modelinizi değiştirdiğinizde infüzyonlarınızı taşıyabilen öğelerden birine sahip olabilir. Ayrıca, aynı anda infüze edebileceğiniz maksimum öğe sayısı 2 artar, ancak bu ekstra öğeler Steam Silahınızın bir parçası olmalıdır. Çift elii arbede silahın ile bonus aksiyondan saldırabilirsin. Çift elii arbede silahın silahına 2 infusion koyabilirsin.</p>
+		</description>
+		<sheet>
+			<description> Artık kalkanına da Vapor Weapon etkilerden birisini işleyebilirsin. Bonus aksiyonun ile kalkanınla saldırabilirsin, shield hasar 1d4 + STR modifi kadardır, Vapor haline gelmiş shieldlar STR yerine INT modifi ile hasar verebilir.
+            • Her biri, Steam Silahları özelliği ile silah modelinizi değiştirdiğinizde infüzyonlarınızı taşıyabilen öğelerden birine sahip olabilir. Ayrıca, aynı anda infüze edebileceğiniz maksimum öğe sayısı 2 artar, ancak bu ekstra öğeler Steam Silahınızın bir parçası olmalıdır.
+            • Çift Elli arbede silahın ile bonus aksiyondan saldırabilir ve çift elli arbede silahın silahına 2 infusion ekleyebilirsin.</description>
+		</sheet>
+		<rules>		
+			<stat name="item infusions:max" value="2" />
+		</rules>
+	</element>
+    <element name="Master of Forge" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_MASTER_OF_FORGE">
+        <description>
+            <p>15. Seviyeden itibaren Arcane Weaponın modeline bağlı olarak ekstra özellik kazanır;</p>
+            <p class="indent"><strong><em>Temor:</em></strong>Kalkan: AC değerine +2 kazandırır.
+            Silah: Eğer menzilinde prone birisi varsa reaksiyondan saldırmana izin verir. AC değeri azalmış kişilere yapacağın saldırılar azalmış AC değeri başına fazladan 1d6 hasar verir. Bu hasar çift elli silah için 1d8 olur.</p>
+            <p class="indent"><strong><em>Shaker:</em></strong>Kalkan: Reaksiyondan rakibin eğer sana saldırmışsa kalkanını önüne çekerek saldırısına dezavantaj verebilirsin. 
+            Silah: Silahlı saldırıların rakibi DC{{vapor tech:dc}} CON save atmaya zorlar, geçemezse turunun sonuna kadar incapacitated sayılır.</p> 
+            <p class="indent"><strong><em>Steam:</em></strong> Kalkan: 15 feetindeki herkes ranged attacklara karşı half cover sayılır. Kalkanın büyüsel infusionı 15 feetindeki takım arkadaşlarını burnt effecte karşı korur. 
+            Silah: Turuna 15 feetinde başlayanlar burnt efektine maruz kalmamak için DC{{vapor tech:dc}} CON save atar.</p>
+        </description>
+        <sheet display="false">
+            <description>15. Seviyeden itibaren Arcane Weaponın modeline bağlı olarak ekstra özellik kazanır;</description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_MASTER_OF_FORGE_TREMOR" requirements="ID_DH_ARCHETYPE_FEATURE_VAPOR_TECH_TREMOR" />
+			<grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_MASTER_OF_FORGE_SHAKER" requirements="ID_DH_ARCHETYPE_FEATURE_VAPOR_TECH_SHAKER" />
+            <grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_MASTER_OF_FORGE_STEAM" requirements="ID_DH_ARCHETYPE_FEATURE_VAPOR_TECH_STEAM" />
+		</rules>
+    </element>
+    <element name="Heart of Forge (Tremor)" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_MASTER_OF_FORGE_TREMOR">
+        <description>Tremor güçlendirmesi aktifken:
+            • <strong>Silah:</strong>Eğer menzilinde prone birisi varsa reaksiyondan saldırmana izin verir. AC değeri azalmış kişilere yapacağın saldırılar azalmış AC değeri başına fazladan 1d6 hasar verir. Bu hasar çift elli silah için 1d8 olur. 
+            • <strong>Kalkan:</strong> AC değerine +2 kazandırır.</description>
+        <sheet>
+            <description> 
+            • <strong>Silah:</strong> Eğer menzilinde prone birisi varsa reaksiyondan saldırmana izin verir. AC değeri azalmış kişilere yapacağın saldırılar azalmış AC değeri başına fazladan 1d6 hasar verir. Bu hasar çift elli silah için 1d8 olur. 
+            • <strong>Kalkan:</strong> AC değerine +2 kazandırır.</description>
+        </sheet>
+        <rules>
+            <stat name="ac:misc" value="2" equipped="[shield:shield]" />
+        </rules>
+    </element>
+    <element name="Heart of Forge (Shaker)" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_MASTER_OF_FORGE_SHAKER">
+        <description>Shaker güçlendirmesi aktifken:
+            • <strong>Silah:</strong> Silahlı saldırıların rakibi CON save atmaya zorlar, geçemezse turunun sonuna kadar incapacitated sayılır. 
+            • <strong>Kalkan:</strong> Reaksiyondan rakibin eğer sana saldırmışsa kalkanını önüne çekerek saldırısına dezavantaj verebilirsin.</description>
+        <sheet>
+            <description> 
+            • <strong>Silah:</strong> Silahlı saldırıların rakibi DC{{vapor tech:dc}} CON save atmaya zorlar, geçemezse turunun sonuna kadar incapacitated sayılır. 
+            • <strong>Kalkan:</strong> Reaksiyondan rakibin eğer sana saldırmışsa kalkanını önüne çekerek saldırısına dezavantaj verebilirsin. </description>
+        </sheet>
+    </element>
+    <element name="Heart of Forge (Steam)" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_MASTER_OF_FORGE_STEAM">
+        <description>Shaker güçlendirmesi aktifken:
+            • <strong>Silah:</strong> Turuna 15 feetinde başlayanlar burnt efektine maruz kalmamak için CON save atar. 
+            • <strong>Kalkan:</strong> 15 feetindeki herkes ranged attacklara karşı half cover sayılır. Kalkanın büyüsel infusionı 15 feetindeki takım arkadaşlarını burnt effecte karşı korur.</description>
+        <sheet>
+            <description> 
+            • <strong>Silah:</strong> Turuna 15 feetinde başlayanlar burnt efektine maruz kalmamak için DC{{vapor tech:dc}} CON save atar. 
+            • <strong>Kalkan:</strong> 15 feetindeki herkes ranged attacklara karşı half cover sayılır. Kalkanın büyüsel infusionı 15 feetindeki takım arkadaşlarını burnt effecte karşı korur.</description>
+        </sheet>
+    </element>
+</elements>
+
+
+
+
+

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <element name="Eternal Fire" type="Archetype" source="DOOM HALL" id="ID_DH_PHB_ARCHETYPE_ETERNAL_FIRE">
+        <supports>Sorcerous Origin</supports>
+        <description>
+            <p>Celodram'da (Devarnus'un 3. katı) yaşayan bir şeytan tarafından kan bağı sonucu bu güç sana aktarılmıştır. Birden farklı yoldan bu gücü elde edebilecek sen; sana doğarken ruhuna bulaşmıştır ve gücü kanına karışmıştır, annen veya baban olabilir, direkt kendin Celodram'daki bir ruh tarafından da olabilir.</p>
+            <h5>Heir of Eternal Fire</h5>
+            <table>
+            <thead>
+					<tr><td>d4</td><td>Quirk</td></tr>
+				</thead>
+				<tr><td>1</td><td>Alevin izleri bedenine yansımıştır normalde sıradan bir yanık izi gibi görünen bu izler sen her ne zaman gücünü kullansan Sonsuz Alev'in rengi olan maviye döner.</td></tr>
+				<tr><td>2</td><td>Ruhunda yanmakta olan alev gözlerine yansımıştır ve göz bebeğin siyah bir yuvarlaktan ziyade alev şeklinde mavi renktedir.</td></tr>
+				<tr><td>3</td><td>Sadece senin görebildiğin ve zihninden konuştuğun bir Celodram iblisi vardır.</td></tr>
+				<tr><td>4</td><td> Sonsuz Alev'in soğukluğu ve sıcaklığı bedenine taşınmıştır ve fazla duygu anında cansız objelerle temas ettigin yerler soğur veya sıcaklaşır bunun sonunda ise soğuma anında hafiften bir buzlanma veya ısınıp yumuşama görülebilir.</td></tr>
+            </table>
+            <div element="ID_DH_PHB_ARCHETYPE_FEATURE_ETERNAL_FIRE_COLDFIRE_SPELLS" />
+			<div element="ID_DH_PHB_ARCHETYPE_FEATURE_ETERNAL_FIRE_PART_OF_ETERNAL_FIRE" />
+			<div element="ID_DH_PHB_ARCHETYPE_FEATURE_ETERNAL_FIRE_CONSUME_LIFE_ESSENCE" />
+			<div element="ID_DH_PHB_ARCHETYPE_FEATURE_ETERNAL_FIRE_COLDFIRE_WINGS" />
+			<div element="ID_DH_PHB_ARCHETYPE_FEATURE_ETERNAL_FIRE_ETERNAL_BODY" />
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Archetype Feature" id="ID_DH_PHB_ARCHETYPE_FEATURE_ETERNAL_FIRE_COLDFIRE_SPELLS" level="1" />
+			<grant type="Archetype Feature" id="ID_DH_PHB_ARCHETYPE_FEATURE_ETERNAL_FIRE_PART_OF_ETERNAL_FIRE" level="1" />
+			<grant type="Archetype Feature" id="ID_DH_PHB_ARCHETYPE_FEATURE_ETERNAL_FIRE_CONSUME_LIFE_ESSENCE" level="6" />
+			<grant type="Archetype Feature" id="ID_DH_PHB_ARCHETYPE_FEATURE_ETERNAL_FIRE_COLDFIRE_WINGS" level="14" />
+			<grant type="Archetype Feature" id="ID_DH_PHB_ARCHETYPE_FEATURE_ETERNAL_FIRE_ETERNAL_BODY" level="18" />
+        </rules>
+    </element>
+    
+    <element name="Coldfire Spells" type="Archetype Feature" source="DOOM HALL" id="ID_DH_PHB_ARCHETYPE_FEATURE_ETERNAL_FIRE_COLDFIRE_SPELLS" >
+        <description>
+            <p><em>1 level Eternal Fire Özelliği</em></p>
+            <p>Her ne zaman bu klastan seviye alırsan Sonsuz Alev tablosunda belirtildiği gibi büyüler kazanırsın. Bu büyüler senin için sorcerer büyüsü olarak sayılır ancak bildiğin spell sayılarından sayılmaz.</p>
+            <p class="indent">Bu özellik ile aldığın büyüyü aynı seviyeden bir başka sorcerer büyüsü ile level atladığında değiştirebilirsin.</p>
+            <h5 class="caption">Coldfire Spells</h5>
+            <table>
+				<thead>
+					<tr><td>Sorcerer Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>1st</td><td><em>frost fingers, hellish rebuke</em></td></tr>
+				<tr><td>3rd</td><td><em>flaming sphere</em></td></tr>
+				<tr><td>5th</td><td><em>sleet storm, summon lesser demons</em></td></tr>
+				<tr><td>7th</td><td><em>ice storm, summon greater demon, wall of fire</em></td></tr>
+				<tr><td>9th</td><td><em>cone of cold, infernal calling, flame strike</em></td></tr>
+            </table>
+        </description>
+        <sheet display="false">
+            <description>Her ne zaman bu klastan seviye alırsan Sonsuz Alev tablosunda belirtildiği gibi büyüler kazanırsın, bu özellik ile aldığın büyüyü aynı seviyeden bir başka sorcerer büyüsü ile level atladığında değiştirebilirsin.</description>
+        </sheet>
+        <rules>
+            <select type="Spell" name="Additional Spells (Coldfire Spells)" supports="1,(Evocation),(Sorcerer||Warlock)||Hellish Rebuke" level="1" default="ID_PHB_SPELL_HELLISH_REBUKE" spellcasting="Sorcerer" allowReplace="false" />
+            <select type="Spell" name="Additional Spells (Coldfire Spells)" supports="1,(Evocation),(Sorcerer||Warlock||Wizard)||Frost Fingers" level="1" default="ID_WOTC_IDROTF_SPELL_FROST_FINGERS" spellcasting="Sorcerer" allowReplace="false" />
+            <select type="Spell" name="Additional Spells (Coldfire Spells)" supports="2,(Conjuration),(Sorcerer||Druid)||Flaming Sphere" level="3" default="ID_PHB_SPELL_FLAMING_SPHERE" spellcasting="Sorcerer" allowReplace="false" />
+            <select type="Spell" name="Additional Spells (Coldfire Spells)" supports="3,(Sorcerer)||Sleet Storm" level="5" default="ID_PHB_SPELL_SLEET_STORM" spellcasting="Sorcerer" allowReplace="false" />
+            <select type="Spell" name="Additional Spells (Coldfire Spells)" supports="3,(Conjuration),(Sorcerer||Warlock)||Summon Lesser Demons" level="5" default="ID_XGTE_SPELL_SUMMON_LESSER_DEMONS" spellcasting="Sorcerer" allowReplace="false" />
+            <select type="Spell" name="Additional Spells (Coldfire Spells)" supports="4,(Sorcerer)||Ice Storm" level="7" default="ID_PHB_SPELL_ICE_STORM" spellcasting="Sorcerer" allowReplace="false" />
+            <select type="Spell" name="Additional Spells (Coldfire Spells)" supports="4,(Conjuration),(Sorcerer||Warlock)||Summon Greater Demon" level="7" default="ID_XGTE_SPELL_SUMMON_GREATER_DEMON" spellcasting="Sorcerer" allowReplace="false" />
+            <select type="Spell" name="Additional Spells (Coldfire Spells)" supports="4,(Sorcerer)||Wall of Fire" level="7" default="ID_PHB_SPELL_WALL_OF_FIRE" spellcasting="Sorcerer" allowReplace="false" />
+            <select type="Spell" name="Additional Spells (Coldfire Spells)" supports="5,(Sorcerer)||Cone of Cold" level="9" default="ID_PHB_SPELL_CONE_OF_COLD" spellcasting="Sorcerer" allowReplace="false" />
+            <select type="Spell" name="Additional Spells (Coldfire Spells)" supports="5,(Conjuration),(Sorcerer||Wizard||Warlock)||Infernal Calling" level="9" default="ID_XGTE_SPELL_INFERNAL_CALLING" spellcasting="Sorcerer" allowReplace="false" />
+            <select type="Spell" name="Additional Spells (Coldfire Spells)" supports="5,(Evocation),(Sorcerer||Cleric)||Flame Strike" level="9" default="ID_PHB_SPELL_FLAME_STRIKE" spellcasting="Sorcerer" allowReplace="false" />
+        </rules>
+    </element>
+    
+    <element name="Part of Eternal Fire" type="Archetype Feature" source="DOOM HALL" id="ID_DH_PHB_ARCHETYPE_FEATURE_ETERNAL_FIRE_PART_OF_ETERNAL_FIRE" >
+        <description>
+            <p><em>1 level Eternal Fire Özelliği</em></p>
+            <p>Sonsuz alevin gücü içinde büyümeye başlar ve artık bir parçan haline gelir. Bu soğukalevden yanan güç sana savaşmanda yardımcı olur ve bir arbede silahı sindirerek sana hizmetini alevleriyle sunar.</p>
+            <p class="indent">Gücün sana soğuk ve ateş hasarına karşı direnç kazandırır ve iblis diyarına ait olan gücün oraya dair anılarını canlandırarak sana infernal dilini bahşeder. İblis düzleminde bile saygın olan gücün, iblislerle iletişime geçtiğinde charisma checklerine profciency eklemene olanak tanır.</p>
+            <p class="indent">Soğuk alevler bedenini de dirayetli yapmıştır. Her seviye başına HP değerin 1 artar.</p>
+            <p class="indent">Silahın seni savaşta gelecek darbelere karşı daha korunaklı bir hale getirir. Her ne zaman alevlerinle kuşanmış bir silahı kuşanırsan savunma değerine bonus kazanırsın:
+                5-9 levellerde bonus AC değeri +1, 10-15. seviyelerde +2, 16-20. seviyelerde +3 olur.</p>
+        </description>
+        <sheet>
+            <description>Hp değerin sorcerer seviyen başına 1 artar, Ateş ve soğuk hasarına karşı direnç kazanırsın, Infernal dilini öğrenirsin, İblislere karşı olan iletişimlerinde charisma checklerine profciency eklersin. AC değer 5-9 seviyeler arasında +1, 10-15 +2, 16-20 +3 olur.</description>
+        </sheet>
+        <rules>
+            <stat name="hp" value="level:sorcerer" />
+            <stat name="ac:misc"  value="1" level="5" />
+            <stat name="ac:misc"  value="1" level="10" />
+            <stat name="ac:misc"  value="1" level="16" />
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FIRE" />
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_COLD" />
+            <grant type="Language" id="ID_LANGUAGE_INFERNAL" />
+        </rules>
+    </element>
+
+    <element name="Consume Life Essence" type="Archetype Feature" source="DOOM HALL" id="ID_DH_PHB_ARCHETYPE_FEATURE_ETERNAL_FIRE_CONSUME_LIFE_ESSENCE" >
+        <description> 
+            <p><em>6 level Eternal Fire Özelliği</em></p>
+            <p>İçinde ruhu bulunan bir ceset sömürebilirsin ve sömürdüğün yaşam özleri gücünü besler, bedenini korur.</p> 
+            <p class="indent">Bonus Aksiyondan birisini sömürdüğünde sorcerer levelin kadar can yenilersin ve artan hpler bir bariyer gibi etrafında kalkan oluşturur. Bariyerler long restler arasında varlığını sürdürür.</p>
+            <p class="indent">Sömürdüğün her bir kişi, sana bir metamagic puanı kazandırır.</p>
+            <p class="indent">Her ne zaman birisinin özünü sömürürsen sonraki tur boyunca attack rolların avantajlı olur.</p>
+            <p class="indent">Long rest arasında yalnızca charisma modifierın kadar kullanabilirsin.(en az 1 olucak şekilde)</p>
+        </description>
+        <sheet action="Bonus Aksiyon" usage="{{life essence:count}}/long rest">
+            <description>
+            <p class="indent">• Bonus Aksiyondan birisini sömürdüğünde sorcerer levelin kadar can yenilersin ve artan hpler bir bariyer gibi etrafında kalkan oluşturur. Bariyerler long restler arasında varlığını sürdürür.</p>
+            • Sömürdüğün her bir kişi, sana bir metamagic puanı kazandırır. 
+            • Her ne zaman birisinin özünü sömürürsen sonraki tur boyunca attack rolların avantajlı olur.</description>
+        </sheet>
+        <rules>
+            <stat name="life essence:count" value="1" bonus="base" />
+			<stat name="life essence:count" value="charisma:modifier" bonus="base" />
+        </rules>
+    </element>
+    
+    <element name="Coldfire Wings" type="Archetype Feature" source="DOOM HALL" id="ID_DH_PHB_ARCHETYPE_FEATURE_ETERNAL_FIRE_COLDFIRE_WINGS" >
+        <description>
+            <p><em>14 level Eternal Fire Özelliği</em></p>
+            <p>Yanan mavi alevden kanatları bonus aksiyondan çağırabilirsin ve 60 feet uçma hızına sahip olursun.</p>
+            <p class="indent">Bu kanatlar aktif olduğu süre boyunca bonus aksiyondan  disengage alabilirsin.</p>
+            <p class="indent">Kanatlar sen incapacitated, ölene veya bonus aksiyondan kapatana kadar kalırlar.</p>
+        </description>
+        <sheet action="bonus action">
+            <description>Yanan mavi alevden kanatları bonus aksiyondan çağırabilirsin ve 60 feet uçma hızına sahip olursun. Bu kanatlar aktif olduğu süre boyunca bonus aksiyondan  disengage alabilirsin. Kanatlar sen incapacitated, ölene veya bonus aksiyondan kapatana kadar kalırlar.</description>
+        </sheet>
+        <rules>
+            <stat name="speed:fly:" value="60" bonus="base" />
+        </rules>
+    </element>
+
+    <element name="Eternal Body" type="Archetype Feature" source="DOOM HALL" id="ID_DH_PHB_ARCHETYPE_FEATURE_ETERNAL_FIRE_ETERNAL_BODY" >
+        <description>
+            <p><em>18 level Eternal Fire Özelliği</em></p>
+            <p>Vücudunda dolaşan Sonsuz Alev'in etkileri bedeninde de görülmeye başlamıştır. Gözlerin için için yanan bir mavi alev rengindedir ve 60 feetine kadar truesight sağlar. Her ne zaman bir uzvun kopsa aksiyonundan kopan uzvunu yeniden çıkarabilirsin. Bu etki iç organların için geçerli değildir.</p>
+            <p class="indent">Kopan uzvunu yeniden çıkarma eylemini long restte con modifin kadar yapabilirsin.</p>
+        </description>
+        <sheet action="Aksiyon" usage="{{constitution:modifier}}/long rest">
+            <description>Her ne zaman bir uzvun kopsa aksiyonundan kopan uzvunu yeniden çıkarabilirsin. Bu etki iç organların için geçerli değildir.</description>
+        </sheet>
+        <rules>
+            <grant type="Vision" id="ID_VISION_TRUESIGHT" />
+            <stat name="truesight:range" value="60" bonus="base" />
+        </rules>
+    </element>
+
+</elements>
+            
+
+
+
+
+
+
+

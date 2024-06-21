@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <element name="Stellar Strider" type="Archetype" source="DOOM HALL" id="ID_DH_ARCHETYPE_STELLAR_STRIDER">
+        <supports>Roguish Archetype</supports>
+        <description>
+            <p>Kozmik evrene olan bağlantın rogue güçlerinle bir araya gelir. Gökyüzünün imgeleriyle birlikte yolunu bulup, galaksiler arasında seyahet edebilen Stellar Striderlar, bir kaşif gibi etrafta gezinirler.</p>
+            <div element="ID_DH_ARCHETYPE_FEATURE_STELLAR_STRIDER_COSMIC_INSIGHT" />
+			<div element="ID_DH_ARCHETYPE_FEATURE_STELLAR_STRIDER_BLINK_ATTACK" />
+			<div element="ID_DH_ARCHETYPE_FEATURE_STELLAR_STRIDER_STELLAR_INSPIRATION" />
+			<div element="ID_DH_ARCHETYPE_FEATURE_STELLAR_STRIDER_STARS_OF_NINTH" />
+			<div element="ID_DH_ARCHETYPE_FEATURE_STELLAR_STRIDER_PLANEWALKER" />
+            <h5 class="caption">Stellar Inspiration</h5>
+            <table>
+                <thead>
+                    <tr><td>100</td><td>Effect</td></tr>
+                </thead>
+                <tr><td>01-15</td><td>1 dakikalığına merkezi siz olucak şekilde sizi de etkileyen 15 feetlik  aydınlık bir alan yayılır bu alanda dost olarak gördüğünüz kişilerin hepsi atacakları ilk zarı  avantajlı bir şekilde atarlar.</td></tr>
+                <tr><td>16-20</td><td>Yıldız bekçilerinin kutsamasını kazanmışsınızdır, long reste kadar atacağınız bir sonraki zar yerine kritik başarı seçebilirsiniz. </td></tr>
+                <tr><td>21-30</td><td>Yıldızların enerjisi ile dolmuşsunuzdur, sonraki başarılı hasar zarını veya büyü hasarını maksimumdan vurmasını sağlarsınız.</td></tr>
+                <tr><td>31-35</td><td>Kozmik kaos zihninizi bulandırmıştır. DC 18 Wisdom saving throw ile bu durumdan kurtulmaya çalışabilirsiniz geçmediğiniz takdirde 1 dakikalığına stunlanırsınız. Her turunuzun sonunda saving throw yenilenir ve stun etkisi altındayken hasar alındıysa tur sonundaki kurtulma zarınızı avantajlı atarsınız.</td></tr>
+                <tr><td>36-45</td><td>Size kanalize olan kozmik enerji bedeninizin kaldırabileceğinden fazla dolup taşar. 1 seviye exhaustiona maruz kalırsınız.</td></tr>
+                <tr><td>46-51</td><td>Kozmik gelecek sana paralel olasılık yansımaları gösterir. 2 tur süresi boyunca 120 feetinizde bulunan kişiler ne zaman bir zar atarsa zarı tekrardan atmalarını sağlayabilirsiniz. Bir zarı en fazla bir kere attırabilirsiniz. </td></tr>
+                <tr><td>52-61</td><td>Gök aleme olan bağlantınız geçici olarak soluklaşır, sizi bir dakika boyunca etheral düzlemine geçirir, ancak bu süre zarfında hiçbir şey göremezsiniz.</td></tr>
+                <tr><td>62-71</td><td>Kozmik enerji algılarınızı bulandırır, kendinizi kontrol edebilmekte zorlanırsınız. Yapacağınız bütün attack roll, ability check ve saving throwlarınız 1 dakika boyunca dezavantajlı olur.</td></tr>
+                <tr><td>72-75</td><td>Varlığınız ve kuşanmış olduğunuz şeyler 2 turluğuna soyut bir hale gelir, bu süre boyunca tüm hasar türlerine ve kondisyonlara immunity kazanırsınız. Soyut haldeyken fiziksel olarak yapacağınız saldırılar psişik hasar uygular.</td></tr>
+                <tr><td>76-79</td><td>150 feetinizi kapsayacak bir alanda bulunan bütün canlılar, 1 dakikalığına uzay boşluğunda dingin ve huzur verici bir platforma ışınlanır. Bu platformda eğer varsa negatif kondisyon etkileri yokmuş gibi sayılır. Duygusal hissiyatlar veya taşkınlıklar bu alanda hiçbir şekilde oluşamaz, hissedilebilen tek şey dinginliktir yine de düşman ve dost gibi algılar sürmeye devam eder.</td></tr>
+                <tr><td>80-83</td><td>150 feetinizi kapsayacak bir alanda bulunan bütün canlılar, 1 dakikalığına uzay boşluğunda tam ortasında simsiyah bir sütun bulunan kafa karıştırıcı ve kaotik bir platforma ışınlanır. Bu alandaki herkes DC 20 WIS saving throw atmaya zorlanır, geçemeyenler confusion etkisi altında sayılır. Saving throwlar turlarının sonunda yenilenir ve hiçbir şekilde confusion etkisi engellenemez ancak başarılı saving throw o turluk etkilenmemeyi sağlayabilir.</td></tr>
+                <tr><td>84-87</td><td>150 feetinizi kapsayacak bir alanda bulunan bütün canlılar, 1 dakikalığına uzay boşluğunda eski krallıkların eski krallarına ait yıkılmış heykellerin bulunduğu bir vadiye ışınlanır. Bu alanda bulunan kişiler alignmentlarına göre etki kazanırlar. 
+                                    Lawful: Bless etkisi altında sayılırlar
+                                    Chaotic: 15 feetindekiler kendisi hariç  Bane etkisi altında sayılır
+                                    Neutral: Protection from evil and good büyüsüyle korunur.</td></tr>
+                <tr><td>88-91</td><td>60 feetinizde bulunan alanda yer çekimi tersine döner. Bu alan 1 dakika boyunca bu şekilde kalır.</td></tr>
+                <tr><td>92-94</td><td>Başka bir düzlemden celestial bir varlığın ilgisini çekersiniz, iyi mi kötü mü dikkat çektiğiniz DM'e bağlıdır.</td></tr>
+                <tr><td>95-97</td><td>Başka bir düzlemden fiend bir varlığın ilgisini çekersiniz, iyi mi kötü mü dikkat çektiğiniz DM'e bağlıdır.</td></tr>
+                <tr><td>98-100</td><td>Başka bir düzlemden aberration bir varlığın ilgisini çekersiniz, iyi mi kötü mü dikkat çektiğiniz DM'e bağlıdır.</td></tr>
+            </table>
+        </description>
+        <sheet display="false">
+            <description>Kozmik evrene olan bağlantın rogue güçlerinle bir araya gelir.</description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_STELLAR_STRIDER_COSMIC_INSIGHT" level="3"/>
+			<grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_STELLAR_STRIDER_BLINK_ATTACK" level="3"/>
+			<grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_STELLAR_STRIDER_STELLAR_INSPIRATION" level="9"/>
+			<grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_STELLAR_STRIDER_STARS_OF_NINTH" level="13"/>
+			<grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_STELLAR_STRIDER_PLANEWALKER" level="17"/>
+        </rules>
+    </element>
+    <element name="Cosmic Insight" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_STELLAR_STRIDER_COSMIC_INSIGHT">
+        <requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_ROGUE_STELLAR_STRIDER_COSMIC_INSGHT</requirements>
+        <description>
+            <p>3. seviyeden itibaren;</p>
+            <p class="indent"><strong><em>Stellar Perception:</em></strong> Göksel cisimlere olan bağlantınız, gözlem yeteneklerinizi geliştirmenizi sağlar. Perception ve Investigation becerisinde proficiency kazanırsınız.</p>
+            <p class="indent"><strong><em>Astrological Intution:</em></strong> Gökyüzünü en az 1 saat inceleyerek yıldızları okursunuz. Bir d20 atarsınız ve 15 veya daha yüksek bir sonuç elde ederseniz, yolunuzu veya etrafınızdaki dünyayı etkileyebilecek bir göksel alamet veya olaya içgörü kazanırsınız. Zardan 20 atarsanız göksel varlıkla iletişim kurarsanız.(Bu iletişim yıldız parlaması gibi de olabilir, anlık bir görüntü veya konuşmada olabilir. Tasviri DM'e bağlıdır.)</p>
+        </description>
+        <sheet>
+            <description> Gökyüzünü en az 1 saat inceleyerek yıldızları okursunuz. Bir d20 atarsınız ve 15 veya daha yüksek bir sonuç elde ederseniz, yolunuzu veya etrafınızdaki dünyayı etkileyebilecek bir göksel alamet veya olaya içgörü kazanırsınız. Zardan 20 atarsanız göksel varlıkla iletişim kurarsanız.(Bu iletişim yıldız parlaması gibi de olabilir, anlık bir görüntü veya konuşmada olabilir. Tasviri DM'e bağlıdır.)</description>
+        </sheet>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERCEPTION" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INVESTIGATION" />
+        </rules>
+    </element>
+
+    <element name="Blink Attack" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_STELLAR_STRIDER_BLINK_ATTACK">
+        <requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_ROGUE_STELLAR_STRIDER_BLINK_ATTACK</requirements>
+        <description>
+            <p>3. seviyeden itibaren, proficiency bonusunun iki katı kadar astral gücünü kullanarak etheral düzleme anlık olarak geçiş yapabilirsin. 30 feetinde var olan bir hedefe karşı anlık olarak ortadan kaybolup arkasından avantajlı bir yakın saldırı yaparsın, saldırı sonlandığı gibi yeteneği kullandığın noktada geri belirirsin. Eğer ki saldırın başarılı olmuşsa hedef üzerinde bir imge bırakırsın, imge turunun sonunda aktifleşir ve  tüketerek kullanabileceğin yetenekler sağlar.</p>
+            <p class="indent"> Hedef eğer ki 120 feetideyse bonus aksiyondan arkasına ışınlanabilirsin ve ışınlandıktan sonra rakibe yapacağın o tur içerisindeki saldırın avanrajlı olur.</p>
+            <p class="indent"> İmgeyi reaksiyondan patlarak kişinin dikkatini dağıtırsın. Yapacağı attack roll veya saving throw dezavantajlı olur.</p>
+            <p class="indent"> Bir sonraki başarılı saldırında ekstradan rogue levelin + 1d8 kadar hasar verir.</p>
+        </description>
+        <sheet action="Aksiyon" usage="{{blink:count}}/long rest">
+            <description> Aksiyonundan 30 feetinde bulunan birisinin anlık olarak arkasına ışınlanıp avantajlı bir yakın saldırı yaparsın ve saldırın başarılıysa eğer vurmuş olduğun yerde rakibin bedeni üzerinde bir imge belirir. 
+            İmge turunun sonunda aktifleşir ve tüketerek kullanabileceğin yetenekler sağlar;
+            • Hedef eğer ki 120 feetideyse <strong>bonus aksiyondan</strong> arkasına ışınlanabilirsin ve ışınlandıktan sonra rakibe yapacağın o tur içerisindeki ilk saldırın avanrajlı olur.
+            • İmgeyi <strong>reaksiyondan</strong> patlarak kişinin dikkatini dağıtırsın. Yapacağı attack roll veya saving throw dezavantajlı olur.
+            • Bir sonraki başarılı saldırında ekstradan {{blink attack:pool}} + 1d8 kadar hasar verir.</description>
+        </sheet>
+        <rules>
+           <stat name="blink attack:pool" value="level:rogue" />
+           <stat name="blink:count" value="proficiency" />
+           <stat name="blink:count" value="proficiency" />
+        </rules>
+    </element>
+
+    <element name="Stellar Inspiration" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_STELLAR_STRIDER_STELLAR_INSPIRATION">
+        <requirements>!ID_INTERNEAL_FEATURE_REPLACEMENT_ROGUE_STELLAR_STRIDER_STELLAR_INSPIRATION</requirements>
+        <supports>Stellar Inspiration</supports>
+        <description>
+            <p>Evrenin enerjisi size yapacağınız şeyler için yeniden bir şans verir. En az 1 olucak şekilde wisdom modifier değeriniz kadar ilham zarı kazanırsınız. İstediğiniz bir eylemi yapmadan önce kendinizi ilhamlandırmak için bu haklardan birisini harcayarak eylemi avantanjlı bir şekilde yapabilirsiniz. İlham vermeniz halinde, verdiğiniz an d100 yollarsınız ve eyleminizden önce yıldızların sizin için belirlediği kader gerçekleşir</p>
+        </description>
+        <sheet usage="{{inspiration:count}}/long rest">
+            <description> Atmış olduğunuz zardan sonra yapacağınız bir eyleme avantaj kazanabilirsiniz, bunu gerçekleştirdikten sonra d100 atarsınız ve steller inspiration tablosundan var olan bir sonuç gerçekleşir.</description>
+        </sheet>
+        <rules>
+            <stat name="inspiration:count" value="1" bonus="base" />
+			<stat name="inspiration:count" value="wisdom:modifier" bonus="base" />
+        </rules>
+    </element>
+
+    <element name="Stars of Ninth" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_STELLAR_STRIDER_STARS_OF_NINTH">
+        <requirements>!ID_INTERNEAL_FEATURE_REPLACEMENT_ROGUE_STELLAR_STRIDER_STARS_OF_NINTH</requirements>
+        <description>
+            <p>Bonus aksiyonunuzdan toplamda 9 olucak şekilde, her biri üç yıldız içeren üç adet yıldız seti omuzlarınızın üzerinde süzülür ve bir dizi oluşturur. Geçen her turda setlerden bir tanesi parlar ve aktif hale gelir. Her bir yıldız seti üç yolla sizi güçlendirir ve aktif hale geldiklerinde birikecek şekilde yıldızların gücüyle dolarsınız;</p>
+            <p class="indent">• Saldırı atışlarınıza ve kurtarma zarlarınıza +1 bonus kazanırsınız.</p>
+            <p class="indent">• Silahınız, ışığın gücüyle dolu olarak ekstra 1d6 radiant hasar verir.</p>
+            <p class="indent"> • 30 fitlik bir yarıçapı aydınlatırsınız ve bu ışığa karşı  karanlık büyüsü ışığın etki ettiği alan kadarı etkisiz hale gelir.</p>
+            <p class="indent">Tüm setler aktif hale geldikten 3 tur sonra yıldızlar 30 feetinizde hedeflediğiniz her bir kişiye karşı dalışa geçer ve seçmiş olduğunuz kişiler dexterity saving throw atmaya zorlanır, geçemezlerse her bir yıldız başına 1d8 radiant hasar alır. Yıldızlar kaybolur.</p>
+            <p class="indent">Bu özellik short restte bir kere kullanılabilir.</p>
+        </description>
+        <sheet display="true" action="Bonus Aksiyon" usage="1/Short Rest">
+            <description>Toplamda 9 olucak şekilde, her biri üç yıldız içeren üç adet yıldız seti omuzlarınızın üzerinde süzülür ve bir dizi oluşturur. Geçen her turda setlerden bir tanesi parlar ve aktif hale gelir. Her bir yıldız seti üç yolla sizi güçlendirir ve aktif hale geldiklerinde birikecek şekilde yıldızların gücüyle dolarsınız;
+            • Saldırı atışlarınıza ve kurtarma zarlarınıza +1 bonus kazanırsınız.
+            • Silahınız, ışığın gücüyle dolu olarak ekstra 1d6 radiant hasar verir.
+            • 30 fitlik bir yarıçapı aydınlatırsınız ve bu ışığa karşı  karanlık büyüsü ışığın etki ettiği alan kadarı etkisiz hale gelir.
+            • Tüm setler aktif hale geldikten 3 tur sonra yıldızlar 30 feetinizde hedeflediğiniz her bir kişiye karşı dalışa geçer ve seçmiş olduğunuz kişiler dexterity saving throw atmaya zorlanır, geçemezlerse her bir yıldız başına 1d8 radiant hasar alır. Yıldızlar kaybolur.</description>
+        </sheet>
+    </element>
+
+    <element name="Planewalker" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_STELLAR_STRIDER_PLANEWALKER">
+        <requirements>!ID_INTERNEAL_FEATURE_REPLACEMENT_ROGUE_STELLAR_STRIDER_PLANEWALKER</requirements>
+        <description>
+            <p>Daha öncesinde bulunmuş olduğun bir evrene 1 saatlik odaklanmanın ardından 1 dakikalığına aktif kalıcak bir geçit açabilirsin. Bu evrende daha önce bulunmadıysan da kozmoza bağlanmaya çalışarak bunu deneyebilirsin.</p>
+            <p class="indent">Bu özelliği her iki long rest arasında yalnızca bir kere kullanabilirsin.</p>
+        </description>
+        <sheet display="true" action="1 saat ritüel" usage="1/Long Rest">
+            <description>Daha öncesinde bulunmuş olduğun bir evrene 1 saatlik odaklanmanın ardından 1 dakikalığına aktif kalıcak bir geçit açabilirsin. Bu evrende daha önce bulunmadıysan da kozmoza bağlanmaya çalışarak bunu deneyebilirsin.</description>
+        </sheet>
+    </element>
+</elements>
+
+ 

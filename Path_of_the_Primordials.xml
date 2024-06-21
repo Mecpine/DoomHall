@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <!-- Path of the Primordials -->
+    <element name="Path of the Primordials" type="Archetype" source="DOOM HALL" id="ID_DH_ARCHETYPE_PATH_OF_THE_PRIMORDIALS">
+        <supports>Primal Path</supports>
+        <description>
+            <p>Elementellerin öfkesini, gazabını ve bilgeiğini taşıyan primordail barbar, diğer barbarların aksine öfkesini evrenin en temel elementleriyle yönlendirmeyi öğrenir.</p>
+            <div element="ID_DH_ARCHETYPE_FEATURE_PRIMORDIALS_ELEMENTAL_RAGE" />
+            <div element="ID_DH_ARCHETYPE_FEATURE_PRIMORDIALS_PRIMORDIAL_KNOWLODGE" />
+            <div element="ID_DH_ARCHETYPE_FEATURE_PRIMORDIALS_ELEMENTAL_WARD" />
+            <div element="ID_DH_ARCHETYPE_FEATURE_PRIMORDIALS_IMPROVED_RAGE" />
+            <div element="ID_DH_ARCHETYPE_FEATURE_PRIMORDIALS_SOUL_OF_THE_PRIMORDIAL" />
+        </description>
+        <sheet dsiplay="false" />
+        <rules>
+            <grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_PRIMORDIALS_ELEMENTAL_RAGE" level="3" />
+            <grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_PRIMORDIALS_PRIMORDIAL_KNOWLODGE" level="3" />
+            <grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_PRIMORDIALS_ELEMENTAL_WARD" level="6" />
+            <grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_PRIMORDIALS_IMPROVED_RAGE" level="11" />
+            <grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_PRIMORDIALS_SOUL_OF_THE_PRIMORDIAL" level="14" />
+        </rules>
+    </element>
+    <element name="Elemental Rage" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_PRIMORDIALS_ELEMENTAL_RAGE">
+        <description>
+            <p>3. seviyede yolundan gideceğin elementi seçersin. Her ne zaman rage geçirirsen  seçmiş olduğun elementin güçlendirmesini kazanırsın. 6 ve 11. seviyelerde yeni bir element daha seçersin.</p>
+            <p class="indent"><b><i>Fire:</i></b> Rage geçirdiğin an ateş hasarına karşı direnç kazanırsın, 5 feetinde bulunanlar etrafına saçmış olduğun ateşlerden kaçınmak için Dexterity saving throw atarlar. Geçemezlerse barbar levelin kadar hasar alırlar, geçerlerse hasarın yarısını alırlar. Yapacağın saldırılar ekstradan 1d8 ateş hasarı uygular.</p>
+            <p class="indent"><b><i>Air:</i></b> Rage geçirdiğin an thunder hasarına karşı direnç kazanırsın ve hareket hızı değerin 10 artar. 15 feetindekiler Strength saving throw atmaya zorlanırlar, geçemedikleri takdirde 5 feet geriye itilip prone duruma düşerler. Geçerlerse sadece 5 feet geriye itilirler.</p>
+            <p class="indent"><b><i>Lightning:</i></b> Rage geçirdiğin an lightning hasarına karşı direnç kazanırsın. 5 feetindekiler senden dışarı çıkan yıldırıma karşı Constitution save atarlar geçemezlerse sonraki turlarının başına kadar stun olurlar. Metal eşya kuşanan kişiler stun yerine paralize olurlar.</p>
+            <p class="indent"><b><i>Cold:</i></b> Rage geçirdiğin an cold hasarına karşı direnç kazanırsın ve buz tabanlı zeminler senin için difficult terrain sayılmaz. Merkezi sen olucak şekilde 10 feetine kadar uzanan bir buz yeri kaplar ve bu alan difficult terrain sayılır, alan seninle birlikte hareket eder. Bu alan su gibi yapıları da donduracağından üzerinde yürünebilir bir zemin oluşabilir. Yapacağın saldırılar ekstradan 1d6 soğuk hasarı uygular.</p>
+            <p class="indent"><b><i>Earth:</i></b> Rage geçirdiğin an AC değerin 5 feetindeki düşman sayısı başına 1 artar. Her tur başında barbar levelin/3 kadar temporary hp kazanırsın. Poison hasarına karşı resistance kazanırsın. Saldırıların ekstradan force hasar türünde 1d6 hasar uygular.</p>
+            <p class="indent">Eğer ki rageiniz saving throw attırıyorsa, saving throw DC'niz 8 + profciency bonusunuz + constitution modifier değeriniz kadardır.</p>
+        </description>
+        <sheet action="Rage">
+            <description>Rage geçirdiğin zaman elementinin gücünü açığa çıkarırsın.</description>
+        </sheet>
+        <rules>
+            <select type="Archetype Feature" name="Elementral Rage (Level 3)" supports="Primordials Elemental Rage" level="3" />
+            <select type="Archetype Feature" name="Elementral Rage (Level 6)" supports="Primordials Elemental Rage" level="6" />
+            <select type="Archetype Feature" name="Elementral Rage (Level 11)" supports="Primordials Elemental Rage" level="11" />
+            <stat name="elemental rage:dc" value="8"/>
+            <stat name="elemental rage:dc" value="proficiency" />
+            <stat name="elemental rage:dc" value="constitution:modifier" />
+            <stat name="earth rage:count" value="1" bonus="base" />
+			<stat name="earth rage:count" value="2" level="6" bonus="base" />
+			<stat name="earth rage:count" value="3" level="9" bonus="base" />
+			<stat name="earth rage:count" value="4" level="12" bonus="base" />
+			<stat name="earth rage:count" value="5" level="15" bonus="base" />
+			<stat name="earth rage:count" value="6" level="18" bonus="base" />
+            <stat name="fire rage:dice:amount" value="1" bonus="base" />  
+            <stat name="air rage:dice:amount" value="1" bonus="base" />    
+            <stat name="lightning rage:dice:amount" value="1" bonus="base" />  
+            <stat name="cold rage:dice:amount" value="1" bonus="base" />
+            <stat name="earth rage:dice:amount" value="1" bonus="base" />  
+        </rules>
+    </element>
+    
+    <!-- elemental rage supports -->
+    <element name="Fire" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_PRIMORDIALS_ELEMENTAL_RAGE_FIRE">
+        <supports>Primordials Elemental Rage</supports>
+        <description>
+            <p>Rage geçirdiğin an ateş hasarına karşı direnç kazanırsın, 5 feetinde bulunanlar etrafına saçmış olduğun ateşlerden kaçınmak için Dexterity saving throw atarlar. Geçemezlerse barbar levelin kadar hasar alırlar, geçerlerse hasarın yarısını alırlar. Yapacağın saldırılar ekstradan 1d8 ateş hasarı uygular.</p>
+        </description>
+        <sheet>
+            <description>Rage geçirdiğin an 5 feetinde bulunanlar etrafına saçmış olduğun ateşlerden kaçınmak için DC{{elemental rage:dc}} Dexterity saving throw atarlar. Geçemezlerse {{level:barbarian}}  ateş hasarı alırlar, geçerlerse hasarın yarısını alırlar. Yapacağın saldırılar ekstradan {{fire rage:dice:amount}}d8 ateş hasarı uygular.</description>
+        </sheet>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FIRE" />
+        </rules>
+    </element>
+    
+    <element name="Air" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_PRIMORDIALS_ELEMENTAL_RAGE_AIR">
+        <supports>Primordials Elemental Rage</supports>
+        <description>
+            <p>Rage geçirdiğin an thunder hasarına karşı direnç kazanırsın ve hareket hızı değerin 10 artar. 15 feetindekiler Strength saving throw atmaya zorlanırlar, geçemedikleri takdirde 5 feet geriye itilip prone duruma düşerler. Geçerlerse sadece 5 feet geriye itilirler.Yapacağın saldırılar ekstradan 1d6 thunder damage uygular.</p>
+        </description>  
+        <sheet>
+           <description>Rage geçirdiğin an hareket hızı değerin 10 artar. 15 feetindekiler DC{{elemental rage:dc}} Strength saving throw atmaya zorlanırlar, geçemedikleri takdirde 5 feet geriye itilip prone duruma düşerler. Geçerlerse sadece 5 feet geriye itilirler.Yapacağın saldırılar ekstradan {{air rage:dice:amount}}d6 thunder damage uygular.</description>
+        </sheet>
+        <rules>
+           <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_THUNDER" />
+           <stat name="speed:misc" value="10" />
+        </rules>
+    </element>
+
+    <element name="Lightning" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_PRIMORDIALS_ELEMENTAL_RAGE_LIGHTNING">
+        <supports>Primordials Elemental Rage</supports>
+        <description>
+            <p>Rage geçirdiğin an lightning hasarına karşı direnç kazanırsın. 5 feetindekiler senden dışarı çıkan yıldırıma karşı Constitution save atarlar geçemezlerse sonraki turlarının başına kadar stun olurlar. Metal eşya kuşanan kişiler stun yerine paralize olurlar.</p>
+        </description>
+        <sheet>
+            <description>Rage geçirdiğin an 5 feetindekiler senden dışarı çıkan yıldırıma karşı DC{{elemental rage:dc}} Constitution save atarlar geçemezlerse sonraki turlarının başına kadar stun olurlar. Metal eşya kuşanan kişiler stun yerine paralize olurlar.Yapacağın saldırılar ekstradan {{lightning rage:dice:amount}}d6 lightning damage uygular.</description>
+        </sheet>
+        <rules>
+           <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_LIGHTNING" />
+        </rules>
+    </element>
+
+    <element name="Cold" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_PRIMORDIALS_ELEMENTAL_RAGE_COLD">
+        <supports>Primordials Elemental Rage</supports>
+        <description>
+            <p>Rage geçirdiğin an cold hasarına karşı direnç kazanırsın ve buz tabanlı zeminler senin için difficult terrain sayılmaz. Merkezi sen olucak şekilde 10 feetine kadar uzanan bir buz yeri kaplar ve bu alan difficult terrain sayılır, alan seninle birlikte hareket eder. Bu alan su gibi yapıları da donduracağından üzerinde yürünebilir bir zemin oluşabilir. Yapacağın saldırılar ekstradan 1d6 soğuk hasarı uygular.</p>
+        </description>
+        <sheet>
+            <description>Rage geçirdiğin merkezi sen olucak şekilde 10 feetine kadar uzanan bir buz yeri kaplar ve bu alan difficult terrain sayılır, alan seninle birlikte hareket eder. Bu alan su gibi yapıları da donduracağından üzerinde yürünebilir bir zemin oluşabilir. Buz tabanlı zeminler senin için difficult terrain sayılmaz.  Yapacağın saldırılar ekstradan {{cold rage:dice:amount}}d6 soğuk hasarı uygular.</description>
+        </sheet>
+        <rules>
+           <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_COLD" />
+        </rules>
+    </element>
+
+    <element name="Earth" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_PRIMORDIALS_ELEMENTAL_RAGE_EARTH">
+        <supports>Primordials Elemental Rage</supports>
+        <description>
+            <p>Rage geçirdiğin an AC değerin 5 feetindeki düşman sayısı başına 1 artar. Her tur başında barbar levelin/3 kadar temporary hp kazanırsın. Poison hasarına karşı resistance kazanırsın. Saldırıların ekstradan force hasar türünde 1d6 hasar uygular.</p>
+        </description>
+        <sheet>
+            <description>Rage geçirdiğin an AC değerin 5 feetindeki düşman sayısı başına 1 artar. Her tur başında barbar {{earth rage:count}} temporary hp kazanırsın. Saldırıların ekstradan force hasar türünde {{earth rage:dice:amount}}d6 hasar uygular.</description>
+        </sheet>
+        <rules>
+           <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON" />
+        </rules>
+    </element>
+
+    <element name="Primordial Knowlodge" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_PRIMORDIALS_PRIMORDIAL_KNOWLODGE">
+        <description>
+            <p>Primordial diline ve nature skilline profciency kazanırsın. Eğer ki bu dil ve skill checklerden en az birisine sahipsen başka bir dil veya barbar skillinde bu hakkı kullanabilirsin.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <select type="Language" name="Language (Primordial Knowlodge)" supports="Standard||Exotic" default="ID_LANGUAGE_PRIMORDIAL"/>
+            <select type="Proficiency" name="Skill Proficiency (Primordial Knowlodge)" supports="Skill,Barbarian" default="ID_PROFICIENCY_SKILL_NATURE"/>
+        </rules>
+    </element>
+
+    <element name="Elemental Ward" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_PRIMORDIALS_ELEMENTAL_WARD">
+        <description>
+            <p>Eğer ki öğrenmiş olduğun element türünde hasar vuran bir etkene karşı saving throw atarsan, reaksiyonunu harcayarak hasarı yarılayabilirsin, eğer ki saving throwu geçmişsen hasar almazsın. İstersen kendin yerine 30 feetinde bulunan bir başkası üzerinde raksiyonunu harcayarak bu özelliği kullanabilirsin.</p>
+        </description>
+        <sheet action="Reaksiyon">
+            <description>Eğer ki öğrenmiş olduğun element türünde hasar vuran bir etkene karşı saving throw atarsan, reaksiyonunu harcayarak hasarı yarılayabilirsin, eğer ki saving throwu geçmişsen hasar almazsın. İstersen kendin yerine 30 feetinde bulunan bir başkası üzerinde raksiyonunu harcayarak bu özelliği kullanabilirsin.</description>
+        </sheet>
+    </element>
+
+    <element name="Improved Rage" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_PRIMORDIALS_IMPROVED_RAGE">
+        <description>
+            <p>Elementlerin saldırılara eklenen hasar değerleri fazladan bir zar daha kazanır ayrıca öfken açıkken hangi elementin öfkesiyle güçlenmişsen o elemente ait şu ekstralara erşirsin;</p>
+            <p class="indent"><b><i>Fire:</i></b> Her ne zaman bir hedefe saldırırsan, saldırıların hedeflemiş olduğun kişinin arkasına doğru 10 feet konik alana  2d8 ateş hasarı vuran alevler sıçratır.</p>
+            <p class="indent"><b><i>Air:</i></b> Bonus Aksiyondan dash veya disengage alabilirsin. Hareket hızı değerin kadar uçma hızı kazanırsın.</p>
+            <p class="indent"><b><i>Lightning:</i></b> Her ne zaman birisi sana başarılı bir arbede saldırı gerçekleştirirse kişiye 5 lightning hasar geri yansıtırsın. Bu hasar metal zırh veya silah kuşananlar için 8 olur.</p>
+            <p class="indent"><b><i>Cold:</i></b> Hızı azaltılmış rakiplere karşı saldırılarının krit menzili 1 düşer. Kritik bir vuruş gerçkleştirirsen rakip senin sonraki turunun başına kadar incapacitated sayılır.</p>
+            <p class="indent"><b><i>Earth:</i></b> Başarılı saldırıların rakipleri constitution saving throw atmaya zorlar, geçemezlerse sonraki turlarının sonuna kadar stunlanırlar.</p>
+        </description>
+        <sheet display="false"> 
+            <description> Elementlerin saldırılara eklenen hasar değerleri fazladan bir zar daha kazanır ayrıca öfken açıkken hangi elementin öfkesiyle güçlenmişsen o elemente ait ekstralara erişirsin. Ekstralar seçmiş olduğun element türüne göre belirlenir.</description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_PRIMORDIALS_IMPROVED_RAGE_FIRE" requirements="ID_DH_ARCHETYPE_FEATURE_PRIMORDIALS_ELEMENTAL_RAGE_FIRE" />
+            <grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_PRIMORDIALS_IMPROVED_RAGE_AIR" requirements="ID_DH_ARCHETYPE_FEATURE_PRIMORDIALS_ELEMENTAL_RAGE_AIR" />
+            <grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_PRIMORDIALS_IMPROVED_RAGE_LIGHTNING" requirements="ID_DH_ARCHETYPE_FEATURE_PRIMORDIALS_ELEMENTAL_RAGE_LIGHTNING" />
+            <grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_PRIMORDIALS_IMPROVED_RAGE_COLD" requirements="ID_DH_ARCHETYPE_FEATURE_PRIMORDIALS_ELEMENTAL_RAGE_COLD" />
+            <grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_PRIMORDIALS_IMPROVED_RAGE_EARTH" requirements="ID_DH_ARCHETYPE_FEATURE_PRIMORDIALS_ELEMENTAL_RAGE_EARTH" />
+        </rules>
+    </element>
+    <element name="Improved Rage (Fire)" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_PRIMORDIALS_IMPROVED_RAGE_FIRE">
+        <description>Her ne zaman bir hedefe saldırırsan, saldırıların hedeflemiş olduğun kişinin arkasına doğru 10 feet konik alana  2d8 ateş hasarı vuran alevler sıçratır.</description>
+        <sheet>
+            <description>Her ne zaman bir hedefe saldırırsan, saldırıların hedeflemiş olduğun kişinin arkasına doğru 10 feet konik alana  2d8 ateş hasarı vuran alevler sıçratır.</description>
+        </sheet>
+        <rules>
+            <stat name="fire rage:dice:amount" value="2" bonus="base" />
+        </rules>
+    </element>
+    <element name="Improved Rage (Air)" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_PRIMORDIALS_IMPROVED_RAGE_AIR">
+        <description>Bonus Aksiyondan disengage alabilirsin. Hareket hızı değerin kadar uçma hızı kazanırsın.</description>
+        <sheet>
+            <description>Bonus Aksiyondan disengage alabilirsin.</description>
+        </sheet>
+        <rules>
+            <stat name="air rage:dice:amount" value="2" bonus="base" />
+            <stat name="speed:fly" value="speed" bonus="base" />
+        </rules>
+    </element>
+    <element name="Improved Rage (Lightning)" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_PRIMORDIALS_IMPROVED_RAGE_LIGHTNING">
+        <description>Her ne zaman birisi sana başarılı bir arbede saldırı gerçekleştirirse kişiye 5 lightning hasar geri yansıtırsın. Bu hasar metal zırh veya silah kuşananlar için 8 olur.</description>
+        <sheet>
+            <description> Her ne zaman birisi sana başarılı bir arbede saldırı gerçekleştirirse kişiye 5 lightning hasar geri yansıtırsın. Bu hasar metal zırh veya silah kuşananlar için 8 olur.</description>
+        </sheet>
+        <rules>
+            <stat name="lightning rage:dice:amount" value="2" bonus="base" />
+        </rules>
+    </element>
+    <element name="Improved Rage (Cold)" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_PRIMORDIALS_IMPROVED_RAGE_COLD">
+        <description>Hızı azaltılmış rakiplere karşı saldırılarının krit menzili 1 düşer. Kritik bir vuruş gerçkleştirirsen rakip senin sonraki turunun başına kadar incapacitated sayılır.</description>
+        <sheet>
+            <description>Hızı azaltılmış rakiplere karşı saldırılarının krit menzili 1 düşer. Kritik bir vuruş gerçkleştirirsen rakip senin sonraki turunun başına kadar incapacitated sayılır.</description>
+        </sheet>
+        <rules>
+            <stat name="cold rage:dice:amount" value="2" bonus="base" />
+        </rules>
+    </element>
+    <element name="Improved Rage (Earth)" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_PRIMORDIALS_IMPROVED_RAGE_EARTH">
+        <description>Başarılı saldırıların rakipleri constitution saving throw atmaya zorlar, geçemezlerse sonraki turlarının sonuna kadar veya tekrardan hasar alana kadar stunlanırlar.</description>
+        <sheet>
+            <description>Başarılı saldırıların rakipleri DC{{elemental rage:dc}} Constitution saving throw atmaya zorlar, geçemezlerse sonraki turlarının sonuna kadar veya tekrardan hasar alana kadar stunlanırlar.</description>
+        </sheet>
+        <rules>
+            <stat name="earth rage:dice:amount" value="2" bonus="base" />
+        </rules>
+    </element>
+    <element name="Soul of the Primordial" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_PRIMORDIALS_SOUL_OF_THE_PRIMORDIAL">
+        <description>
+            <p>Tüm element türlerine erişirsin, öfke durumundayken bonus aksiyonundan öfke element tipini değiştirebilirsin</p>
+        </description>
+        <sheet action="Bonus Aksiyon">
+            <description>Öfke durumundayken bonus aksiyonundan öfke element tipini değiştirebilirsin.</description>
+        </sheet>
+        <rules>
+            <select type="Archetype Feature" name="Soul of the Primordial (Level 14)" supports="Primordials Elemental Rage" level="14" />
+            <select type="Archetype Feature" name="Soul of the Primordial (Level 14)" supports="Primordials Elemental Rage" level="14" />
+        </rules>
+    </element>
+</elements>
+
+
+
+
+
+   

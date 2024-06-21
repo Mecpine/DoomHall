@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="Electro Jumper" type="Archetype" source="DOOM HALL" id="ID_DH_ARCHETYPE_ARTIFICER_ELECTRO_JUMPER">
+        <supports>Artificer Specialist</supports>
+        <description>
+            <p>Electro Jumper dalında uzmanlaşan artificerler silahlarını elektrikle bir hale getirirler. Bu silahlar artificer büyüsünü taşır ve patlayıcı veya elektriği kuşanmasına yardımcı olurlar. Sarsan yıldırımın gücü ile rakiplerini afallatabilir veya atlatabilirsin.</p>
+            <div element="ID_DH_ARCHETYPE_FEATURE_KNOWLODGE_OF_FUTURE" />
+            <div element="ID_DH_ARCHETYPE_FEATURE_ELECTRO_JUMPER_SPELLS" />
+            <div element="ID_DH_ARCHETYPE_FEATURE_JOLT_GUNS" />
+            <div element="ID_DH_ARCHETYPE_FEATURE_ELECTRICITY" />
+            <div element="ID_DH_ARCHETYPE_FEATURE_EXTRA_ATTACK" />
+            <div element="ID_DH_ARCHETYPE_FEATURE_ELECTRICITY_UP" />
+            <div element="ID_DH_ARCHETYPE_FEATURE_ELECTRO_WORLD" />
+        </description>
+            <sheet display="false" />
+        <rules>
+            <grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_KNOWLODGE_OF_FUTURE" level="3" />
+			<grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_ELECTRO_JUMPER_SPELLS" level="3" />
+			<grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_JOLT_GUNS" level="3" />
+			<grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_ELECTRICITY" level="3" />
+			<grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_EXTRA_ATTACK" level="5" />
+			<grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_ELECTRICITY_UP" level="9" />
+			<grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_ELECTRO_WORLD" level="15" />
+        </rules>
+    </element>
+
+    <element name="Knowlodge of Future" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_KNOWLODGE_OF_FUTURE">
+        <description>
+            <p><em>3. Seviye Electro Jumper Özelliği</em></p>
+            <p>Smith tool ve firearm proficiency kazanırsın. Eğer Smith tool profun varsa yerine başka bir tool proficiency alabilirsin.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="profciency" id="ID_WOTC_DMG_PROFICIENCY_WEAPON_FIREARMS" />
+            <select type="Proficiency" name="Tool Proficiency, Knowlodge of Future" supports="Artisan tools" default="ID_PROFICIENCY_TOOL_PROFICIENCY_SMITHS_TOOLS" />
+        </rules>
+    </element>
+
+    <element name="Electro Jumper Spells" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_ELECTRO_JUMPER_SPELLS">
+        <description>
+            <p><em>3. Seviye Electro Jumper Özelliği</em></p>
+            <p>Bu subclassta belirli seviyelere geldiğinde, Electro Jumper büyü listesinde göreceğin büyülere erişirsin. Bunlar senin için artificer büyüsü olarak sayılır ancak hazırladığın artificer büyüleri ile sayılmaz.</p>
+            <h5 class="caption">Electro Jumper Büyüleri</h5>
+            <table>
+                <thead>
+                    <tr><td>Artificer Level</td><td>Spells</td></tr>
+                </thead>
+                <tr><td>3rd</td><td><em>thunderwave, zephyr strike</em></td></tr>
+				<tr><td>5th</td><td><em>kinetic jaunt, misty step</em></td></tr>
+				<tr><td>9th</td><td><em>iightning arrow, haste</em></td></tr>
+				<tr><td>13th</td><td><em>freedom of movement, electrocute</em></td></tr>
+				<tr><td>17th</td><td><em>far step, conjure volley</em></td></tr>
+            </table>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_THUNDERWAVE" spellcasting="Artificer" level="3" prepared="true" />
+			<grant type="Spell" id="ID_XGTE_SPELL_ZEPHYR_STRIKE" spellcasting="Artificer" level="3" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_SCOC_SPELL_KINETIC_JAUNT" spellcasting="Artificer" level="5" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_MISTY_STEP" spellcasting="Artificer" level="5" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_LIGHTNING_ARROW" spellcasting="Artificer" level="9" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_HASTE" spellcasting="Artificer" level="9" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_FREEDOM_OF_MOVEMENT" spellcasting="Artificer" level="13" prepared="true" />
+			<grant type="Spell" id="ID_DH_SPELL_ELECTROCUTE" spellcasting="Artificer" level="13" prepared="true" />
+			<grant type="Spell" id="ID_XGTE_SPELL_FAR_STEP" spellcasting="Artificer" level="17" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_CONJURE_VOLLEY" spellcasting="Artificer" level="17" prepared="true" />
+        </rules>
+    </element>
+
+    <element name="Jolt Guns" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_JOLT_GUNS">
+        <description>
+            <p><em>3. Seviye Electro Jumper Özelliği</em></p>
+            <p>Elektrik bilimi üzerinde olan çalışmaların sonucunda, elektriği verimle şekilde kullanabileceğin sonuçlar elde ettin. Aksiyondan smith tool'un ile elektrik büyünü ayakkabı ve firearm silahlarına aktararak onları electricity haline getirebilirsin.</p>
+            <p class="indent"> Bu silahı ve zırh kuşanırken şu özelliklere erişirsin:</p>
+            <ul>
+                <li>Bu tabancayı kullandığın sürece senin arcane focusun gibi sayılır.</li>
+                <li>Silah sana bağlanmıştır ve disarmlanamaz, onla yapmış olduğun saldırılar magical sayılır.</li>
+                <li>Electricity ayakkabını kuşandığında doğal zorlu alanlardan etkilenmezsin.</li>
+                <li>Ayakkabıların senin iraden dışında senden çıkarılamaz, büyünle sana bağlanmıştır.</li>
+                <li>Ayakkabıyı kuşanıyorken lightning hasar türüne resistance kazanırsın.</li>
+            </ul>
+            <p clas="indent">Ayakkabı ve silahlar sen ölene kadar, yeni bir silah veya ayakkabıyı büyüleyene kadar ya da ölene kadar Electricity olarak sayılır.</p>
+        </description>
+        <sheet usage="Aksiyon">
+            <description>Elinde smith toolun varken, aksiyonundan bir firearm silahı ve ayakkabıyı electricity hale getirebilirsin. Getirdiğind şu etkileri kazanırsın:  &#13;
+            • Bu tabancayı kullandığın sürece senin arcane focusun gibi sayılır. &#13;
+            • Silah sana bağlanmıştır ve disarmlanamaz, onla yapmış olduğun saldırılar magical sayılır. Saldırılarında DEX yerine INT modifier değerini kullanabilirsin. &#13;
+            • Electricity ayakkabını kuşandığında doğal zorlu alanlardan etkilenmezsin. &#13;
+            • Ayakkabıların senin iraden dışında senden çıkarılamaz, büyünle sana bağlanmıştır. &#13;
+            Ölene kadar ya da başka bir şeyi electricity hale getirene kadar eşyaların electricity halini kaybetmez.</description>
+        </sheet>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_LIGHTNING" />
+        </rules>
+    </element>
+    
+    <element name="Electricity" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_ELECTRICITY">
+        <description>
+            <p><em>3. Seviye Artificer Özelliği</em></p>
+            <p>Silahını ve ayakkabılarını kostümüze edebilirsin. Kostümüze ederken short veya long restte değiştirebildiğin iki seçeneğin olur: 
+            •  Zipper ve Blaster; silahınla birlikte saldırırken STR veya DEX'in yerine INT kullanabilirsin.</p>
+            <p class="indent"><strong><em>Zipper:</em></strong> Elektriğin enerji dolu ve kıvrak halini yüklediğin bu modda belirtilen özellikleri kazanırsın:</p>
+            <p style="text-indent: -1em; margin-left: 1em"><strong>Zipper Gun:</strong> Birisine karşı electricity weaponından ateşlenmiş başarılı saldırın sonucunda kişi ekstradan 1d8 elektrik hasarı alır ve darbene karşı DC{{electricity:dc}}CON save atmaya zorlanır, geçemezse bir turluğuna hareket hızı 10 azalır.</p>
+            <p style="text-indent: -1em; margin-left: 1em; margin-bottom: 20px"><strong>Zipper Shoes:</strong> Birisi tarafından ele geçirilmemiş 5 feetindeki bir yere aop tetiklemeden hızlıca hareket edebilirsin ve 20 feetinde kalan birisi varsa reaksiyonundan ona silahlı saldırı uygularsın.(Silahlı saldırın eğer electricity silahın tarafından gerçekleşmişse aynı etkileri uygular.) Hareket hızı değerin 5 artar.</p>
+            <p class="indent"><strong><em>Blaster:</em></strong>Elektriğin patlayıcı halini yüklediğin bu modda belirtilen özellikleri kazanırsın:</p>
+            <p style="text-indent: -1em; margin-left: 1em"><strong>Blaster Gun:</strong> Mermin hedefe isabet ettikten sonra patlayarak hedefi merkez alacak şekilde 10 feetindeki herkesi dexterity saving throw atmaya zorlar, geçemeyenlere 1d10 elektrik hasarı verir geçenler hasarın sadece yarısını alır. Metal zırh giyenler hasarın iki katını alırlar.</p>
+            <p style="text-indent: -1em; margin-left: 1em; margin-bottom: 20px"><strong>Blaster Shoes:</strong> Sana karşı yapılan yakın menzilli saldırıya reaksiyon alarak; elektrikler ayakkabından patlayarak çıkar ve zıplayarak 15 feet mesafende ele geçirilmemiş bir yere doğru  inersin. Patlamanın 10 feetinde  kalanlar dexterity saving throw atmaya zorlanır, geçemezlerse 1d10 elektrik hasarı alırlar. Metal zırh giyenler hasarın iki katını alırlar.</p>
+        </description>
+        <sheet>
+            <description>Electricity ekipmanlarını kişiselleştirebilirsin. Her bir modelin kendine has özelliği vardır. Electricity silahınla saldırırken, hasar ve tutturma zarlarına bonus olark DEX yerine INT modifierını kullanabilirsin. 
+            Short veya long restte, elinde smith toolun varken ekipmanlarının modelini değiştirebilirsin.</description>
+        </sheet>
+        <rules>
+            <select type="Archetype Feature" name="Electricity Modelleri, Electro Jumper" supports="Electricity Modelleri" optional="True" />
+            <stat name="electricity:dc" value="8"/>
+            <stat name="eelectricity:dc" value="proficiency" />
+            <stat name="electricity:dc" value="intelligence:modifier" />
+        </rules>
+    </element>
+    <element name="Zipper" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_ELECTRO_JUMPER_ELECTRCITY_MODELLERI_ZIPPER">
+        <compendium display="false" />
+        <supports>Electricity Modelleri</supports>
+        <description>
+            <p>Ekipmanlarını elektriğin akımıyla dizayn etmişsindir. Alttaki özelliklere sahiptir:</p>
+            <p><strong>Zipper Gun:</strong> Birisine karşı electricity weaponından ateşlenmiş başarılı saldırın sonucunda kişi ekstradan 1d8 elektrik hasarı alır ve darbene karşı CON save atmaya zorlanır, geçemezse bir turluğuna hareket hızı 10 azalır.</p>
+            <p><strong>Zipper Shoes:</strong> Her ne zaman birisi 5 feetine girerse, reaksiyondan birisi tarafından ele geçirilmemiş 5 feetindeki bir yere aop tetiklemeden hızlıca hareket edebilirsin ve 20 feetinde kalan birisi varsa reaksiyonunun devamı olarak silahlı saldırı uygulayabilirsin.(Silahlı saldırın eğer electricity silahın tarafından gerçekleşmişse aynı etkileri uygular.) Hareket hızı değerin 5 artar.</p>
+        </description>
+        <sheet usage="Electricity Modelleri">
+            <description>Ekipmanlarını elektriğin akımıyla dizayn etmişsindir.</description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_ELECTRO_JUMPER_ELECTRICITY_MODELLERI_ZIPPER_ZIPPER_GUN" />
+            <grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_ELECTRO_JUMPER_ELECTRICITY_MODELLERI_ZIPPER_ZIPPER_SHOES" />
+        </rules>
+    </element>
+    <element name="Zipper Gun" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_ELECTRO_JUMPER_ELECTRICITY_MODELLERI_ZIPPER_ZIPPER_GUN">
+        <compendium display="false" />
+        <description>
+            <p>Birisine karşı electricity weaponından ateşlenmiş başarılı saldırın sonucunda kişi ekstradan 1d8 elektrik hasarı alır ve darbene karşı CON save atmaya zorlanır, geçemezse bir turluğuna hareket hızı 10 azalır.</p>
+        </description>
+        <sheet>
+            <description>Birisine karşı electricity weaponından ateşlenmiş başarılı saldırın sonucunda kişi ekstradan {{zipper gun:dice:amount}}d8 elektrik hasarı alır ve darbene karşı CON save atmaya zorlanır, geçemezse bir turluğuna hareket hızı 10 azalır.</description>
+        </sheet>
+        <rules>
+            <stat name="zipper gun:dice:amount" value="1" bonus="base" />
+        </rules>
+    </element>
+    <element name="Zipper Shoes" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_ELECTRO_JUMPER_ELECTRICITY_MODELLERI_ZIPPER_ZIPPER_SHOES">
+        <compendium display="false" />
+        <description>
+            <p>Her ne zaman birisi 5 feetine girerse, reaksiyondan birisi tarafından ele geçirilmemiş 5 feetindeki bir yere aop tetiklemeden hızlıca hareket edebilirsin ve 20 feetinde kalan birisi varsa reaksiyonunun devamı olarak silahlı saldırı uygulayabilirsin.(Silahlı saldırın eğer electricity silahın tarafından gerçekleşmişse aynı etkileri uygular.) Hareket hızı değerin 5 artar.</p>
+        </description>
+        <sheet action="Reakisyon">
+            <description>Her ne zaman birisi 5 feetine girerse, reaksiyondan birisi tarafından ele geçirilmemiş {{zipper shoes:amount}} feetindeki bir yere aop tetiklemeden hızlıca hareket edebilirsin ve {{zipper shoes:attack range:amount}} feetinde kalan birisi varsa reaksiyonunun devamı olarak silahlı saldırı uygulayabilirsin.(Silahlı saldırın eğer electricity silahın tarafından gerçekleşmişse aynı etkileri uygular.)</description>
+        </sheet>
+        <rules>
+            <stat name="speed:misc" value="5" />
+            <stat name="zipper shoes:amount" value="5" bonus="base" />
+            <stat name="zipper shoes:attack range:amount" value="20" bonus="base" />
+        </rules>
+    </element>
+    <element name="Blaster" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_ELECTRO_JUMPER_ELECTRCITY_MODELLERI_BLASTER">
+        <compendium display="false" />
+        <supports>Electricity Modelleri</supports>
+        <description>
+            <p>Ekipmanlarını elektriğin patlayıcılığı ile dizayn etmişsindir. Alttaki özelliklere sahip olursun:</p>
+            <p><strong>Blaster Gun:</strong> Mermin hedefe isabet ettikten sonra patlayarak hedefi merkez alacak şekilde, isabet alan kişi dahil, 10 feetindeki herkesi dexterity saving throw atmaya zorlar, geçemeyenlere 1d8 elektrik hasarı verir, geçenler hasarın sadece yarısını alır. Metal zırh giyenler hasarın iki katını alırlar.</p>
+            <p><strong>Blaster Shoes:</strong> Sana karşı yapılan yakın menzilli saldırıya reaksiyon alarak; elektrikler ayakkabından patlayarak çıkar ve zıplayarak 15 feet mesafende ele geçirilmemiş bir yere doğru  inersin. Patlamanın 10 feetinde  kalanlar dexterity saving throw atmaya zorlanır, geçemezlerse 1d8 elektrik hasarı alırlar. Metal zırh giyenler hasarın iki katını alırlar.</p>
+        </description>
+        <sheet usage="Electricity Modelleri">
+            <description>Ekipmanlarını elektriğin patlayıcılığı ile dizayn etmişsindir.</description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_ELECTRO_JUMPER_ELECTRICITY_MODELLERI_BLASTER_BLASTER_GUN" />
+            <grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_ELECTRO_JUMPER_ELECTRICITY_MODELLERI_BLASTER_BLASTER_SHOES" />
+        </rules>
+    </element>
+    <element name="Blaster Gun" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_ELECTRO_JUMPER_ELECTRICITY_MODELLERI_BLASTER_BLASTER_GUN">
+        <compendium display="false" />
+        <description>
+            <p>Mermin hedefe isabet ettikten sonra patlayarak hedefi merkez alacak şekilde 10 feetindeki herkesi dexterity saving throw atmaya zorlar, geçemeyenlere 1d10 elektrik hasarı verir geçenler hasarın sadece yarısını alır. Metal zırh giyenler hasarın iki katını alırlar.</p>
+        </description>
+        <sheet>
+            <description>Mermin hedefe isabet ettikten sonra patlayarak hedefi merkez alacak şekilde {{blaster gun:range:amount}} feetindeki herkesi dexterity saving throw atmaya zorlar, geçemeyenlere {{blaster gun:dice:amount}}d10 elektrik hasarı verir geçenler hasarın sadece yarısını alır. Metal zırh giyenler hasarın iki katını alırlar.</description>
+        </sheet>
+        <rules>
+            <stat name="blaster gun:dice:amount" value="1" bonus="base" />
+            <stat name="blaster gun:range:amount" value="10" bonus="base" />
+        </rules>
+    </element>
+    <element name="Blaster Shoes" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_ELECTRO_JUMPER_ELECTRICITY_MODELLERI_BLASTER_BLASTER_SHOES">
+        <compendium display="false" />
+        <description>
+            <p>Sana karşı yapılan yakın menzilli saldırıya reaksiyon alarak; elektrikler ayakkabından patlayarak çıkar ve zıplayarak 15 feet mesafende ele geçirilmemiş bir yere doğru  inersin. Patlamanın 10 feetinde  kalanlar dexterity saving throw atmaya zorlanır, geçemezlerse 1d8 elektrik hasarı alırlar. Metal zırh giyenler hasarın iki katını alırlar.</p>
+        </description>
+        <sheet action="Reaksiyon">
+            <description>Sana karşı yapılan yakın menzilli saldırıya reaksiyon alarak; elektrikler ayakkabından patlayarak çıkar ve zıplayarak 15 feet mesafende ele geçirilmemiş bir yere doğru  inersin. Patlamanın {{blaster shoes:range:amount}} feetinde  kalanlar dexterity saving throw atmaya zorlanır, geçemezlerse {{blaster shoes:dice:amount}}d8 elektrik hasarı alırlar. Metal zırh giyenler hasarın iki katını alırlar.</description>
+        </sheet>
+        <rules>
+            <stat name="blaster shoes:dice:amount" value="1" bonus="base" />
+            <stat name="blaster shoes:range:amount" value="10" bonus="base" />
+        </rules>
+    </element>
+    <element name="Extra Attack" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_EXTRA_ATTACK">
+		<description>
+			<p><em>5. Seviye Artificer Özelliği</em></p>
+			<p>Turunda attack aksiyonu almışsan bir yerine iki kere saldırabilirsin.</p>
+		</description>
+		<sheet>
+			<description>Turunda attack aksiyonu almışsan bir yerine iki kere saldırabilirsin.</description>
+		</sheet>
+		<rules>
+			<stat name="extra attack:count" value="2" level="5" bonus="extra attack" />
+		</rules>
+	</element>
+    <element name="Electricity-UP!" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_ELECTRICITY_UP">
+        <description>
+            <p><em>9. Seviye Artificer Özelliği</em></p>
+            <p>Elektrik gücün artmasıyla birlikte ekipmanlarının gücü çılgın! seviyeye erişmiştir:
+                <ul>
+                    <li>Electricity ekipmanların ile vermiş olduğun elektrik hasar zarları 1 tane daha artar.(1d8' den 2d8 gibi)</li>
+                    <li>Zipper silahındaki saldırın isabet sonucu sana turunun sonuna kadar kullanabileceğin geçici 5 hareket hızı kazandırır. Turda bir kereliğine, ekstara biriken hareket hızlarından 10 feet tüketip bir kere daha saldırabilirsin.</li>
+                    <li>Zipperdaki ayakkabı yeteneği 5 feet atılmadan 10 feete çıkar ve atış menzili 20 yerine 30 olur.</li>
+                    <li>Blaster silahındaki 10 feet yarıçaplık patlama 15 feete çıkar. Patlama sonrası manyetik çekim oluşur ve alan con save geçemeyenler için difficult terrain sayılır, metal zırh giyenler dezavantajlı saving throw atarlar.</li>
+                    <li>Blaster ayakkabasındaki atılma sonucu indiğin yerde oluşturduğun patlama menzili 15 feete genişler.</li>
+                </ul>
+            </p>
+        </description>
+        <sheet>
+            <p>Zipper ve blaster modların yeni bir seviyeye erişmiştir:
+            • Zipper silahındaki saldırın isabet sonucu sana turunun sonuna kadar kullanabileceğin geçici 5 hareket hızı kazandırır. Turda bir kereliğine, ekstara biriken hareket hızlarından 10 feet tüketip bir kere daha saldırabilirsin.
+            • Blaster silahının patlaması sonrası manyetik çekim oluşur ve alan con save geçemeyenler için difficult terrain sayılır, metal zırh giyenler dezavantajlı saving throw atarlar.</p>
+        </sheet>
+        <rules>
+           <stat name="blaster gun:dice:amount" value="2" bonus="base" />
+           <stat name="zipper gun:dice:amount" value="2" bonus="base" />
+           <stat name="zipper shoes:value:amount" value="10" bonus="base" />
+           <stat name="zipper shoes:attack range:amount" value="30" bonus="base" />
+           <stat name="blaster gun:range:amount" value="15" bonus="base" />
+           <stat name="blaster shoes:dice:amount" value="2" bonus="base" />
+        </rules>
+    </element>
+
+    <element name="Electro World" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_ELECTRO_WORLD">
+        <description>
+        <compendium display="false" />
+        <supports>Electricity Modelleri</supports>
+            <p><em>15. Seviye Artificer Özelliği</em></p>
+            <p>Elektrik bir kan gibi içine işlemiştir. Hücrelerinde elektriğin büyüsü akar.
+            •Lightning damage immuntysi kazanırsın.
+            •30 feet uçma hızına sahip olursun.</p>
+            <p class="indent"><strong><em>Zipper:</em></strong> Dolup taşan gücün tıpkı yerinde duramaz ve etrafa bulaşır!</p>
+            <p style="text-indent: -1em; margin-left: 1em"><strong>Zipper Gun:</strong> Gerçekleştirmiş olduğun electricity weaponlı saldırılar ekstradan rakibin 30 feetinde birisi varsa ona da seker ve AC sini geçersen 3d8 yıldırım hasar verir. Eğer sonraki hedefinde 30 feetinde birisi varsa ona da bu saldırı seker ve onun  da AC'sini geçersen o da 3d8 hasar alır. (Sekme sayısı maksimumu 2'dir).</p>
+            <p style="text-indent: -1em; margin-left: 1em; margin-bottom: 20px"><strong>Zipper Shoes:</strong>Zıplaman artık ekstradan 100 feetten duyulan bir 2d6 thunder damage sahiptir hem inerken hem zıplarken. Etki çapı 30 feet olur ve indigin yerdekiler CON save geçemezlerse o tur boyunca reaksiyon gösteremezler; aksiyon veya bonus aksiyonlarından sadece bir tanesini kullanabilirler.</p>
+            <p class="indent"><strong><em>Blaster:</em></strong> Zaptedilemez gücün etrafını havaya uçurmak için hazır ve nazır!</p>
+            <p style="text-indent: -1em; margin-left: 1em"><strong>Blaster Gun:</strong> Saldırın sonucunda gerçekleşen alan etkili patlamalar, bulaştıkları ana hedefin dışndaki rakiplere de bulaşır ve onlarda da tekrar bir patlama gerçekleştirir. Gerçekleşen patlama hasarı bir önceki hasar zarının daha az hasar zarı deperine sahiptir.  Patlama merkez olarak patlamış kişilerde turun sonuna kadar tekrardan patlamaz. Hasar ilk patlama için 2d8 sonrasında; 2d6//1d10//1d8//1d6//1d4 şeklinde azalır. 1d4 ten sonra patlama tekrardan gerçekleşmez.</p>
+            <p style="text-indent: -1em; margin-left: 1em; margin-bottom: 20px"><strong>Zipper Shoes:</strong> Zıplaman artık ekstradan 100 feetten duyulan bir 2d6 thunder damage sahiptir hem inerken hem zıplarken. Etki çapı 30 feet olur ve indigin yerdekiler CON save geçemezlerse o tur boyunca reaksiyon gösteremezler; aksiyon veya bonus aksiyonlarından sadece bir tanesini kullanabilirler.</p>
+        </description>
+        <sheet display="false" />  
+        <rules>  
+            <stat name="speed:fly:" value="30" bonus="base" />
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_LIGHTNING" />
+            <grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_ELECTRO_WORLD_ZIPPER" requirements="ID_DH_ARCHETYPE_FEATURE_ELECTRO_JUMPER_ELECTRCITY_MODELLERI_ZIPPER" />
+            <grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_ELECTRO_WORLD_BLASTER" requirements="ID_DH_ARCHETYPE_FEATURE_ELECTRO_JUMPER_ELECTRCITY_MODELLERI_BLASTER" />
+        </rules>
+    </element>
+    <element name="Electro World (Zipper)" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_ELECTRO_WORLD_ZIPPER">
+        <description>Zipper modu aktifken:
+        • <strong>Silah:</strong> Gerçekleştirmiş olduğun electricity weaponlı saldırılar ekstradan rakibin 30 feetinde birisi varsa ona da seker ve AC sini geçersen 3d8 yıldırım hasar verir. Eğer sonraki hedefinde 30 feetinde birisi varsa ona da bu saldırı seker ve onun  da AC'sini geçersen o da 3d8 hasar alır. Sekmeler aynı kişiye geri sekmez.(Sekme sayısı maksimumu 2'dir) 
+        • <strong>Ayakkkabı:</strong> Her bir başarılı sekme sana sonraki turunun başına kadar 10 feet hareket hızı kazandırır.</description>
+        <sheet>
+            <description> 
+            • <strong>Silah:</strong> Gerçekleştirmiş olduğun electricity weaponlı saldırılar ekstradan rakibin 30 feetinde birisi varsa ona da seker ve AC sini geçersen 3d8 yıldırım hasar verir. Eğer sonraki hedefinde 30 feetinde birisi varsa ona da bu saldırı seker ve onun  da AC'sini geçersen o da 3d8 hasar alır. Sekmeler aynı kişiye geri sekmez.(Sekme sayısı maksimumu 2'dir) 
+            • <strong>Ayakkkabı:</strong> Her bir başarılı sekme sana sonraki turunun başına kadar 10 feet hareket hızı kazandırır.</description>
+        </sheet>
+    </element>
+    <element name="Electro World (Blaster)" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_ELECTRO_WORLD_BLASTER">
+        <description>Blast modu aktifken
+        • <strong>Silah:</strong> Saldırın sonucunda gerçekleşen alan etkili patlamalar, artçıl patlamalar oluşturur. Artçıl patlama, patlamadan hasar almış kişilerde meydana gelir ve artçıl patlamadan kaynaklı yeni artçıl patlama en fazla 1 kere daha oluşabilir.  Artçıl patlama aynı tur içerisinde aynı hedefte terkardan kaynak olarak patlama başlatmaz.  Artçıl patlamaların  15 feet yarıçaplık alana 2d8 hasar verir. 
+        • <strong>Ayakkkabı:</strong> Zıplaman artık ekstradan 100 feetten duyulan bir 2d6 thunder damage sahiptir hem inerken hem zıplarken. Etki çapı 30 feet olur ve indigin yerdekiler DC{{electricity:dc}} Constitution save geçemezlerse  sonraki turlarının başına kadar  paralize sayılırlar.</description>
+        <sheet>
+            <description>
+            • <strong>Silah:</strong> Saldırın sonucunda gerçekleşen alan etkili patlamalar, artçıl patlamalar oluşturur. Artçıl patlama, patlamadan hasar almış kişilerde meydana gelir ve artçıl patlamadan kaynaklı yeni artçıl patlama en fazla 1 kere daha oluşabilir.  Artçıl patlama aynı tur içerisinde aynı hedefte terkardan kaynak olarak patlama başlatmaz.  Artçıl patlamaların  15 feet yarıçaplık alana 2d8 hasar verir. 
+            • <strong>Ayakkkabı:</strong> Zıplaman artık ekstradan 100 feetten duyulan bir 2d6 thunder damage sahiptir hem inerken hem zıplarken. Etki çapı 30 feet olur ve indigin yerdekiler DC{{electricity:dc}} Constitution save geçemezlerse  sonraki turlarının başına kadar  paralize sayılırlar.</description>
+        </sheet>
+    </element>
+</elements>
+
+

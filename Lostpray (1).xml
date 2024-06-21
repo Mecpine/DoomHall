@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <element name="Lostpray" type="Archetype" source="DOOM HALL" id="ID_DH_PHB_ARCHETYPE_CLERIC_LOSTPRAY" >
+        <supports>Divine Domain</supports>
+        <description>
+            <p>Bazıları vardır gerçekten tanrının izindedir, öğretileri yayar ve onun için inanıcılar toplar. İyi veya kötü olmalarından bağımsız bir şekilde hepsi farklı yöntemlerle bezer amaca hizmet eder.
+            Aralarında bir de yozlaşıp bu durumu kendine kullananlar nükseder zaman zaman. Kendnice niyetleriyle adamış oldukları dualardan beslenen yozlaşmış rahipler, saf düşüncelerin üzerinde duran.
+            Bir parazit gibi bu inanç hırsızlarının avcısıdır ''Kayıpdua'lar'', tek şartlı vazifeleri hala kimliği bilinmeyen ama kendi müritlerini seçen tanrının isteği üzerine bu yozlaşmışları avlamaktır.</p>
+            <div element="ID_DH_PHB_ARCHETYPE_FEATURE_LOSTPRAY_DOMAIN_SPELLS" />
+            <div element="ID_DH_PHB_ARCHETYPE_FEATURE_LOSTPRAY_DEVOTED_SOUL" />
+			<div element="ID_DH_PHB_ARCHETYPE_FEATURE_LOSTPRAY_WAY_OF_THE_EXTERMINATOR" />
+			<div element="ID_DH_PHB_ARCHETYPE_FEATURE_LOSTPRAY_CD_SPHERE_OF_INVIOLABLE" />
+			<div element="ID_DH_PHB_ARCHETYPE_FEATURE_LOSTPRAY_DIVINE_RESPONSE" />
+			<div element="ID_DH_PHB_ARCHETYPE_FEATURE_LOSTPRAY_DIVINE_STRIKE" />
+            <div element="ID_DH_PHB_ARCHETYPE_FEATURE_LOSTPRAY_FINAL_FORM_OF_EXTERMINATOR" />
+            <div element="ID_DH_PHB_ARCHETYPE_FEATURE_LOSTPRAY_REVERSE_INTERVETION" />
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Archetype Feature" id="ID_DH_PHB_ARCHETYPE_FEATURE_LOSTPRAY_DOMAIN_SPELLS" level="1"/>
+			<grant type="Archetype Feature" id="ID_DH_PHB_ARCHETYPE_FEATURE_LOSTPRAY_DEVOTED_SOUL" level="1"/>
+			<grant type="Archetype Feature" id="ID_DH_PHB_ARCHETYPE_FEATURE_LOSTPRAY_WAY_OF_THE_EXTERMINATOR" level="1"/>
+			<grant type="Archetype Feature" id="ID_DH_PHB_ARCHETYPE_FEATURE_LOSTPRAY_CD_SPHERE_OF_INVIOLABLE" level="2"/>
+			<grant type="Archetype Feature" id="ID_DH_PHB_ARCHETYPE_FEATURE_LOSTPRAY_DIVINE_RESPONSE" level="6"/>
+			<grant type="Archetype Feature" id="ID_DH_PHB_ARCHETYPE_FEATURE_LOSTPRAY_DIVINE_STRIKE" level="8"/>
+			<grant type="Archetype Feature" id="ID_DH_PHB_ARCHETYPE_FEATURE_LOSTPRAY_FINAL_FORM_OF_EXTERMINATOR" level="17"/>
+            <grant type="Archetype Feature" id="ID_DH_PHB_ARCHETYPE_FEATURE_LOSTPRAY_REVERSE_INTERVETION" level="20"/>
+		</rules>
+    </element>
+
+    <element name="Domain Spells" type="Archetype Feature" source="DOOM HALL" id="ID_DH_PHB_ARCHETYPE_FEATURE_LOSTPRAY_DOMAIN_SPELLS">
+        <description>
+            <p>Domain büyülerine lostpray subclass seviyelerine geldiğide erişirsin, nasıl olacağını domain tablondan görebilirsin.</p>
+            <h5>Lostpray Spells</h5>
+            <table>
+                <thead>
+                    <tread><td>Cleric Level</td></tread>
+                </thead>
+                <tr><td>1st</td><td><em>shield, hunter's mark</em></td></tr>
+                <tr><td>3st</td><td><em>detect thoughts, sparkle dash</em></td></tr>
+                <tr><td>5st</td><td><em>crystal explosion, haste</em></td></tr>
+                <tr><td>7st</td><td><em>otiluke's resilient sphere, dimension door</em></td></tr>
+                <tr><td>9st</td><td><em>destructive wave, steel wind strike</em></td></tr>
+            </table>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_SHIELD" level="1" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_HUNTERS_MARK" level="1" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_DETECT_THOUGHTS" level="3" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_DH_SPELL_SPARKLE_DASH" level="3" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_DH_SPELL_CRYSTAL_EXPLOSION" level="5" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_HASTE" level="5" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_OTILUKES_RESILIENT_SPHERE" level="7" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_DIMENSION_DOOR" level="7" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_DESTRUCTIVE_WAVE" level="9" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_XGTE_SPELL_STEEL_WIND_STRIKE" level="9" spellcasting="Cleric" prepared="true" />
+        </rules>
+    </element>
+
+    <element name="Devoted Soul" type="Archetype Feature" source="DOOM HALL" id="ID_DH_PHB_ARCHETYPE_FEATURE_LOSTPRAY_DEVOTED_SOUL">
+        <description>
+            <p>1. seviyede, nu yola olan bağlılığın tanrın tarafından takdirle karşılanır ve gücünü zihin ve bedenen yaptığın eylemlerde daha iyi yapabilmek için kullanmana izin verir.  Bedenini güçlendiren bir divine güç seni sarmalar.</p>
+            <p class="indent">Her long rest arasında 1 kere olucak şekilde; 1 dakika boyunca, turda bir kere saving throw, attack roll veya saving throwu avantajlı bir şekilde yaparsın. Avantaj yerine rakibe attırdığın saving throwu reaksiyonundan dezavantajlı atmasına sebep olabilirsin. Bu güç unconscious duruma düşersen sonlanır. Süre gelen 1 dakikalık sürede her tur profciency bonusun kadar can yenilersin, Charm effect ve int saving throwlarına karşı atacağın saving throwlar  avantajlı olursun.</p>
+            <p class="indent"><b>Pasif:</b>Her ne zaman yoldan çıkmış bir rahip öldürürsen, silahın ruhlarını içlerinden çekip çıkarmana yardımcı olur ve çıkarmış olduğun ruhları bir mürekkep gibi kullanarak kitabına yazabilirsin. Bunun sonucunda ise ruhu  tüketilene dek sana o clericin seçtiğin bir adet channel divintysini kullanma imkanı tanır. Bu kullanım senin channel Divinity hakkından harcamaz. Sana ait olmayan channel divinity(leri) gün içerisinde profciency bonusun kadar kullanabilirsin, bir daha kullanabilmek için long rest almış olman gerekir.  Long restlerde ertesi güne bildiklerin arasından bir tanesini ertesi güne hazırlayabilirsin. İlerleyen seviyelerde daha fazla hazırlayacak duruma gelirsin;</p>
+            <p class="indent"><i>7. Seviyede 2 farklı türde Channel Divinity, 14. Seviyede 3 farklı türde Channel Divinity ve 20. Seviyede aynı anda tüm hazırda olan Channel Divinitylere erişimin olur.</i></p>
+        </description>
+        <sheet action="Bonus Aksiyon">
+            <description>Her long rest arasında 1 kere olucak şekilde; 1 dakika boyunca, turda bir kere saving throw, attack roll veya saving throwu avantajlı bir şekilde yaparsın. Avantaj yerine rakibe attırdığın saving throwu reaksiyonundan dezavantajlı atmasına sebep olabilirsin. Bu güç unconscious duruma düşersen sonlanır. Süre gelen 1 dakikalık sürede her tur profciency bonusun kadar can yenilersin, Charm effect ve int saving throwlarına karşı atacağın saving throwlar  avantajlı olursun. Güçlenmenin dışında Her ne zaman yoldan çıkmış bir rahip öldürürsen, silahın ruhlarını içlerinden çekip çıkarmana yardımcı olur ve çıkarmış olduğun ruhları bir mürekkep gibi kullanarak kitabına yazabilirsin. Bunun sonucunda ise ruhu  tüketilene dek sana o clericin seçtiğin bir adet channel divintysini kullanma imkanı tanır. Bu kullanım senin channel Divinity hakkından harcamaz. Sana ait olmayan channel divinity(leri) gün içerisinde profciency bonusun kadar kullanabilirsin, bir daha kullanabilmek için long rest almış olman gerekir.  Long restlerde ertesi güne bildiklerin arasından bir tanesini ertesi güne hazırlayabilirsin. 7. Seviyede 2 farklı türde Channel Divinity, 14. Seviyede 3 farklı türde Channel Divinity ve 20. Seviyede aynı anda tüm hazırda olan Channel Divinitylere erişimin olur. </description>
+        </sheet>  
+    </element>
+
+    <element name="Way of the Exterminator" type="Archetype Feature" source="DOOM HALL" id="ID_DH_PHB_ARCHETYPE_FEATURE_LOSTPRAY_WAY_OF_THE_EXTERMINATOR">
+        <description>
+            <p>1. seviyede, imha ve yok etmek üzerine aldıığn eğitimler sonrasında  heavy armorlara ve martial weaponlara proficiency kazanmışsındır. Hunter's Mark ile hedeflediğin kişiye karşı ilk saldırın avantajlıdır.</p>
+        </description>
+        <sheet>
+            <description>Hunter’s Mark ile hedeflediğin kişiye karşı ilk saldırın avantajlıdır.</description>
+        </sheet>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_HEAVY_ARMOR" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_MARTIAL_WEAPONS" />
+        </rules>
+    </element>
+
+    <element name="Channel Divinty: Sphere of Inviolable" type="Archetype Feature" source="DOOM HALL" id="ID_DH_PHB_ARCHETYPE_FEATURE_LOSTPRAY_CD_SPHERE_OF_INVIOLABLE">
+        <description>
+            <p>Yozlaşmışlığa karşı savaşabilmen için sana bahşedilen bu kutsal güç sana 1 dakikalığına saf bir alan oluşturmanı sağlar. Bu alan seninde içerisinde olacağın şekilde, hedeflediğin yerde 30 feetlik yarı çapta oluşur. Bu alan dışarıdan kapalı ışıktan bir küre gibi gözükür ve kürenin içinden dışına veya tam tersi geçiş yoktur. Alanın içerisinde düşman olarak gördüğün kişiler belli dezavantajlara uğrarlar, bu dezavantajlar WIS saving throw atamayan kişiler için sırasıyla uygulanır, geçenlerde etki  ilerlemez.</p>
+            <p class="indent">Hareket hızı değerleri yarıya iner.</p>
+            <p class="indent">Tüm skill checkler dezavantajlı atılır.</p>
+            <p class="indent">Tüm saving throwlar dezavantajlı atılır.</p>
+            <p class="indent">Bonus aksiyon ve ekstra attack kullanılamaz.</p>
+        </description>
+        <sheet alt="Sphere of Inviolable" usage="Channel Divinty">
+            <description>Bir dakikalığına ışıktan bir alan oluşturursun, Bu alan seninde içerisinde olacağın şekilde, hedeflediğin yerde 30 feetlik yarı çapta oluşur. Bu alan dışarıdan kapalı ışıktan bir küre gibi gözükür ve kürenin içinden dışına veya tam tersi geçiş yoktur. Alanın içerisinde düşman olarak gördüğün kişiler  kişiler belli dezavantajlara uğrarlar, bu dezavantajlar WIS saving throw atamayan kişiler için sırasıyla uygulanır, geçenlerde etki  ilerlemez;
+            Hareket hızı değerleri yarıya iner.
+            Tüm skill checkler dezavantajlı atılır.
+            Tüm saving throwlar dezavantajlı atılır.</description>
+        </sheet>
+    </element>
+
+    <element name="Divine Response" type="Archetype Feature" source="DOOM HALL" id="ID_DH_PHB_ARCHETYPE_FEATURE_LOSTPRAY_DIVINE_RESPONSE">
+        <description>
+            <p>6. seviyede, Her ne zaman bir cleric büyü yaparsa, reaksiyondan clericin büyü yapmasını iptal edebilirsin. İptal etmek için (10+büyünün spell seviyesi)  DC'sine karşı wisdom ability check atarsın, Eğer ki başarıyla iptal edersen o kişi yapmak üzere olduğu büyü türünü 2 tur boyunca kullanamaz (Evocation ise Evocation türünden büyülerini).</p>
+            <p class="indent">Bu özellik diğer büyü caster sınıflarına karşı ise daha zordur. Kontralamak için gerken  DC seviyesi 12+Spell Leveli olur. Büyüyü başarılı iptal ettiğinde bile aynı türden büyüleri yapmaya devam edebilirler.</p>
+            <p class="indent">Bu özelliği her long rest aralığında Charisma modifierın kadar kullanabilirsin.</p>
+        </description>
+        <sheet action="Reksiyon" usage="{{wisdom:modifier}}/long rest">
+            <description>Büyü yapan kişilerin büyü yapmasını reaksiyondan engellersin, bu eylemi clericlere karşı başarırsan yapmış oldukları türden büyüyü 2 tur boyunca yapamazlar. 
+            İptal etmek için gerekli olan dc; clericlere karşı (10+yapılan spell seviyesi), diğer casterlara karşı (12+yapılan spell seviyesi) olur.</description>
+        </sheet>
+    </element>
+
+    <element name="Divine Strike" type="Archetype Feature" source="DOOM HALL" id="ID_DH_PHB_ARCHETYPE_FEATURE_LOSTPRAY_DIVINE_STRIKE">
+		<requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_CLERIC_DIVINE_STRIKE_OR_POTENT_SPELLCASTING</requirements>
+		<description>
+			<p>8. seviyede, silahlı saldırılarına rakibin zihnine hasar verecek gücü işlersin. Turunda bir kereliğine bir canlıya arbede darbeyle saldırdığında , saldırının hedefe ekstradan 1d8 psişik hasar vurmasını sağlarsın. 14 level geldiğinde, ekstra hasar 2d8 olur.</p>
+		</description>
+		<sheet usage="1/Round">
+			<description>Her ne zaman bir canlıya silahlı saldırı yaparsan, saldırının hedefe ekstradan 1d8 psişik hasar vurmasını sağlarsın.</description>
+			<description level="14">Her ne zaman bir canlıya silahlı saldırı yaparsan, saldırının hedefe ekstradan 2d8 psişik hasar vurmasını sağlarsın.</description>
+		</sheet>
+	</element>
+
+    <element name="Final Form of Exterminator" type="Archetype Feature" source="DOOM HALL" id="ID_DH_PHB_ARCHETYPE_FEATURE_LOSTPRAY_FINAL_FORM_OF_EXTERMINATOR">
+        <description>
+            <p>17. seviyede, Silahın kontrol edebildiğin kristali parçacıklarında dönüşür ve kristallere dönüşmüş silahını 120 feetlik mesafeye kadar ellerinle yönlendirerek <b>melee weapon attack</b> gerçekleştirebilirsin.</p>
+            <p class="indent">Ellerinle kontrol ettiğin bu kristaller seni bir yandan da çevrelerler. Çevrelenmişken AC değerin +3 kazanır.</p>
+            <p class="indent">Çevrelenmiş kristalleri atak aksiyonu almışsan, atak aksiyonunun devamı olarak saldırmak için kullanabilirsin. Saldırmak için çevrelenen kristaller kullanıldığında AC değerin sonraki turunun başına kadar bonus +3 kazanmaz.</p>
+        </description>
+        <sheet>
+            <description>Silahın kontrol edebildiğin kristali parçacıklarında dönüşür ve kristallere dönüşmüş silahını 120 feetlik mesafeye kadar ellerinle yönlendirerek melee weapon attack gerçekleştirebilirsin.
+            Ellerinle kontrol ettiğin bu kristaller seni bir yandan da çevrelerler. Çevrelenmişken AC değerin +3 kazanır.
+            Çevrelenmiş kristalleri atak aksiyonu almışsan, atak aksiyonunun devamı olarak saldırmak için kullanabilirsin. Saldırmak için çevrelenen kristaller kullanıldığında AC değerin sonraki turunun başına kadar bonus +3 kazanmaz.</description>
+        </sheet>
+    </element>
+
+    <element name="Reverse Intervetion" type="Archetype Feature" source="DOOM HALL" id="ID_DH_PHB_ARCHETYPE_FEATURE_LOSTPRAY_REVERSE_INTERVETION">
+        <description>
+            <p>20.seviyede, Her ne zaman birisi Divine Intervention kullanırsa kendi Divine Intervention hakkını kullanarak o kişinin bunu yapmasına sen de tanrın aracılığı ile buna engel olursun.</p>
+        </description>
+        <sheet action="Reaksiyon">
+            <description>Her ne zaman birisi Divine Intervention kullanırsa kendi Divine Intervention hakkını kullanarak o kişinin bunu yapmasına sen de tanrın aracılığı ile buna engel olursun.</description>
+        </sheet>
+    </element>
+</elements>
+
+
+
+
+            

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <element name="Shadow Domain" type="Archetype" source="DOOM HALL" id="ID_DH_PHB_ARCHETYPE_CLERIC_SHADOW_DOMAIN" >
+        <supports>Divine Domain</supports>
+        <description>
+            <p>Chaos Domain zihinlere erişmenin, kabusların ve gölgelerin kutsal gücüdür.</p>
+            <div element="ID_DH_PHB_ARCHETYPE_FEATURE_SHADOW_DOMAIN_SPELLS" />
+            <div element="ID_DH_PHB_ARCHETYPE_FEATURE_SHADOW_DOMAIN_DARK_KNOWLODGE" />
+			<div element="ID_DH_PHB_ARCHETYPE_FEATURE_SHADOW_DOMAIN_SHADE_ESSENCE" />
+			<div element="ID_DH_PHB_ARCHETYPE_FEATURE_SHADOW_DOMAIN_CD_VAMPIRIC_LEECH" />
+			<div element="ID_DH_PHB_ARCHETYPE_FEATURE_SHADOW_DOMAIN_SHADOW_EMBRACE" />
+			<div element="ID_DH_PHB_ARCHETYPE_FEATURE_SHADOW_DOMAIN_POTENT_SPELLCASTING" />
+            <div element="ID_DH_PHB_ARCHETYPE_FEATURE_SHADOW_DOMAIN_INSANITY" />
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Archetype Feature" id="ID_DH_PHB_ARCHETYPE_FEATURE_SHADOW_DOMAIN_SPELLS" level="1"/>
+			<grant type="Archetype Feature" id="ID_DH_PHB_ARCHETYPE_FEATURE_SHADOW_DOMAIN_DARK_KNOWLODGE" level="1"/>
+			<grant type="Archetype Feature" id="ID_DH_PHB_ARCHETYPE_FEATURE_SHADOW_DOMAIN_SHADE_ESSENCE" level="1"/>
+			<grant type="Archetype Feature" id="ID_DH_PHB_ARCHETYPE_FEATURE_SHADOW_DOMAIN_CD_VAMPIRIC_LEECH" level="2"/>
+			<grant type="Archetype Feature" id="ID_DH_PHB_ARCHETYPE_FEATURE_SHADOW_DOMAIN_SHADOW_EMBRACE" level="6"/>
+			<grant type="Archetype Feature" id="ID_DH_PHB_ARCHETYPE_FEATURE_SHADOW_DOMAIN_POTENT_SPELLCASTING" level="8"/>
+			<grant type="Archetype Feature" id="ID_DH_PHB_ARCHETYPE_FEATURE_SHADOW_DOMAIN_INSANITY" level="17"/>
+		</rules>
+    </element>
+
+    <element name="Domain Spells" type="Archetype Feature" source="DOOM HALL" id="ID_DH_PHB_ARCHETYPE_FEATURE_SHADOW_DOMAIN_SPELLS">
+        <description>
+            <p>Domain büyülerine shadow domain subclass seviyelerine geldiğide erişirsin, nasıl olacağını domain tablondan görebilirsin.</p>
+            <h5>Shadow Domain Spells</h5>
+            <table>
+                <thead>
+                    <tread><td>Cleric Level</td></tread>
+                </thead>
+                <tr><td>1st</td><td><em>mind flay, cause fear</em></td></tr>
+                <tr><td>3st</td><td><em>devouring infliction, mind blast</em></td></tr>
+                <tr><td>5st</td><td><em>terror wave, inner focus</em></td></tr>
+                <tr><td>7st</td><td><em>shadow word: whispering touch, power infusion</em></td></tr>
+                <tr><td>9st</td><td><em>dominate person, hold monster</em></td></tr>
+            </table>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Spell" id="ID_DH_SPELL_MIND_FLAY" level="1" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_XGTE_SPELL_CAUSE_FEAR" level="1" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_DH_SPELL_DEVOURING_INFLICTION" level="3" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_DH_SPELL_MIND_BLAST" level="3" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_DH_SPELL_TERROR_WAVE" level="5" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_DH_SPELL_INNER_FOCUS" level="5" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_DH_SPELL_SW_WHISPERING_TOUCH" level="7" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_DH_SPELL_POWER_INFUSION" level="7" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_DOMINATE_PERSON" level="9" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_HOLD_MONSTER" level="9" spellcasting="Cleric" prepared="true" />
+        </rules>
+    </element>
+
+    <element name="Dark Knowlodge" type="Archetype Feature" source="DOOM HALL" id="ID_DH_PHB_ARCHETYPE_FEATURE_SHADOW_DOMAIN_DARK_KNOWLODGE">
+        <description>
+            <p>60 feetlik darkvision kazanırsınız.</p>
+            <p class="indent">Mind Sliver ve chill touch cantripleri her zaman hazır olarak sayılır. Bu büyüler yapıldığında cleric büyüsü olarak yapılır.</p>
+            <p class="indent">Her ne zaman bir büyü üzerinden psişik veya nekrotik hasar verirseniz, zar sonucunda gelen değer 1 ise zarı tekrardan yollayabilirsiniz, yeni yollananlar öncekinin yerini alır.</p>
+        </description>
+        <sheet>
+            <description>Her ne zaman bir büyü üzerinden psişik veya nekrotik hasar verirseniz, zar sonucunda gelen değer 1 ise zarı tekrardan yollayabilirsiniz, yeni yollananlar öncekinin yerini alır.</description>
+        </sheet>  
+        <rules>
+			<grant type="Spell" id="ID_WOTC_TCOE_SPELL_MIND_SLIVER" spellcasting="Cleric" />
+            <grant type="Spell" id="ID_PHB_SPELL_CHILL_TOUCH" spellcasting="Cleric" />
+            <grant type="Vision" id="ID_VISION_DARKVISION" />
+		</rules>
+    </element>
+
+    <element name="Shade Essence" type="Archetype Feature" source="DOOM HALL" id="ID_DH_PHB_ARCHETYPE_FEATURE_SHADOW_DOMAIN_SHADE_ESSENCE">
+        <description>
+            <p class="indent">Her ne zaman hasar kaynağı nekrotik veya psişik olan bir cantrip ya da büyüden hasar verirseniz, d6 zarı atarsınız ve zar sonucu 5 veya 6 gelirse etrafınızda süzülen bir gölge özü kazanırsınız. Zar yetenek başına 1 kere atılabilir.</p>
+            <p class="indent">Bu gölge özleri long restler arasında varlığını korur ve öz taşıma kapasiteniz 1+Wisdom modifier değeriniz kadardır ve bunları eylemlerinizde harcayabilirsiniz.</p>
+            <p class="indent">Hastened (3 adet Shade Essence): Shade essence harcamış olduğunuz turunuzda fazladan bir bonus aksiyon alabilirsiniz.</p>
+            <p class="indent">Fortify Spell (2 ye kadar Shade Essence): Büyü yaparken güçlendirerek büyünüzün spell save DC'sini harcadığınız shade essence kadar arttırırsınız.</p>
+            <p class="indent">Replenish (Castlenen Büyü Seviyesi/3 kadar Shade Essence): Büyü yaparken, yapmış olduğunuz büyünün seviyesi/3 kadar shade essence harcayarak harcamış olduğunuz miktarın seviyesinden spell slot elde edebilirsiniz.</p>
+        </description>
+        <sheet>
+            <description>Her ne zaman hasar kaynağı nekrotik veya psişik olan bir cantrip ya da büyüden hasar verirseniz, d6 zarı atarsınız ve zar sonucu 5 veya 6 gelirse etrafınızda süzülen bir gölge özü kazanırsınız. Zar yetenek başına 1 kere atılabilir.
+            Bu gölge özleri long restler arasında varlığını korur ve öz taşıma kapasiteniz 1+Wisdom modifier değeriniz kadardır ve bunları eylemlerinizde harcayabilirsiniz.
+
+            <strong>Hastened (3 adet Shade Essence):</strong> Shade essence harcamış olduğunuz turunuzda fazladan bir bonus aksiyon alabilirsiniz.
+
+            <strong>Fortify Spell (2 ye kadar Shade Essence):</strong> Büyü yaparken güçlendirerek büyünüzün spell save DC'sini harcadığınız shade essence kadar arttırırsınız.
+
+            <strong>Replenish (Castlenen Büyü Seviyesi/3 kadar Shade Essence):</strong> Büyü yaparken, yapmış olduğunuz büyünün seviyesi/3 kadar shade essence harcayarak harcamış olduğunuz miktarın seviyesinden spell slot elde edebilirsiniz.</description>
+        </sheet>
+    </element>
+
+    <element name="Channel Divinity: Vampiric Leech" type="Archetype Feature" source="DOOM HALL" id="ID_DH_PHB_ARCHETYPE_FEATURE_SHADOW_DOMAIN_CD_VAMPIRIC_LEECH">
+        <description>
+            <p>Bonus aksiyondan bir dakika boyunca yapacağınız nekrotik ve psişik saldırılar, vermiş olduğu hasar miktarının yarısı  kadar sizi iyileştirir, aoe hasarlardan yapılan iyileştirme miktarı yarılanır.</p>
+            <p class="indent">Bu özellik yoluyla yapmış olduğunuz iyileştirme miktarının yarısı kadar da isterseniz 60 feetinizde başka birisini iyileştirebilirsiniz.</p>
+        </description>
+        <sheet alt="Vampiric Leech" action="Bonus Aksiyon" usage="Channel Divinty">
+            <description>Bonus aksiyondan bir dakika boyunca yapacağınız nekrotik ve psişik saldırılar, vermiş olduğu hasar miktarının yarısı  kadar sizi iyileştirir, aoe hasarlardan yapılan iyileştirme miktarı yarılanır.
+            Bu özellik yoluyla yapmış olduğunuz iyileştirme miktarının yarısı kadar da isterseniz 60 feetinizde başka birisini iyileştirebilirsiniz.</description>
+        </sheet>
+    </element>
+
+    <element name="Shadow Embrace" type="Archetype Feature" source="DOOM HALL" id="ID_DH_PHB_ARCHETYPE_FEATURE_SHADOW_DOMAIN_SHADOW_EMBRACE">
+        <description>
+            <p>Etrafını gölgelerden bir alan kaplar ve seni kuşatır. Gölgelerin gücü yapmış olduğun büyülerde sana yardımcı olur, alacağın darbelere karşı seni korur.</p>
+            <p class="indent">Gölge kuşatması 1 dakika boyunca aktif kalır ve long restler arasında 1 kere kullanabilirsin.</p>
+            <p class="indent">Kullanma sayısı 10. seviyede 2, 14. seviyede 3 olur</p>
+            <p class="indent">Bu süre boyunca;</p>
+            <p class="indent">Nekrotik ve psişik hasarların, zarları türünden 1 tane daha kazanır ve nekrotik veya psişik hasar veren saldırıların için yapacağın attack rollerin kritik için gereksinimi 19 sayılır.</p>
+            <p class="indent">Işık ve nekrotik hasar türlerine karşı dayanıklılık kazanırsın. Delme, kesme ve ezme hasar türlerinden alacağın hasar değeri d8 kadar azalır.</p>
+            <p class="indent">Kanalize büyülerin (witch bolt, mind flay, entervetion) sonraki turlarınızda tekrardan aktifleştirmek için gerekli olan aksiyon eylemi yerine bonus aksiyonunuzu harcar.</p>
+        </description>
+        <sheet action="Bonus Aksiyon" usage="{{shadow embrace:count}}/long rest">
+            <description>
+                Etrafını gölgelerden bir alan kaplar ve seni kuşatır. Gölgelerin gücü yapmış olduğun büyülerde sana yardımcı olur, alacağın darbelere karşı seni korur.
+                Gölge kuşatması 1 dakika boyunca aktif kalır ve long restler arasında 1 kere kullanabilirsin.
+                Kullanma sayısı 10. seviyede 2, 14. seviyede 3 olur
+                Nekrotik ve psişik hasarların, zarları türünden 1 tane daha kazanır ve nekrotik veya psişik hasar veren saldırıların için yapacağın attack rollerin kritik için gereksinimi 19 sayılır.
+                Işık ve nekrotik hasar türlerine karşı dayanıklılık kazanırsın. Delme, kesme ve ezme hasar türlerinden alacağın hasar değeri d8 kadar azalır.
+                büyülerin (witch bolt, mind flay, entervetion) sonraki turlarınızda tekrardan aktifleştirmek için gerekli olan aksiyon eylemi yerine bonus aksiyonunuzu harcar.
+            </description>
+        </sheet>
+        <rules>
+            <stat name="shadow embrace:count" value="1" bonus="base" />
+            <stat name="shadow embrace:count" value="2" level="10" bonus="base" />
+            <stat name="shadow embrace:count" value="3" level="14" bonus="base" />
+        </rules>
+    </element>
+
+    <element name="Potent Spellcasting" type="Archetype Feature" source="Player’s Handbook" id="ID_DH_PHB_ARCHETYPE_FEATURE_SHADOW_DOMAIN_POTENT_SPELLCASTING">
+		<requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_CLERIC_DIVINE_STRIKE_OR_POTENT_SPELLCASTING</requirements>
+		<description>
+			<p>8. seviyede itibaren, cleric cantripleri ile vereceğin hasarlara wisdom modifierını eklersin.</p>
+		</description>
+		<sheet>
+			<description>Cleric cantripleri ile vereceğin hasarlara +{{wisdom:modifier}} eklersin.</description>
+		</sheet>
+	</element>
+
+    <element name="Insanity" type="Archetype Feature" source="DOOM HALL" id="ID_DH_PHB_ARCHETYPE_FEATURE_SHADOW_DOMAIN_INSANITY">
+        <description>
+            <p>Nekromansi veya psişik  hasar türünden büyüler ile her ne zaman birisine hasar verirseniz,  hasar almış olan kimseler delirmemek için wisdom saving throw atmaya zorlanır.</p>
+            <p class="indent">Geçemezlerse delirmeye yaklaşırlar, her kim delirmeye karşı 1 kere saving throw faillerse frightened condition altında sayılır ve etraflarını karanlık bir aura sarmalar.</p>
+            <p class="indent">Etrafında aura bulunan kişiler 2. kez saving throw faillerseler sizin tarafınızdan charmlanırlar ve zihinlerinin kontrolü size geçer ve turunuzun sonunda zihni ele geçirilmiş kişileri istediğiniz bir hedefe karşı attack aksiyonu alması emredersiniz. Zihin kontrolü, kontrol edilen kişi wisdom saving throw geçene kadar veya 1 dakika boyunca sürer, saving throw geçenler 24 saat boyunca bundan etkilenmezler.</p>
+            <p class="indent">Her ne zaman birisinin kontrolü size geçerse hiçliğin güçleri etrafınızı kuşatır ve; apacağınız psişik ve nekrotik saldırılar dayanıklıklara karşı üstün gelirler.</p>
+            <p class="indent">Eğer ki shadow embrace sahipseniz, shadow embrace dayanıklılıklarının yerine tüm hasar türlerine karşı dayanıklılık kazanırsınız ve shadow formunuz void formuna dönüşür, Void formunuz 2 tur boyunca veya siz unconscious olana kadar aktif kalır, düşmanları deliliğe itelemek turda en fazla 1 kere olabilecek şekilde void formun süresini 1 tur daha uzatır.</p>
+        </description>
+        <sheet>
+            <description>Nekromansi veya psişik  hasar türünden büyüler ile her ne zaman birisine hasar verirseniz,  hasar almış olan kimseler delirmemek için wisdom saving throw atmaya zorlanır.
+                        Geçemezlerse delirmeye yaklaşırlar, her kim delirmeye karşı 1 kere saving throw faillerse frightened condition altında sayılır ve etraflarını karanlık bir aura sarmalar.
+                        Etrafında aura bulunan kişiler 2. kez saving throw faillerseler sizin tarafınızdan charmlanırlar ve zihinlerinin kontrolü size geçer ve turunuzun sonunda zihni ele geçirilmiş kişileri istediğiniz bir hedefe karşı attack aksiyonu alması emredersiniz. Zihin kontrolü, kontrol edilen kişi wisdom saving throw geçene kadar veya 1 dakika boyunca sürer, saving throw geçenler 24 saat boyunca bundan etkilenmezler.
+                        Her ne zaman birisinin kontrolü size geçerse hiçliğin güçleri etrafınızı kuşatır ve;
+                        Yapacağınız psişik ve nekrotik saldırılar dayanıklıklara karşı üstün gelirler.
+                        Eğer ki shadow embrace sahipseniz, shadow embrace dayanıklılıklarının yerine tüm hasar türlerine karşı dayanıklılık kazanırsınız ve shadow formunuz void formuna dönüşür
+                        Void formunuz 2 tur boyunca veya siz unconscious olana kadar aktif kalır, düşmanları deliliğe itelemek turda en fazla 1 kere olabilecek şekilde void formun süresini 1 tur daha uzatır.</description>
+        </sheet>
+    </element>
+</elements>
+
+
+
+
+            

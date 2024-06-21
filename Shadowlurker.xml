@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+
+    <element name="Shadowlurker" type="Archetype" source="DOOM HALL" id="ID_DH_ARCHETYPE_SHADOWLURKER">
+        <supports>Ranger Archetype</supports>
+        <description>
+            <p>Gölgelerin karanlığını bir yol ve silah gibi kullanan gölge avcıları, avlarını ani ve sessiz bir biçimde avlarlar.</p>
+            <div element="ID_DH_ARCHETYPEFEATURE_RANGER_HIDDEN_ASSAULT" />
+            <div element="ID_DH_ARCHETYPEFEATURE_RANGER_SHADOWHUNT" />
+            <div element="ID_DH_ARCHETYPEFEATURE_RANGER_SHADOW_FORTITUDE" />
+            <div element="ID_DH_ARCHETYPEFEATURE_RANGER_DARKENED_SHADOW" />
+            <div element="ID_DH_ARCHETYPEFEATURE_RANGER_SHADOWMELD" />
+        </description>
+        <sheet display="false">
+            <description>Gölge avcısı olan kimseler ilerledikleri yolda gölge avcılığı yeteneklerini güçlendirirler.</description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_DH_ARCHETYPEFEATURE_RANGER_HIDDEN_ASSAULT" level="3" />
+            <grant type="Archetype Feature" id="ID_DH_ARCHETYPEFEATURE_RANGER_SHADOWHUNT" level="3" />
+            <grant type="Archetype Feature" id="ID_DH_ARCHETYPEFEATURE_RANGER_SHADOW_FORTITUDE" level="7" />
+            <grant type="Archetype Feature" id="ID_DH_ARCHETYPEFEATURE_RANGER_DARKENED_SHADOW" level="11" />
+            <grant type="Archetype Feature" id="ID_DH_ARCHETYPEFEATURE_RANGER_SHADOWMELD" level="15" />
+        </rules>
+    </element>
+
+    <element name="Hidden Assault" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPEFEATURE_RANGER_HIDDEN_ASSAULT">
+        <requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_RANGER_HUNTER_HIDDEN_ASSAULT</requirements>
+        <description>
+            <p><em>3. Seviye Shadowlurker Özelliği</em></p>
+            <p>Gizlenme konusunda yeteneklerin ölümcül bir hal almıştır. Artık bonus aksiyonunu gizlenmek için kullanabilirsin.</p>
+            <p>120 feetlik gece görüşü kazanırsın.</p>
+            <p>Gizli bir durumdayken veya avantajın varken yapmış olduğun saldırılar ekstradan 1d8 silah hasarı verir. Bu değer her 8 ve 15. seviyelere geldiğinde 1d8 daha artar.</p>
+            <p>Bu ek hasar sadece başarılı ilk 2 saldırın için geçerlidir.</p>
+        </description>
+        <sheet display="true">
+            <description>Bonus aksiyondan gizlenebilirsin.
+                Gizli bir durumdayken veya gizlilikten çıktığın tur boyunca ya da avantajlı saldırılarına ekstradan {{assault:dice:amount}}d8 silah hasarı verirsin.
+                Bu ek hasar aynı tur içerisinde gerçekleştireceğin ilk 2 saldırın için geçerlidir.</description>
+        </sheet>
+            <rules>
+                <stat name="assault:dice:amount" value="1" bonus="base"/>
+                <stat name="assault:dice:amount" value="2" bonus="base" level="8"/>
+                <stat name="assault:dice:amount" value="3" bonus="base" level="15"/>
+                <stat name="darkvision:range" value="120" bonus="base" />
+            </rules>
+    </element>
+
+    <element name="Shadowhunt" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPEFEATURE_RANGER_SHADOWHUNT">
+        <requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_RANGER_HUNTER_SHADOWHUNT</requirements>
+        <description>
+            <p><em>3. Seviye Shadowlurker Özelliği</em></p>
+            <p>Avlanma içgüdülerin gelişmiştir.</p> 
+            <p class="indent">Hunter's Mark ile hedeflediğin bir kişi eğer ki, (30 + ranger levelin x5) mesafende ise bonus aksiyon kullanarak o kişinin 30 feet içerisinde, boş olmak kaydıyla istediğin bir yerde belirebilirsin. Işınlandıktan sonra o kişiye karşı yapacağın ilk saldırı avantajlı olur ve hidden Assault özelliğini tetikler.</p>
+            <p class="indent">Bu özelliği long rest arasinda profciency bonusun kadar kullanabilirsin.</p>
+        </description>
+        <sheet action="Bonus Aksiyon" usage="{{proficiency}}/Long Rest">
+            <description>Hunter's Mark ile hedeflediğin bir kişi eğer ki, (30 + {{level:ranger}}x5) mesafende ise bonus aksiyon kullanarak o kişinin 30 feet içerisinde, boş olmak kaydıyla istediğin bir yerde belirebilirsin. Işınlandıktan sonra o kişiye karşı yapacağın ilk saldırı avantajlı olur ve hidden Assault özelliğini tetikler.</description>
+        </sheet>
+    </element>
+
+    <element name="Shadow Fortitude" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPEFEATURE_RANGER_SHADOW_FORTITUDE">
+        <requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_RANGER_HUNTER_SHADOW_FORTITUDE</requirements>
+        <description>
+            <p><em>7. Seviye Shadowlurker Özelliği</em></p>
+            <p>Gölgelerin gücü vücudunu ve zihnini bir siper gibi çevrelemektedir. Necrotic damage resistance kazanırsın.</p>
+            <p class="indent">Vücudun 10 senede 1 yaşlanır, paralize, charmed veya restrained duruma düşüren bir eyleme karşı saving throw faillersen, reaksiyon kullanarak yeniden o saving throwa karşı zar atabilirsin.</p>
+        </description>
+        <sheet action="Reaksiyon">
+            <description>Vücudun 10 senede 1 yaşlanır. Paralize, charmed veya restrained duruma düşüren bir eyleme karşı saving throw faillersen, reaksiyon kullanarak yeniden o saving throwa karşı zar atabilirsin.</description>
+        </sheet>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_NECROTIC" />
+        </rules>
+    </element>
+
+    <element name="Darkened Shadow" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPEFEATURE_RANGER_DARKENED_SHADOW">
+        <requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_RANGER_HUNTER_DARKENED_SHADOW</requirements>
+        <description>
+            <p><em>11. Seviye Shadowlurker Özelliği</em></p>
+            <p>120 feet çapında bir alana aksiyonundan  büyüsel karanlık oluşturursun. Aynı zamanda darkvision görüş mesafen kadar büyüsel karanlıkta görme yetisi kazanırsın. Bu alanı long rest başına wisdom modifierın kadar yapabilirsin.</p>
+        </description>
+        <sheet action="Aksiyon" usage="{{wisdom:modifier}}/Long Rest">
+            <description>120 feet çapında bir alana aksiyonundan  büyüsel karanlık oluşturursun. Aynı zamanda darkvision görüş mesafen kadar büyüsel karanlıkta görme yetisi kazanırsın.</description>
+        </sheet>
+    </element>
+
+    <element name="Shadowmeld" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPEFEATURE_RANGER_SHADOWMELD">
+        <requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_RANGER_HUNTER_SHADOWMELD</requirements>
+        <description>
+            <p><em>15. Seviye Shadowlurker Özelliği</em></p>
+            <p>Bonus aksiyondan 1 dakikalığına gölge formunu kuşanırsın. Bu formdayken etrafın gölgelerle çevrilir ve hedef alınması ve saptanması zor bir hale gelirsin. Ayrıca saldırıların ise gölge güçlerini üzerinde taşır.
+            Bu formdayken AC değerin ve weapon hasarın wisdom modifierın kadar artar.
+            Darkvisionı olmayan kişilerin sana karşı saldırıları dezavantajlıdır.
+            Ortam dim light veya darkness ise invisible olursun.
+            Bu özelliği long restte 1 defa kullanabilirsin.</p>
+        </description>
+        <sheet action="Bonus Aksiyon" usage="1/Long Rest">
+            <description>Bu formdayken AC değerin ve weapon hasarın {{wisdom:modifier}} kadar artar.
+            Darkvisionı olmayan kişilerin sana karşı saldırıları dezavantajlıdır.
+            Ortam dim light veya darkness ise invisible olursun.</description>
+        </sheet>
+    </element>
+</elements>
+
+
+
+
+
+
+
+
+

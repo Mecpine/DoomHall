@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<element name="Oath of Opression" type="Archetype" source="DOOM HALL" id="ID_DH_PHB_ARCHETYPE_PALADIN_OATH_OF_OPRESSION">
+		<supports>Sacred Oath</supports>
+		<description>
+			<p>An Oath of Opression is a paladin who fulfills his desire with corrupting whom resists his will.</p>
+			<p class="indent">A paladin must be lawful or neutral evil and at least 3rd level to become an Oath of Opression.</p>
+			<div element="ID_DH_ARCHETYPE_FEATURE_OOO_OOO_SPELLS" />
+			<div element="ID_DH_PHB_ARCHETYPE_FEATURE_OOO_CHANNEL_DIVINITY" />
+			<div element="ID_DH_ARCHETYPE_FEATURE_OOO_AURA_OF_DESPAIR" />
+			<div element="ID_DH_PHB_ARCHETYPE_FEATURE_OOO_SEIZURE_MAGIC" />
+			<div element="ID_DH_PHB_ARCHETYPE_FEATURE_OOO_THE_OPPRESSOR" />
+		</description>
+		<sheet display="false">
+			<description>An Oath of Opression is a paladin who fulfills his desire with corrupting whom resists his will.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_OOO_OOO_SPELLS" level="3" />
+			<grant type="Archetype Feature" id="ID_DH_PHB_ARCHETYPE_FEATURE_OOO_CHANNEL_DIVINITY" level="3" />
+			<grant type="Archetype Feature" id="ID_DH_ARCHETYPE_FEATURE_OOO_AURA_OF_DESPAIR" level="7" />
+			<grant type="Archetype Feature" id="ID_DH_PHB_ARCHETYPE_FEATURE_OOO_SEIZURE_MAGIC" level="15" />
+			<grant type="Archetype Feature" id="ID_DH_PHB_ARCHETYPE_FEATURE_OOO_THE_OPPRESSOR" level="20" />
+		</rules>
+	</element>
+
+	<element name="Oath Of Opression Spells" type="Archetype Feature" source="Player's Handbook" id="ID_DH_ARCHETYPE_FEATURE_OOO_OOO_SPELLS">
+		<description>
+			<p>An oath of opression gain the following Oath Of Opression spells at the paladin levels listed.</p>
+			<h5> OATH OF OPRESSION SPELLS</h5>
+			<table>
+				<thead>
+					<tr><td>Paladin Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>3rd</td><td><em>charm person, hex</em></td></tr>
+				<tr><td>5th</td><td><em>crown of madness, suggestion</em></td></tr>
+				<tr><td>9th</td><td><em>hunger of hadar, bestow curse</em></td></tr>
+				<tr><td>13th</td><td><em>blight, confusion</em></td></tr>
+				<tr><td>17th</td><td><em>hold monster, dominate person</em></td></tr>
+			</table>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_CHARM_PERSON" level="3" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_HEX" level="3" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_CROWN_OF_MADNESS" level="5" spellcasting="Paladin" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_SUGGESTION" level="5" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_HUNGER_OF_HADAR" level="9" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_BESTOW_CURSE" level="9" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_BLIGHT" level="13" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_CONFUSION" level="13" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_HOLD_MONSTER" level="17" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_DOMINATE_PERSON" level="17" spellcasting="Paladin" prepared="true" />
+		</rules>
+	</element>
+	<element name="Channel Divinity" type="Archetype Feature" source="DOOM HALL" id="ID_DH_PHB_ARCHETYPE_FEATURE_OOO_CHANNEL_DIVINITY">
+		<description>
+			<p>An Oath of Opression paladin of 3rd level or higher gains the following two Channel Divinity options.</p>
+			<p class="indent"><b><i>Domineering Strike.</i></b>Her ne zaman bir varliğa silahinla gerçekleştirilen arbede bir saldiri yaparsan, onlarin iradesine güçlü bir saldiri yapmak için  channel divinitni kullanirsin. Kişi senin saldirina karşi Charisma saving throw atmaya zorlanir yoksa sen tarafindan 1 dakika boyunca charmlanir. Charmlandiği süreçte senin emirlerine itaat etmek zorundadir ve kendi isteğiyle senden uzağa hareket edemez. Kişinin canina son verecek bir emir verirsen eğer ki cr değeri seviyen/2 (aşaği olucak şekilde) den daha az veya eşitse emrine uyar, değilse charm sonlanir. Bu channel divinity tarafindan charm altinda bulunan kişi veya kişilere bonus aksiyonun ile emir verebilirsin. Charm imuntiysi olanlar bu etkiden etkilenmezler.</p>
+			<p class="indent"><b><i>Shackles of Binding.</i></b>Aksiyonundan channel divinityni aktifleştirerek ethereal zincirleri kişilerin ruhunu zaptetmek için çağirirsin.120 feetinde charisma modifin kadar seçmiş olduğun kişi charisma saving throw atmaya zorlanir ve geçemedikleri takdirde seviyen kadar tur boyunca restrained olurla ve save geçemedikleri her tur seviyen kadar hasar alip, 1 strength kaybederlee. Saving throw her turunun başinda atilir ve eğer kişi isterse turunun sonunda olucak şekilde STR saving throw atabilir.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Archetype Feature" id="ID_DH_PHB_ARCHETYPE_FEATURE_OOO_CHANNEL_DIVINITY_DOMINEERING_STRIKE" />
+			<grant type="Archetype Feature" id="ID_DH_PHB_ARCHETYPE_FEATURE_OOO_CHANNEL_DIVINITY_SHACKLES_OF_BINDING" />
+		</rules>
+	</element>
+	<element name="Channel Divinity: Domineering Strike" type="Archetype Feature" source="DOOM HALL" id="ID_DH_PHB_ARCHETYPE_FEATURE_OOO_CHANNEL_DIVINITY_DOMINEERING_STRIKE">
+		<description>
+			<p>Her ne zaman bir varliğa silahinla gerçekleştirilen arbede bir saldiri yaparsan, onlarin iradesine güçlü bir saldiri yapmak için  channel divinitni kullanirsin. Kişi senin saldirina karşi Charisma saving throw atmaya zorlanir yoksa sen tarafindan 1 dakika boyunca charmlanir. Charmlandiği süreçte senin emirlerine itaat etmek zorundadir ve kendi isteğiyle senden uzağa hareket edemez. Kişinin canina son verecek bir emir verirsen eğer ki cr değeri seviyen/2 (aşaği olucak şekilde) den daha az veya eşitse emrine uyar, değilse charm sonlanir. Bu channel divinity tarafindan charm altinda bulunan kişi veya kişilere bonus aksiyonun ile emir verebilirsin. Charm imuntiysi olanlar bu etkiden etkilenmezler.</p>
+		</description>
+		<sheet alt="Domineering Strike" action="Free Action" usage="Channel Divinity">
+			<description>Her ne zaman bir varliğa silahinla gerçekleştirilen arbede bir saldiri yaparsan, onlarin iradesine güçlü bir saldiri yapmak için  channel divinitni kullanirsin. Kişi senin saldirina karşi Charisma saving throw atmaya zorlanir yoksa sen tarafindan 1 dakika boyunca charmlanir. Charmlandiği süreçte senin emirlerine itaat etmek zorundadir ve kendi isteğiyle senden uzağa hareket edemez. Kişinin canina son verecek bir emir verirsen eğer ki cr değeri seviyen/2 (aşaği olucak şekilde) den daha az veya eşitse emrine uyar, değilse charm sonlanir. Bu channel divinity tarafindan charm altinda bulunan kişi veya kişilere bonus aksiyonun ile emir verebilirsin. Charm imuntiysi olanlar bu etkiden etkilenmezler.</description>
+		</sheet>
+	</element>
+	<element name="Channel Divinity: Shackles of Binding" type="Archetype Feature" source="DOOM HALL" id="ID_DH_PHB_ARCHETYPE_FEATURE_OOO_CHANNEL_DIVINITY_SHACKLES_OF_BINDING">
+		<description>
+			<p>Aksiyonundan channel divinityni aktifleştirerek ethereal zincirleri kişilerin ruhunu zaptetmek için çağirirsin.120 feetinde charisma modifin kadar seçmiş olduğun kişi charisma saving throw atmaya zorlanir ve geçemedikleri takdirde seviyen kadar tur boyunca restrained olurla ve save geçemedikleri her tur seviyen kadar hasar alip, 1 strength kaybederlee. Saving throw her turunun başinda atilir ve eğer kişi isterse turunun sonunda olucak şekilde STR saving throw atabilir.</p>
+		</description>
+		<sheet alt="Shackles of Binding" action="Action" usage="Channel Divinity">
+			<description>Aksiyonundan channel divinityni aktifleştirerek ethereal zincirleri kişilerin ruhunu zaptetmek için çağirirsin.120 feetinde charisma modifin kadar seçmiş olduğun kişi charisma saving throw atmaya zorlanir ve geçemedikleri takdirde seviyen kadar tur boyunca restrained olurla ve save geçemedikleri her tur seviyen kadar hasar alip, 1 strength kaybederlee. Saving throw her turunun başinda atilir ve eğer kişi isterse turunun sonunda olucak şekilde STR saving throw atabilir.</description>
+		</sheet>
+	</element>
+	<element name="Aura of Despair" type="Archetype Feature" source="DOOM HALL" id="ID_DH_ARCHETYPE_FEATURE_OOO_AURA_OF_DESPAIR">
+	<requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_OOO_AURA_OF_DESPAIR</requirements>
+		<description>
+			<p>7th level olduğunda paladin, 10 feetinde sana hostile olan düşmanlarini umutsuzluk saçan bir aura ile sarmalarsin. Menzilinde bulunan düşmanlar bütün saving throwlarini dezavantajli atarlar.</p>
+			<p class="indent">18 levelde, auranin menzili 30 feete çikar.</p>
+		</description>
+		<sheet>
+			<description>7th level olduğunda paladin, 10 feetinde sana hostile olan düşmanlarini umutsuzluk saçan bir aura ile sarmalarsin. Menzilinde bulunan düşmanlar bütün saving throwlarini dezavantajli atarlar.</description>
+			<p class="indent">7th level olduğunda paladin, 10 feetinde sana hostile olan düşmanlarini umutsuzluk saçan bir aura ile sarmalarsin. Menzilinde bulunan düşmanlar bütün saving throwlarini dezavantajli atarlar.</p>
+		</sheet>
+		<rules>
+			<stat name="Aura of Despair:range" value="10" />
+			<stat name="Aura of Despair:range" value="30" level="18" />
+		</rules>
+	</element>
+	<element name="Seizure Magic" type="Archetype Feature" source="DOOM HALL" id="ID_DH_PHB_ARCHETYPE_FEATURE_OOO_SEIZURE_MAGIC">
+		<description>
+			<p>15 level paladin özelliği olarak,Her ne zaman 60 feetinde birisi bir büyü castlerse reaksiyonunu kullanarak büyüyü engellemek üzere karşi bir eylemde bulunursun. Kişi eylemine karşi Charisma saving throw atar, geçemezse büyüsü senin tarafindan zaptedilir ve büyüsünün seviyesi kadar hasar alir. Başarili şekilde zapt edilmiş büyünün özü sen tarafindan bir gün boyunca tutulur ve tuttuğun büyü özü sayisi 3'e ulaştiğinda özel bir saldiriyi aksiyonundan gerçekleştirebilirsin. Bu özellik her long rest arasinda charisma modifin kadar uygulanir. Önüne doğru 30 feet konik bir alana anti büyü saldirisi gerçekleştirirsin ve o alanda bulunan büyülü obje, büyü, bulunmakta olan büyüsel alan yetenekleri (anti magic field dahil)  tutmuş olduğun büyü özlerinin seviyesinin ortalamasi kadar seviyeden( min 3) dispel magic büyüsüne maruz kalirlar.</p>
+		</description>
+		<sheet>
+			<description>15 level paladin özelliği olarak,Her ne zaman 60 feetinde birisi bir büyü castlerse reaksiyonunu kullanarak büyüyü engellemek üzere karşi bir eylemde bulunursun. Kişi eylemine karşi Charisma saving throw atar, geçemezse büyüsü senin tarafindan zaptedilir ve büyüsünün seviyesi kadar hasar alir. Başarili şekilde zapt edilmiş büyünün özü sen tarafindan bir gün boyunca tutulur ve tuttuğun büyü özü sayisi 3'e ulaştiğinda özel bir saldiriyi aksiyonundan gerçekleştirebilirsin. Bu özellik her long rest arasinda charisma modifin kadar uygulanir. Önüne doğru 30 feet konik bir alana anti büyü saldirisi gerçekleştirirsin ve o alanda bulunan büyülü obje, büyü, bulunmakta olan büyüsel alan yetenekleri (anti magic field dahil)  tutmuş olduğun büyü özlerinin seviyesinin ortalamasi kadar seviyeden( min 3) dispel magic büyüsüne maruz kalirlar.</description>
+		</sheet>
+	</element>
+	<element name="The Oppressor" type="Archetype Feature" source="DOOM HALL" id="ID_DH_PHB_ARCHETYPE_FEATURE_OOO_THE_OPPRESSOR">
+		<description>
+			<p>20 levela geldiğinde paladin, 1 dakikaliğina erişebileceğin nihai formun olan "Zalim" formuna geçersin ve bu forma geçtiğinde; T30 feetinde bulunan düşmanlar wisdom saving throw atarlar ve geçemeyeer attack rollarini dezavantajli gerçekleştirirler. Saving throw ilk turdan sonraki her turlarinin sonunda tekrarlanir.  Başarili saving throw  gerçekleşirse paladin  tarafindan tekrardan hasar alana kadar bu etkiden etkilenmez. Yapmiş olduğun arbede saldirilar ekstradan charisma modifin kadar hasar verir ve hasar vermiş olduğun kişi constitution saving throw atar geçemezse hareket hizi sonraki turunun sonuna kadar 0 olur. Bu formdayken reaksiyonunu almana engel olacak eylemlere immune olursun ve büyüsel yollarla hareket hizin azalmaz veya paralize olamazsin.Bu formdayken kişilerin iradesine özel bir saldirin olur ve aksiyondan dominion over will saldirisini gerçekleştirebilirsin. Dominion over will: Aksiyondan, 60 feetinde bir kişiyi wisdom saving throwa zorlarsin ve geçemediği takdirde formun bitene kadar sen tarafindan charmlanir. Charmlanan kişilere dominate person büyüsüne maruz kalmişlar gibi emir verebilirsin ve ellerinden gelenin en iyisini senin için yapmaya çalişirlar. Charm imuntiysi olanlar bu etkiden etkilenmezler.</p>
+			<p class="indent">30 feetinde bulunan düşmanlar wisdom saving throw atarlar ve geçemeyeer attack rollarini dezavantajli gerçekleştirirler. Saving throw ilk turdan sonraki her turlarinin sonunda tekrarlanir.  Başarili saving throw  gerçekleşirse paladin  tarafindan tekrardan hasar alana kadar bu etkiden etkilenmez.</p>
+			<p class="indent">Yapmiş olduğun arbede saldirilar ekstradan charisma modifin kadar hasar verir ve hasar vermiş olduğun kişi constitution saving throw atar geçemezse hareket hizi sonraki turunun sonuna kadar 0 olur.</p>
+            <p class="indent">Bu formdayken reaksiyonunu almana engel olacak eylemlere immune olursun ve büyüsel yollarla hareket hizin azalmaz veya paralize olamazsin.</p>
+            <p class="indent">Bu formdayken kişilerin iradesine özel bir saldirin olur ve aksiyondan dominion over will saldirisini gerçekleştirebilirsin. Dominion over Will: Aksiyondan, 60 feetinde bir kişiyi wisdom saving throwa zorlarsin ve geçemediği takdirde formun bitene kadar sen tarafindan charmlanir. Charmlanan kişilere dominate person büyüsüne maruz kalmişlar gibi emir verebilirsin ve ellerinden gelenin en iyisini senin için yapmaya çalişirlar. Charm imuntiysi olanlar bu etkiden etkilenmezler.</p>
+		</description>
+		<sheet usage="1/Long Rest" action="Bonus Action">
+			<description>20 levela geldiğinde paladin, 1 dakikaliğina erişebileceğin nihai formun olan "Zalim" formuna geçersin ve bu forma geçtiğinde; T30 feetinde bulunan düşmanlar wisdom saving throw atarlar ve geçemeyeer attack rollarini dezavantajli gerçekleştirirler. Saving throw ilk turdan sonraki her turlarinin sonunda tekrarlanir.  Başarili saving throw  gerçekleşirse paladin  tarafindan tekrardan hasar alana kadar bu etkiden etkilenmez. Yapmiş olduğun arbede saldirilar ekstradan charisma modifin kadar hasar verir ve hasar vermiş olduğun kişi constitution saving throw atar geçemezse hareket hizi sonraki turunun sonuna kadar 0 olur. Bu formdayken reaksiyonunu almana engel olacak eylemlere immune olursun ve büyüsel yollarla hareket hizin azalmaz veya paralize olamazsin.Bu formdayken kişilerin iradesine özel bir saldirin olur ve aksiyondan dominion over will saldirisini gerçekleştirebilirsin. Dominion over will: Aksiyondan, 60 feetinde bir kişiyi wisdom saving throwa zorlarsin ve geçemediği takdirde formun bitene kadar sen tarafindan charmlanir. Charmlanan kişilere dominate person büyüsüne maruz kalmişlar gibi emir verebilirsin ve ellerinden gelenin en iyisini senin için yapmaya çalişirlar. Charm imuntiysi olanlar bu etkiden etkilenmezler.</description>
+		</sheet>
+	</element>
+</elements>
