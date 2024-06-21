@@ -2,7 +2,7 @@
 <index>
   <info>
     <update version="1.0">
-      <file name="DoomHall.index" url="http://hosting.com/files/sample.index" />
+      <file name="DoomHall.index" url="https://raw.githubusercontent.com/Mecpine/DoomHall/main/DoomHall.index" />
     </update>
   </info>
   <files>
