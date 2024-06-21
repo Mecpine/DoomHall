@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
+    <info>
+		<name>Wrath of Nature</name>
+		<author url="https://github.com/Mecpine/DoomHall.git">Emruva</author>
+		<update version="1.0">
+            <file name="Wrath_of_Nature.xml" url="https://raw.githubusercontent.com/Mecpine/DoomHall/main/DoomHall/Wrath_of_Nature.xml" />
+		</update>
+	</info>
     <element name="Wrath of Nature" type="Archetype" source="DOOM HALL" id="ID_DH_ARCHETYPE_WRATH_OF_NATURE">
         <supports>Druid Circle</supports>
         <description>
@@ -111,5 +118,3 @@
 
             
           
-
-

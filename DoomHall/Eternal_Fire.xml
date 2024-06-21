@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
+    <info>
+		<name>Eternal Fire</name>
+		<author url="https://github.com/Mecpine/DoomHall.git">Emruva</author>
+		<update version="1.0">
+			<file name="Eternal_Fire.xml" url="https://raw.githubusercontent.com/Mecpine/DoomHall/main/DoomHall/Eternal_Fire.xml" />
+		</update>
+	</info>
     <element name="Eternal Fire" type="Archetype" source="DOOM HALL" id="ID_DH_PHB_ARCHETYPE_ETERNAL_FIRE">
         <supports>Sorcerous Origin</supports>
         <description>
@@ -141,10 +148,3 @@
 
 </elements>
             
-
-
-
-
-
-
-

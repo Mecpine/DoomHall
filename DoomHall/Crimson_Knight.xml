@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
-    
+    <info>
+		<name>Crimson Knight</name>
+		<author url="https://github.com/Mecpine/DoomHall.git">Emruva</author>
+		<update version="1.0">
+			<file name="Crimson_Knight.xml" url="https://raw.githubusercontent.com/Mecpine/DoomHall/main/DoomHall/Crimson_Knight.xml" />
+		</update>
+	</info>
     <element name="Crimson Knight" type="Archetype" source="DOOM HALL" id="ID_DH_ARCHETYPE_CRIMSON_KNIGHT">
         <supports>Martial Archetype</supports>
         <description>

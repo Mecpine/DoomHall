@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
+    <info>
+		<name>Lostpray</name>
+		<author url="https://github.com/Mecpine/DoomHall.git">Emruva</author>
+		<update version="1.0">
+            <file name="Lostpray.xml" url="https://raw.githubusercontent.com/Mecpine/DoomHall/main/DoomHall/Lostpray.xml" />
+		</update>
+	</info>
     <element name="Lostpray" type="Archetype" source="DOOM HALL" id="ID_DH_PHB_ARCHETYPE_CLERIC_LOSTPRAY" >
         <supports>Divine Domain</supports>
         <description>

@@ -1,4 +1,11 @@
 <elements>
+	<info>
+		<name>Feat</name>
+		<author url="https://github.com/Mecpine/DoomHall.git">Emruva</author>
+		<update version="1.0">
+			<file name="Feat.xml" url="https://raw.githubusercontent.com/Mecpine/DoomHall/main/DoomHall/Feat.xml" />
+		</update>
+	</info>
     <element name="Mariner" type="Class Feature" source="DOOM HALL" id="ID_DH_CLASS_FEATURE_FIGHTINGSTYLE_MARINER">
 		<supports>Fighting Style, Fighter, Paladin, Ranger</supports>
 		<description>

@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
+    <info>
+		<name>spell_2</name>
+		<author url="https://github.com/Mecpine/DoomHall.git">Emruva</author>
+		<update version="1.0">
+            <file name="spell_2.xml" url="https://raw.githubusercontent.com/Mecpine/DoomHall/main/DoomHall/spell_2.xml" />
+		</update>
+	</info>
     <element name="Devouring Infliction" type="Spell" source="DOOM HALL" id="ID_DH_SPELL_DEVOURING_INFLICTION">
         <supports>Cleric</supports>
         <description>

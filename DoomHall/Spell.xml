@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
+    <info>
+		<name>Spell</name>
+		<author url="https://github.com/Mecpine/DoomHall.git">Emruva</author>
+		<update version="1.0">
+            <file name="Spell.xml" url="https://raw.githubusercontent.com/Mecpine/DoomHall/main/DoomHall/spell.xml" />
+		</update>
+	</info>
     <element name="Aardic Blast" type="Spell" source="DOOM HALL" id="ID_DH_SPELL_AARDIC_BLAST">
         <supports>Wizard,Sorcerer,Bard</supports>
         <description>
@@ -1335,9 +1342,3 @@
 
 
             
-
-
-
-
-
-

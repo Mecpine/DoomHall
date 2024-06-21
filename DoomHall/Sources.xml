@@ -5,5 +5,15 @@
 			<file name="sources.xml" url="https://raw.githubusercontent.com/Mecpine/DoomHall/main/DoomHall/Sources.xml" />
 		</update>
 	</info>
-    
+    <element name="Doom Hall" type="Source" source="Core" id="ID_DH_SOURCE_DH">
+		<description>
+			<![CDATA[<p>Emrunun Fantezileri.</p>]]>
+		</description>
+		<setters>
+			<set name="abbreviation">DH</set>
+			<set name="author" abbreviation="Emru">Emruva</set>
+			<set name="homebrew">true</set>
+		</setters>
+	</element>
+
 </elements>

@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
-    
+    <info>
+		<name>Electro Jumper</name>
+		<author url="https://github.com/Mecpine/DoomHall.git">Emruva</author>
+		<update version="1.0">
+			<file name="Electro_Jumper.xml" url="https://raw.githubusercontent.com/Mecpine/DoomHall/main/DoomHall/Electro_Jumper.xml" />
+		</update>
+	</info>
     <element name="Electro Jumper" type="Archetype" source="DOOM HALL" id="ID_DH_ARCHETYPE_ARTIFICER_ELECTRO_JUMPER">
         <supports>Artificer Specialist</supports>
         <description>
@@ -286,5 +292,3 @@
         </sheet>
     </element>
 </elements>
-
-

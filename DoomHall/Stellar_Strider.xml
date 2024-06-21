@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
+    <info>
+		<name>Stellar Strider</name>
+		<author url="https://github.com/Mecpine/DoomHall.git">Emruva</author>
+		<update version="1.0">
+            <file name="Stellar_Strider.xml" url="https://raw.githubusercontent.com/Mecpine/DoomHall/main/DoomHall/Stellar_Strider.xml" />
+		</update>
+	</info>
     <element name="Stellar Strider" type="Archetype" source="DOOM HALL" id="ID_DH_ARCHETYPE_STELLAR_STRIDER">
         <supports>Roguish Archetype</supports>
         <description>

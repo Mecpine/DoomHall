@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
+    <info>
+		<name>Circle of the Rotten Oak</name>
+		<author url="https://github.com/Mecpine/DoomHall.git">Emruva</author>
+		<update version="1.0">
+			<file name="Circle_of_the_Rotten_Oak.xml" url="https://raw.githubusercontent.com/Mecpine/DoomHall/main/DoomHall/Circle_of_the_Rotten_Oak.xml" />
+		</update>
+	</info>
     <element name="Circle of the Rotten Oak" type="Archetype" source="DOOM HALL" id="ID_DH_ARCHETYPE_ROTTEN_OAK">
         <supports>Druid Circle</supports>
         <description>

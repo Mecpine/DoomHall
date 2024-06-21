@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
-    
+    <info>
+		<name>Heart of Forge</name>
+		<author url="https://github.com/Mecpine/DoomHall.git">Emruva</author>
+		<update version="1.0">
+            <file name="Heart_of_Forge.xml" url="https://raw.githubusercontent.com/Mecpine/DoomHall/main/DoomHall/Heart_of_Forge.xml" />
+		</update>
+	</info>
     <element name="Heart of Forge" type="Archetype" source="DOOM HALL" id="ID_DH_ARCHETYPE_ARTIFICER_HEART_OF_FORGE">
         <supports>Artificer Specialist</supports>
         <description>
@@ -244,8 +250,3 @@
         </sheet>
     </element>
 </elements>
-
-
-
-
-

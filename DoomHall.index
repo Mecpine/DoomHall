@@ -12,14 +12,16 @@
     <file name="Electro_Jumper.xml" url="https://raw.githubusercontent.com/Mecpine/DoomHall/main/DoomHall/Electro_Jumper.xml" />
     <file name="Eternal_Fire.xml" url="https://raw.githubusercontent.com/Mecpine/DoomHall/main/DoomHall/Eternal_Fire.xml" />
     <file name="Feat.xml" url="https://raw.githubusercontent.com/Mecpine/DoomHall/main/DoomHall/Feat.xml" />
+    <file name="Heart_of_Forge.xml" url="https://raw.githubusercontent.com/Mecpine/DoomHall/main/DoomHall/Heart_of_Forge.xml" />
     <file name="Hellwanderer.xml" url="https://raw.githubusercontent.com/Mecpine/DoomHall/main/DoomHall/Hellwanderer.xml" />
     <file name="Lostpray.xml" url="https://raw.githubusercontent.com/Mecpine/DoomHall/main/DoomHall/Lostpray.xml" />
     <file name="oath_of_opression.xml" url="https://raw.githubusercontent.com/Mecpine/DoomHall/main/DoomHall/oath_of_opression.xml" />
     <file name="Path_of_the_Primodials.xml" url="https://raw.githubusercontent.com/Mecpine/DoomHall/main/DoomHall/Path_of_the_Primodials.xml" />
     <file name="Path_of_the_Unyielding_Colossus.xml" url="https://raw.githubusercontent.com/Mecpine/DoomHall/main/DoomHall/Path_of_the_Unyielding_Colossus.xml" />
     <file name="Shadow_Domain.xml" url="https://raw.githubusercontent.com/Mecpine/DoomHall/main/DoomHall/Shadow_Domain.xml" />
+    <file name="Shadowlurker.xml" url="https://raw.githubusercontent.com/Mecpine/DoomHall/main/DoomHall/Shadowlurker.xml" />
     <file name="spell_2.xml" url="https://raw.githubusercontent.com/Mecpine/DoomHall/main/DoomHall/spell_2.xml" />
-    <file name="spell.xml" url="https://raw.githubusercontent.com/Mecpine/DoomHall/main/DoomHall/spell.xml" />
+    <file name="Spell.xml" url="https://raw.githubusercontent.com/Mecpine/DoomHall/main/DoomHall/spell.xml" />
     <file name="Stellar_Strider.xml" url="https://raw.githubusercontent.com/Mecpine/DoomHall/main/DoomHall/Stellar_Strider.xml" />
     <file name="Wrath_of_Nature.xml" url="https://raw.githubusercontent.com/Mecpine/DoomHall/main/DoomHall/Wrath_of_Nature.xml" />
 </index>

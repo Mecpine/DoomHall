@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
+	<info>
+		<name>Oath of Opression</name>
+		<author url="https://github.com/Mecpine/DoomHall.git">Emruva</author>
+		<update version="1.0">
+			<file name="oath_of_opression.xml" url="https://raw.githubusercontent.com/Mecpine/DoomHall/main/DoomHall/oath_of_opression.xml" />
+		</update>
+	</info>
 	<element name="Oath of Opression" type="Archetype" source="DOOM HALL" id="ID_DH_PHB_ARCHETYPE_PALADIN_OATH_OF_OPRESSION">
 		<supports>Sacred Oath</supports>
 		<description>

@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
-
+    <info>
+		<name>Shadowlurker</name>
+		<author url="https://github.com/Mecpine/DoomHall.git">Emruva</author>
+		<update version="1.0">
+            <file name="Shadowlurker.xml" url="https://raw.githubusercontent.com/Mecpine/DoomHall/main/DoomHall/Shadowlurker.xml" />
+		</update>
+	</info>
     <element name="Shadowlurker" type="Archetype" source="DOOM HALL" id="ID_DH_ARCHETYPE_SHADOWLURKER">
         <supports>Ranger Archetype</supports>
         <description>
@@ -101,12 +107,3 @@
         </sheet>
     </element>
 </elements>
-
-
-
-
-
-
-
-
-

@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
     <!-- Path of the Unyielding Colossus -->
+    <info>
+		<name>Path of the Unyielding Colossus</name>
+		<author url="https://github.com/Mecpine/DoomHall.git">Emruva</author>
+		<update version="1.0">
+            <file name="Path_of_the_Unyielding_Colossus.xml" url="https://raw.githubusercontent.com/Mecpine/DoomHall/main/DoomHall/Path_of_the_Unyielding_Colossus.xml" />
+		</update>
+	</info>
     <element name="Path of the Unyielding Colossus" type="Archetype" source="DOOM HALL" id="ID_DH_ARCHETYPE_PATH_OF_THE_UNYIELDING_COLOSSUS">
         <supports>Primal Path</supports>
         <description>
@@ -80,5 +87,3 @@
         </sheet>
     </element>
 </elements>
-
-
