@@ -5,7 +5,7 @@
 		<name>Path of the Primordials</name>
 		<author url="https://github.com/Mecpine/DoomHall.git">Emruva</author>
 		<update version="1.0">
-			<file name="Path_of_the_Primodials.xml" url="https://raw.githubusercontent.com/Mecpine/DoomHall/main/DoomHall/Path_of_the_Primodials.xml" />
+			<file name="Path_of_the_Primodials.xml" url="https://raw.githubusercontent.com/Mecpine/DoomHall/main/DoomHall/Path_of_the_Primordials.xml" />
 		</update>
 	</info>
     <element name="Path of the Primordials" type="Archetype" source="DOOM HALL" id="ID_DH_ARCHETYPE_PATH_OF_THE_PRIMORDIALS">
