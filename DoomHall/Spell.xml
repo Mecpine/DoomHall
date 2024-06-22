@@ -4,7 +4,7 @@
 		<name>Spell</name>
 		<author url="https://github.com/Mecpine/DoomHall.git">Emruva</author>
 		<update version="1.0">
-            <file name="Spell.xml" url="https://raw.githubusercontent.com/Mecpine/DoomHall/main/DoomHall/spell.xml" />
+            <file name="Spell.xml" url="https://raw.githubusercontent.com/Mecpine/DoomHall/main/DoomHall/Spell.xml" />
 		</update>
 	</info>
     <element name="Aardic Blast" type="Spell" source="DOOM HALL" id="ID_DH_SPELL_AARDIC_BLAST">
