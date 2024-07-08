@@ -33,7 +33,7 @@
             <p class="indent">Unarmored hasarların ekstradan Strength modifierın kadar hasar vurur. Eğer ki saldırı için strength kulanmışsan strength değerin bir yerine iki kere hasar zarı sonucuna eklenir.</p>
         </description>
         <sheet>
-            <description>Unarmored saldırının normal hasarı yerine 1d{{unarmored:attack}} hasar vurursun.Unarmored hasarların ekstradan {{strength:modifier}} hasar vurur. Eğer ki saldırı için strength kulanmışsan strength değerin bir yerine iki kere hasar zarı sonucuna eklenir.</description>
+            <description>Unarmored saldırının normal hasarı yerine 1d{{unarmored:attack}} hasar vurursun.Unarmored hasarların ekstradan {{proficiency:modifier}} hasar vurur. Eğer ki saldırı için strength kulanmışsan strength değerin bir yerine iki kere hasar zarı sonucuna eklenir.</description>
         </sheet>
         <rules>
             <stat name="unarmored:attack" value="6" bonus="base" />
