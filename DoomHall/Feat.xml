@@ -23,7 +23,7 @@
     <element name="Sword and Board" type="Class Feature" source="DOOM HALL" id="ID_DH_CLASS_FEATURE_FIGHTINGSTYLE_SWORD_AND_BOARD">
 		<supports>Fighting Style, Fighter, Paladin, Ranger</supports>
 		<description>
-			<p>Her ne zaman hedefli bir saldırıya maruz kalırsanız reaksiyondan kalkanınızla gard alırsınız ve o kişiden yapılacak saldırılara karşı sonraki turunuzun başına kadar +2 AC kazanırsınız, reaksiyondan gard almış olduğunuz kişiden gelen hedeflemeli saldırılardan 2d4 daha az hasar alırsınız.</p>
+			<p>Her ne zaman hedefli bir saldırıya maruz kalırsanız reaksiyondan kalkanınızla gard alırsınız ve o kişiden yapılacak saldırılara karşı sonraki turunuzun başına kadar +2 AC kazanırsınız, reaksiyondan gard almış olduğunuz kişiden gelen hedeflemeli saldırılardan 2d4 daha az nonmagical bluedoning,slasing and piercing hasar alırsınız.</p>
             <p class="indent">Bonus aksiyondan rakibe kalkanınızla 1d4 + Strength modifier değeriniz kasar hasar vurabilirsiniz. Başarılı saldırı sonucunda kişiye turunuzun sonuna kadar yapacağınız ilk arbede silahlı saldırı avantajlı olur.</p>
 		</description>
 		<sheet action="Reaksiyon/Bonus Aksiyon">
