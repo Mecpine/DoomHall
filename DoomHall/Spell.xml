@@ -1005,7 +1005,7 @@
     <element name="Divine Star" type="Spell" source="DOOM HALL" id="ID_DH_SPELL_DIVINE_STAR">
         <supports>Druid</supports>
         <description>
-            <p>30 feet uzunluğunda, 5 feet genişliğinde bir yolda kat eden ışıktan kutsal enerji elinden çıkar ve aynı yoldan sana tekrar geri döner. O yol üzerindeki dostlar 1d8 iyileşirler, düşmanlar ise dexterity saving throw atarlar geçemezlerse 1d8 radiant hasar alırlar.</p>
+            <p>30 feet uzunluğunda, 5 feet genişliğinde bir yolda kat eden ışıktan kutsal enerji elinden çıkar ve aynı yoldan sana tekrar geri döner. O yol üzerindeki dostlar 1d8 iyileşirler, düşmanlar ise dexterity saving throw atarlar geçemezlerse 1d8 radiant hasar alırlar. Yeteneğin ilk gidişi büyü yapıldığında, dönüşü ise o turu sonlandırmış olduğunuz yere doğru düz hatta olur.</p>
             <p class="indent"><b><i>Üst Seviyeden Yapımda:</i></b>3 ve üzeri seviyeden yapıldığında hasar da iyileşme de 1d8 artar.</p>
         </description>
         <setters>
