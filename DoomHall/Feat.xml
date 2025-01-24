@@ -82,5 +82,17 @@
 		<rules>
 			<stat name="defensive duelist:ac" value="proficiency" />
 		</rules>
-	</element>
+   </element>
+   <element name="Savage Attacker" type="Feat" source="Player’s Handbook" id="ID_PHB_FEAT_SAVAGEATTACKER">
+		<description>
+			<p>For one turn, all your attacks deal additional damage equal to your proficiency bonus. In return, your AC is reduced by half your proficiency bonus (rounded down).</p>
+		</description>
+		<sheet>
+			<description>For one turn, all your attacks deal additional damage equal to your proficiency bonus. In return, your AC is {{proficiency:ac}} (rounded down).</description>
+		</sheet>
+	        <rules>
+	                <stat name="proficiency:ac" value="1" level="1" bonus="base" />
+                        <stat name="proficiency:ac" value="2" level="9" bonus="base" />
+                        <stat name="proficiency:ac" value="3" level="17" bonus="base" />
+   </element>
 </elements>
