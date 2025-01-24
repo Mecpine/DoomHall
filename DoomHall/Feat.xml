@@ -94,5 +94,6 @@
 	                <stat name="proficiency:ac" value="1" level="1" bonus="base" />
                         <stat name="proficiency:ac" value="2" level="9" bonus="base" />
                         <stat name="proficiency:ac" value="3" level="17" bonus="base" />
+		</rules>
    </element>
 </elements>
