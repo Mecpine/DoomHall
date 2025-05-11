@@ -36,39 +36,64 @@
 			<p>You’ve learned to put the weight of a weapon to your advantage, letting its momentum empower your strikes. You gain the following benefits:</p>
 			<ul>
 				<li>On your turn, when you score a critical hit with a melee weapon or reduce a creature to 0 hit points with one, you can make one melee weapon attack as a bonus action.</li>
-				<li>Before you make a melee attack with a heavy weapon that you are proficient with, you can choose to take a - proficiency bonus - 1 penalty to the attack roll. If the attack hits, you add 2x proficiency bonus + 2 to the attack’s damage.</li>
+				<li>Before you make a melee attack with a heavy weapon that you are proficient with. If the attack hits, you add  proficiency bonus + 2 to the attack’s damage.</li>
 			</ul>
 		</description>
 		<sheet>
 			<description>On your turn, when you score a critical hit with a melee weapon or reduce a creature to 0 hit points with one, you can make one melee weapon attack as a bonus action.
-			Before you make a melee attack with a heavy weapon that you are proficient with, you can choose to take a --{{level:bonus}} penalty to the attack roll. If the attack hits, you add {{proficiency:damage}} to the attack’s damage.</description>
+			Before you make a melee attack with a heavy weapon that you are proficient with. If the attack hits, you add {{proficiency:damage}} to the attack’s damage.</description>
 		</sheet>
         <rules>
-           <stat name="proficiency:damage" value="6" level="1" bonus="base" />
-           <stat name="proficiency:damage" value="8" level="5" bonus="base" />
-           <stat name="proficiency:damage" value="10" level="9" bonus="base" />
-           <stat name="proficiency:damage" value="12" level="13" bonus="base" />
-           <stat name="proficiency:damage" value="14" level="17" bonus="base" />
-           <stat name="level:bonus" value="3" level="1" bonus="base" />
-           <stat name="level:bonus" value="4" level="5" bonus="base" />
-           <stat name="level:bonus" value="5" level="9" bonus="base" />
-           <stat name="level:bonus" value="6" level="13" bonus="base" />
-           <stat name="level:bonus" value="7" level="17" bonus="base" />
+           <stat name="proficiency:damage" value="4" level="1" bonus="base" />
+           <stat name="proficiency:damage" value="5" level="5" bonus="base" />
+           <stat name="proficiency:damage" value="6" level="9" bonus="base" />
+           <stat name="proficiency:damage" value="7" level="13" bonus="base" />
+           <stat name="proficiency:damage" value="8" level="17" bonus="base" />
         </rules>
-	</element>
+     </element>
     <element name="Sharpshooter" type="Feat" source="DOOM HALL" id="ID_DH_FEAT_SHARPSHOOTER">
 		<description>
 			<p>You have mastered ranged weapons and can make shots that others find impossible. You gain the following benefits:</p>
 			<ul>
 				<li>Attacking at long range doesn’t impose disadvantage on your ranged weapon attack rolls.</li>
 				<li>Your ranged weapon attacks ignore half cover and three-quarters cover.</li>
-				<li>Before you make an attack with a ranged weapon that you are proficient with, you can choose to take a - proficiency bonus -1 penalty to the attack roll. If the attack hits, you add 2x proficiency bonus +2 to the attack’s damage.</li>
+				<li>Before you make an attack with a ranged weapon that you are proficient with. If the attack hits, you add proficiency bonus  to the attack’s damage.</li>
 			</ul>
 		</description>
 		<sheet>
 			<description>Attacking at long range doesn’t impose disadvantage on your ranged weapon attack rolls.
 			Your ranged weapon attacks ignore half cover and three-quarters cover.
-			Before you make an attack with a ranged weapon that you are proficient with, you can choose to take a - {{level:bonus}} penalty to the attack roll. If the attack hits, you add {{proficiency:damage}} to the attack’s damage.</description>
+			Before you make an attack with a ranged weapon that you are proficient with. If the attack hits, you add {{sharpshooter:damage}} to the attack’s damage.</description>
 		</sheet>
+		<rules>
+			<stat name="sharpshooter:damage" value="proficiency" />
+		</rules>
     </element>
+    <element name="Defensive Duelist" type="Feat" source="Player’s Handbook" id="ID_DH_FEAT_DEFENSIVE_DUELIST">
+		<prerequisite>Dexterity 13 or higher</prerequisite>
+		<requirements>[dex:13]</requirements>
+		<description>
+			<p><i>Prerequisite: Dexterity 13 or higher</i></p>
+			<p>When you are wielding an one-handed weapon with which you are proficient and another creature hits you with a melee attack, you can use your reaction to add your proficiency bonus to your AC for that attack, potentially causing the attack to miss you. If you have successfully defended the attack made against you, you can make a counterattack as part of the same reaction. If you are holding two one-handed weapons and have the Two-Weapon Fighting style, you can make an attack with both of your weapons.</p>
+		</description>
+		<sheet>
+			<description>When you are wielding an one-handed weapon with which you are proficient and another creature hits you with a melee attack, you can use your reaction to add {{defensive duelist:ac}} to your AC for that attack, potentially causing the attack to miss you. If you have successfully defended the attack made against you, you can make a counterattack as part of the same reaction. If you are holding two one-handed weapons and have the Two-Weapon Fighting style, you can make an attack with both of your weapons.</description>
+		</sheet>
+		<rules>
+			<stat name="defensive duelist:ac" value="proficiency" />
+		</rules>
+   </element>
+   <element name="Savage Attacker" type="Feat" source="Player’s Handbook" id="ID_PHB_FEAT_SAVAGEATTACKER">
+		<description>
+			<p>For one turn, all your attacks deal additional damage equal to your proficiency bonus. In return, your AC is reduced by half your proficiency bonus (rounded down).</p>
+		</description>
+		<sheet>
+			<description>For one turn, all your attacks deal additional damage equal to your proficiency bonus. In return, your AC is {{proficiency:ac}} (rounded down).</description>
+		</sheet>
+	        <rules>
+	                <stat name="proficiency:ac" value="1" level="1" bonus="base" />
+                        <stat name="proficiency:ac" value="2" level="9" bonus="base" />
+                        <stat name="proficiency:ac" value="3" level="17" bonus="base" />
+		</rules>
+   </element>
 </elements>

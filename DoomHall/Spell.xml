@@ -727,7 +727,7 @@
     <element name="Shield of Valor" type="Spell" source="DOOM HALL" id="ID_DH_SPELL_SHIELD_OF_VALOR">
         <supports>Paladin, Cleric</supports>
         <description>
-            <p>Kalkanın suretinde bir ışıktan kalkanı 45 feetindeki bir rakibe doğru savururak ranged spell attack gerçekleştirisin ve aynı rakibe sekmeyecek şekilde hedefin 20 feetine seker. Büyü AC değerini geçemediği an sonlanır. İlk hasar 2d8, sekme hasarı d8'dir.</p>
+            <p>Kalkanın suretinde bir ışıktan kalkanı 45 feetindeki bir rakibe doğru savururak ranged spell attack gerçekleştirisin ve aynı rakibe sekmeyecek şekilde hedefin 20 feetine seker. Büyü AC değerini geçemediği an sonlanır. İlk hasar 2d8, sekme hasarları d8'dir. Kalkanın darbesiyle hasar alan rakipler Constitution saving throw atmaya zorlanır geçemezlerse Dazzled duruma düşerler. Dazzle durumdaki kimseler turlarının sonuna kadar reaksiyon alamazlar ve hareket hızları yarısı kadar azalır.</p>
             <p class="indent"><b><i>Üst Seviyeden Yapıldığında:</i></b>2 seviye ve üzerinde yapıldğında her bir seviye artışında hasar miktarı her iki tür içinde d8 artar. Maksimum 5. seviyeden kullanılabilir.</p>
         </description>
         <setters>
