@@ -1174,160 +1174,161 @@
  
     <!-- Summons Statblock -->
     <element name="Pawn" type="Information" source="DOOM HALL" id="ID_DH_INFORMATION_PAWN_STATBLOCK">
-    <description>
-        <p style="margin-bottom:-5px"><em>Humanoid</em></p>
-        <h4 style="margin-top:5px" />
-        <ul class="unstyled">
-            <li><strong>Armor Class</strong> 13 + spell level (natural armor)</li>
-            <li><strong>Hit Points</strong> 17 + 10 per spell level cast (Pawn has d10 hit dice per level)</li>
-            <li><strong>Speed</strong> 25 feet walking</li>
-        </ul>
-        <table style="text-align:center;margin-top:10px;margin-bottom:10px">
-            <thead><tr><td>STR</td><td>DEX</td><td>CON</td><td>INT</td><td>WIS</td><td>CHA</td></tr></thead>
-            <tr><td>17 (+3)</td><td>10 (+0)</td><td>16 (+3)</td><td>8 (-1)</td><td>10 (+0)</td><td>8 (-1)</td></tr>
-        </table>
-        <ul class="unstyled">
-            <li><strong>Damage Resistances</strong> None</li>
-            <li><strong>Condition Immunities</strong> Charmed</li>
-            <li><strong>Senses</strong> Passive Perception 12</li>
-            <li><strong>Languages</strong> Common, understands languages you speak</li>
-            <li><strong>Challenge</strong> — <strong>Proficiency Bonus</strong> equal to yours</li>
-        </ul>
-        <h4 style="margin-top:10px">Actions</h4>
-        <ul class="unstyled">
-            <li><strong><em>Multiattack.</em></strong> Makes Shortsword attacks equal to Spell Level / 3 (rounded down)</li>
-            <li><strong><em>Shortsword.</em></strong> Melee Weapon Attack: your spell attack modifier, Hit: 1d6 + 2 + spell level</li>
-            <li><strong><em>Protector.</em></strong> When a creature within 5 feet is hit by a melee attack, the Pawn may intercept and take the damage instead</li>
-        </ul>
-    </description>
-</element>
-
-<element name="Knight" type="Information" source="DOOM HALL" id="ID_DH_INFORMATION_KNIGHT_STATBLOCK">
-    <description>
-        <p style="margin-bottom:-5px"><em>Humanoid</em></p>
-        <ul class="unstyled">
-            <li><strong>Armor Class</strong> 12 + spell level (natural armor)</li>
-            <li><strong>Hit Points</strong> 25 + 10 per spell level cast (Knight has d10 hit dice per level)</li>
-            <li><strong>Speed</strong> 40 feet walking</li>
-        </ul>
-        <table style="text-align:center;margin-top:10px;margin-bottom:10px">
-            <thead><tr><td>STR</td><td>DEX</td><td>CON</td><td>INT</td><td>WIS</td><td>CHA</td></tr></thead>
-            <tr><td>16 (+3)</td><td>17 (+3)</td><td>15 (+2)</td><td>8 (-1)</td><td>10 (+0)</td><td>8 (-1)</td></tr>
-        </table>
-        <ul class="unstyled">
-            <li><strong>Damage Resistances</strong> None</li>
-            <li><strong>Condition Immunities</strong> Charmed</li>
-            <li><strong>Senses</strong> Passive Perception 12</li>
-            <li><strong>Languages</strong> Common, understands languages you speak</li>
-            <li><strong>Challenge</strong> — <strong>Proficiency Bonus</strong> equal to yours</li>
-        </ul>
-        <h4>Actions</h4>
-        <ul class="unstyled">
-            <li><strong><em>Lance.</em></strong> Melee Weapon Attack: your spell attack modifier, Hit: 1d12 + 3 + spell level. Used one-handed on horseback, two-handed otherwise. Has disadvantage within 5 feet</li>
-            <li><strong><em>Reach.</em></strong> Weapons with this trait have 5 extra feet of reach</li>
-        </ul>
-        <h4>Ability</h4>
-        <ul class="unstyled">
-            <li><strong><em>Charge.</em></strong> If the mounted Knight moves at least 15 feet in a straight line before hitting a target with a melee weapon attack, the target takes an extra 2d8 damage</li>
-        </ul>
-    </description>
-</element>
-
-<element name="Bishop" type="Information" source="DOOM HALL" id="ID_DH_INFORMATION_BISHOP_STATBLOCK">
-    <description>
-        <p style="margin-bottom:-5px"><em>Humanoid</em></p>
-        <ul class="unstyled">
-            <li><strong>Armor Class</strong> 9 + spell level (natural armor)</li>
-            <li><strong>Hit Points</strong> 20 + 10 per spell level cast (Bishop has d10 hit dice per level)</li>
-            <li><strong>Speed</strong> 30 feet walking</li>
-        </ul>
-        <table style="text-align:center;margin-top:10px;margin-bottom:10px">
-            <thead><tr><td>STR</td><td>DEX</td><td>CON</td><td>INT</td><td>WIS</td><td>CHA</td></tr></thead>
-            <tr><td>8 (-1)</td><td>13 (+1)</td><td>14 (+2)</td><td>15 (+3)</td><td>17 (+3)</td><td>12 (+1)</td></tr>
-        </table>
-        <ul class="unstyled">
-            <li><strong>Damage Resistances</strong> Radiant</li>
-            <li><strong>Condition Immunities</strong> Charmed</li>
-            <li><strong>Senses</strong> Passive Perception 13</li>
-            <li><strong>Languages</strong> Common, understands languages you speak</li>
-            <li><strong>Challenge</strong> — <strong>Proficiency Bonus</strong> equal to yours</li>
-        </ul>
-        <ul class="unstyled">
-            <li><strong><em>Skill Proficiencies:</em></strong> Medicine (3 + your proficiency bonus)</li>
-        </ul>
-        <h4>Actions</h4>
-        <ul class="unstyled">
-            <li><strong><em>Healing Ray:</em></strong> Heals a creature within 30 feet for 2d6+3 HP (additional 1d6 per spell level above 4). Usable a number of times equal to your proficiency bonus</li>
-            <li><strong><em>Radiant Ray:</em></strong> Ranged Spell Attack, 60 feet. Hit: 1d8 + 3 + spell level radiant damage</li>
-            <li><strong><em>Light:</em></strong> Enchants an object or creature to emit bright light (30 ft) and dim light (30 ft) for 10 minutes</li>
-        </ul>
-    </description>
-</element>
-
-<element name="Rook" type="Information" source="DOOM HALL" id="ID_DH_INFORMATION_ROOK_STATBLOCK">
-    <description>
-        <p style="margin-bottom:-5px"><em>Humanoid</em></p>
-        <ul class="unstyled">
-            <li><strong>Armor Class</strong> 14 + spell level (natural armor)</li>
-            <li><strong>Hit Points</strong> 50 + 13 per spell level cast (Rook has d10+3 hit dice per level)</li>
-            <li><strong>Speed</strong> 25 feet walking</li>
-        </ul>
-        <table style="text-align:center;margin-top:10px;margin-bottom:10px">
-            <thead><tr><td>STR</td><td>DEX</td><td>CON</td><td>INT</td><td>WIS</td><td>CHA</td></tr></thead>
-            <tr><td>19 (+4)</td><td>14 (+2)</td><td>18 (+4)</td><td>7 (-1)</td><td>12 (+1)</td><td>10 (+0)</td></tr>
-        </table>
-        <ul class="unstyled">
-            <li><strong>Damage Resistances</strong> Non-magical piercing, bludgeoning, and slashing</li>
-            <li><strong>Condition Immunities</strong> Charmed</li>
-            <li><strong>Senses</strong> Passive Perception 14</li>
-            <li><strong>Languages</strong> Common, understands languages you speak</li>
-            <li><strong>Challenge</strong> — <strong>Proficiency Bonus</strong> equal to yours</li>
-        </ul>
-        <ul class="unstyled">
-            <li><strong><em>Skill Proficiencies:</em></strong> Athletics (4 + your proficiency bonus), Perception (1 + your proficiency bonus)</li>
-        </ul>
-        <h4>Actions</h4>
-        <ul class="unstyled">
-            <li><strong><em>Multiattack:</em></strong> Makes Spell Level / 3 flail attacks (rounded down)</li>
-            <li><strong><em>Flail:</em></strong> Melee Weapon Attack: your spell attack modifier, Hit: 2d6 + 4 + spell level</li>
-            <li><strong><em>Slam:</em></strong> All creatures within 10 feet make STR save (your spell DC). Fail: 5d8 + 4 + 1d8 per spell level above 5, and fall prone. Success: Half damage</li>
-            <li><strong><em>Haste (Recharge 6, Bonus Action):</em></strong> Until the start of its next turn: double movement, +2 AC, advantage on DEX saves, and one extra Flail attack</li>
-        </ul>
-    </description>
-</element>
-
-<element name="Queen" type="Information" source="DOOM HALL" id="ID_DH_INFORMATION_QUEEN_STATBLOCK">
-    <description>
-        <p style="margin-bottom:-5px"><em>Humanoid</em></p>
-        <ul class="unstyled">
-            <li><strong>Armor Class</strong> 13 + spell level (natural armor)</li>
-            <li><strong>Hit Points</strong> 80 + 10 per spell level cast (Queen has d10 hit dice per level)</li>
-            <li><strong>Speed</strong> 50 feet walking</li>
-        </ul>
-        <table style="text-align:center;margin-top:10px;margin-bottom:10px">
-            <thead><tr><td>STR</td><td>DEX</td><td>CON</td><td>INT</td><td>WIS</td><td>CHA</td></tr></thead>
-            <tr><td>10 (+0)</td><td>20 (+5)</td><td>17 (+3)</td><td>18 (+4)</td><td>15 (+2)</td><td>16 (+3)</td></tr>
-        </table>
-        <ul class="unstyled">
-            <li><strong>Damage Resistances</strong> Radiant, Necrotic</li>
-            <li><strong>Condition Immunities</strong> Charmed</li>
-            <li><strong>Senses</strong> Darkvision 120 ft, Truesight 10 ft, Passive Perception 15</li>
-            <li><strong>Languages</strong> Common, knows languages you speak</li>
-            <li><strong>Challenge</strong> — <strong>Proficiency Bonus</strong> equal to yours</li>
-        </ul>
-        <ul class="unstyled">
-            <li><strong><em>Skill Proficiencies:</em></strong> Acrobatics (5 + your proficiency bonus), Arcana (4 + your prof), Deception (3 + prof), Perception (1 + prof)</li>
-        </ul>
-        <h4>Actions</h4>
-        <ul class="unstyled">
-            <li><strong><em>Multiattack:</em></strong> Makes Spell Level / 2 rapier attacks (rounded down)</li>
-            <li><strong><em>Rapier:</em></strong> Melee Weapon Attack: your spell attack modifier, Hit: 1d8 + 5 + spell level</li>
-            <li><strong><em>Blink (Bonus Action, PB/Day):</em></strong> Teleports to an unoccupied space within 30 feet</li>
-            <li><strong><em>Crosscut (2/day):</em></strong> 6 beams (vertical/horizontal/diagonal) in a 40x5 ft line. DEX save or 6d10 damage (1d10 extra per level above 7th). Half damage on save</li>
-            <li><strong><em>Queen's Enchantment (3/day):</em></strong> One creature within 30 ft makes WIS save vs your spell DC. Fail: charmed for 1 minute. Ends if ordered to harm self. Save again at end of turns, with advantage if damaged. Can only charm one target at a time</li>
-        </ul>
-    </description>
-</element>
+        <description>
+            <p style="margin-bottom:-5px"><em>Humanoid</em></p>
+            <h4 style="margin-top:5px" />
+            <ul class="unstyled">
+                <li><strong>Armor Class</strong> 13 + spell level (natural armor)</li>
+                <li><strong>Hit Points</strong> 17 + 10 per spell level cast (Pawn has d10 hit dice per level)</li>
+                <li><strong>Speed</strong> 25 feet walking</li>
+            </ul>
+            <table style="text-align:center;margin-top:10px;margin-bottom:10px">
+                <thead><tr><td>STR</td><td>DEX</td><td>CON</td><td>INT</td><td>WIS</td><td>CHA</td></tr></thead>
+                <tr><td>17 (+3)</td><td>10 (+0)</td><td>16 (+3)</td><td>8 (-1)</td><td>10 (+0)</td><td>8 (-1)</td></tr>
+            </table>
+            <ul class="unstyled">
+                <li><strong>Damage Resistances</strong> None</li>
+                <li><strong>Condition Immunities</strong> Charmed</li>
+                <li><strong>Senses</strong> Passive Perception 12</li>
+                <li><strong>Languages</strong> Common, understands languages you speak</li>
+                <li><strong>Challenge</strong> — <strong>Proficiency Bonus</strong> equal to yours</li>
+            </ul>
+            <h4 style="margin-top:10px">Actions</h4>
+            <ul class="unstyled">
+                <li><strong><em>Multiattack.</em></strong> Makes Shortsword attacks equal to Spell Level / 3 (rounded down)</li>
+                <li><strong><em>Shortsword.</em></strong> Melee Weapon Attack: your spell attack modifier, Hit: 1d6 + 2 + spell level</li>
+                <li><strong><em>Protector.</em></strong> When a creature within 5 feet is hit by a melee attack, the Pawn may intercept and take the damage instead</li>
+            </ul>
+        </description>
+    </element>
+    
+    <element name="Knight" type="Information" source="DOOM HALL" id="ID_DH_INFORMATION_KNIGHT_STATBLOCK">
+        <description>
+            <p style="margin-bottom:-5px"><em>Humanoid</em></p>
+            <ul class="unstyled">
+                <li><strong>Armor Class</strong> 12 + spell level (natural armor)</li>
+                <li><strong>Hit Points</strong> 25 + 10 per spell level cast (Knight has d10 hit dice per level)</li>
+                <li><strong>Speed</strong> 40 feet walking</li>
+            </ul>
+            <table style="text-align:center;margin-top:10px;margin-bottom:10px">
+                <thead><tr><td>STR</td><td>DEX</td><td>CON</td><td>INT</td><td>WIS</td><td>CHA</td></tr></thead>
+                <tr><td>16 (+3)</td><td>17 (+3)</td><td>15 (+2)</td><td>8 (-1)</td><td>10 (+0)</td><td>8 (-1)</td></tr>
+            </table>
+            <ul class="unstyled">
+                <li><strong>Damage Resistances</strong> None</li>
+                <li><strong>Condition Immunities</strong> Charmed</li>
+                <li><strong>Senses</strong> Passive Perception 12</li>
+                <li><strong>Languages</strong> Common, understands languages you speak</li>
+                <li><strong>Challenge</strong> — <strong>Proficiency Bonus</strong> equal to yours</li>
+            </ul>
+            <h4>Actions</h4>
+            <ul class="unstyled">
+                <li><strong><em>Lance.</em></strong> Melee Weapon Attack: your spell attack modifier, Hit: 1d12 + 3 + spell level. Used one-handed on horseback, two-handed otherwise. Has disadvantage within 5 feet</li>
+                <li><strong><em>Reach.</em></strong> Weapons with this trait have 5 extra feet of reach</li>
+            </ul>
+            <h4>Ability</h4>
+            <ul class="unstyled">
+                <li><strong><em>Charge.</em></strong> If the mounted Knight moves at least 15 feet in a straight line before hitting a target with a melee weapon attack, the target takes an extra 2d8 damage</li>
+            </ul>
+        </description>
+    </element>
+    
+        <element name="Bishop" type="Information" source="DOOM HALL" id="ID_DH_INFORMATION_BISHOP_STATBLOCK">
+            <description>
+                <p style="margin-bottom:-5px"><em>Humanoid</em></p>
+                <ul class="unstyled">
+                    <li><strong>Armor Class</strong> 9 + spell level (natural armor)</li>
+                    <li><strong>Hit Points</strong> 20 + 10 per spell level cast (Bishop has d10 hit dice per level)</li>
+                    <li><strong>Speed</strong> 30 feet walking</li>
+                </ul>
+                <table style="text-align:center;margin-top:10px;margin-bottom:10px">
+                    <thead><tr><td>STR</td><td>DEX</td><td>CON</td><td>INT</td><td>WIS</td><td>CHA</td></tr></thead>
+                    <tr><td>8 (-1)</td><td>13 (+1)</td><td>14 (+2)</td><td>15 (+3)</td><td>17 (+3)</td><td>12 (+1)</td></tr>
+                </table>
+                <ul class="unstyled">
+                    <li><strong>Damage Resistances</strong> Radiant</li>
+                    <li><strong>Condition Immunities</strong> Charmed</li>
+                    <li><strong>Senses</strong> Passive Perception 13</li>
+                    <li><strong>Languages</strong> Common, understands languages you speak</li>
+                    <li><strong>Challenge</strong> — <strong>Proficiency Bonus</strong> equal to yours</li>
+                </ul>
+                <ul class="unstyled">
+                    <li><strong><em>Skill Proficiencies:</em></strong> Medicine (3 + your proficiency bonus)</li>
+                </ul>
+                <h4>Actions</h4>
+                <ul class="unstyled">
+                    <li><strong><em>Healing Ray:</em></strong> Heals a creature within 30 feet for 2d6+3 HP (additional 1d6 per spell level above 4). Usable a number of times equal to your proficiency bonus</li>
+                    <li><strong><em>Radiant Ray:</em></strong> Ranged Spell Attack, 60 feet. Hit: 1d8 + 3 + spell level radiant damage</li>
+                    <li><strong><em>Light:</em></strong> Enchants an object or creature to emit bright light (30 ft) and dim light (30 ft) for 10 minutes</li>
+                </ul>
+            </description>
+        </element>
+        
+        <element name="Rook" type="Information" source="DOOM HALL" id="ID_DH_INFORMATION_ROOK_STATBLOCK">
+            <description>
+                <p style="margin-bottom:-5px"><em>Humanoid</em></p>
+                <ul class="unstyled">
+                    <li><strong>Armor Class</strong> 14 + spell level (natural armor)</li>
+                    <li><strong>Hit Points</strong> 50 + 13 per spell level cast (Rook has d10+3 hit dice per level)</li>
+                    <li><strong>Speed</strong> 25 feet walking</li>
+                </ul>
+                <table style="text-align:center;margin-top:10px;margin-bottom:10px">
+                    <thead><tr><td>STR</td><td>DEX</td><td>CON</td><td>INT</td><td>WIS</td><td>CHA</td></tr></thead>
+                    <tr><td>19 (+4)</td><td>14 (+2)</td><td>18 (+4)</td><td>7 (-1)</td><td>12 (+1)</td><td>10 (+0)</td></tr>
+                </table>
+                <ul class="unstyled">
+                    <li><strong>Damage Resistances</strong> Non-magical piercing, bludgeoning, and slashing</li>
+                    <li><strong>Condition Immunities</strong> Charmed</li>
+                    <li><strong>Senses</strong> Passive Perception 14</li>
+                    <li><strong>Languages</strong> Common, understands languages you speak</li>
+                    <li><strong>Challenge</strong> — <strong>Proficiency Bonus</strong> equal to yours</li>
+                </ul>
+                <ul class="unstyled">
+                    <li><strong><em>Skill Proficiencies:</em></strong> Athletics (4 + your proficiency bonus), Perception (1 + your proficiency bonus)</li>
+                </ul>
+                <h4>Actions</h4>
+                <ul class="unstyled">
+                    <li><strong><em>Multiattack:</em></strong> Makes Spell Level / 3 flail attacks (rounded down)</li>
+                    <li><strong><em>Flail:</em></strong> Melee Weapon Attack: your spell attack modifier, Hit: 2d6 + 4 + spell level</li>
+                    <li><strong><em>Slam:</em></strong> All creatures within 10 feet make STR save (your spell DC). Fail: 5d8 + 4 + 1d8 per spell level above 5, and fall prone. Success: Half damage</li>
+                    <li><strong><em>Haste (Recharge 6, Bonus Action):</em></strong> Until the start of its next turn: double movement, +2 AC, advantage on DEX saves, and one extra Flail attack</li>
+                </ul>
+            </description>
+        </element>
+        
+        <element name="Queen" type="Information" source="DOOM HALL" id="ID_DH_INFORMATION_QUEEN_STATBLOCK">
+            <description>
+                <p style="margin-bottom:-5px"><em>Humanoid</em></p>
+                <ul class="unstyled">
+                    <li><strong>Armor Class</strong> 13 + spell level (natural armor)</li>
+                    <li><strong>Hit Points</strong> 80 + 10 per spell level cast (Queen has d10 hit dice per level)</li>
+                    <li><strong>Speed</strong> 50 feet walking</li>
+                </ul>
+                <table style="text-align:center;margin-top:10px;margin-bottom:10px">
+                    <thead><tr><td>STR</td><td>DEX</td><td>CON</td><td>INT</td><td>WIS</td><td>CHA</td></tr></thead>
+                    <tr><td>10 (+0)</td><td>20 (+5)</td><td>17 (+3)</td><td>18 (+4)</td><td>15 (+2)</td><td>16 (+3)</td></tr>
+                </table>
+                <ul class="unstyled">
+                    <li><strong>Damage Resistances</strong> Radiant, Necrotic</li>
+                    <li><strong>Condition Immunities</strong> Charmed</li>
+                    <li><strong>Senses</strong> Darkvision 120 ft, Truesight 10 ft, Passive Perception 15</li>
+                    <li><strong>Languages</strong> Common, knows languages you speak</li>
+                    <li><strong>Challenge</strong> — <strong>Proficiency Bonus</strong> equal to yours</li>
+                </ul>
+                <ul class="unstyled">
+                    <li><strong><em>Skill Proficiencies:</em></strong> Acrobatics (5 + your proficiency bonus), Arcana (4 + your prof), Deception (3 + prof), Perception (1 + prof)</li>
+                </ul>
+                <h4>Actions</h4>
+                <ul class="unstyled">
+                    <li><strong><em>Multiattack:</em></strong> Makes Spell Level / 2 rapier attacks (rounded down)</li>
+                    <li><strong><em>Rapier:</em></strong> Melee Weapon Attack: your spell attack modifier, Hit: 1d8 + 5 + spell level</li>
+                    <li><strong><em>Blink (Bonus Action, PB/Day):</em></strong> Teleports to an unoccupied space within 30 feet</li>
+                    <li><strong><em>Crosscut (2/day):</em></strong> 6 beams (vertical/horizontal/diagonal) in a 40x5 ft line. DEX save or 6d10 damage (1d10 extra per level above 7th). Half damage on save</li>
+                    <li><strong><em>Queen's Enchantment (3/day):</em></strong> One creature within 30 ft makes WIS save vs your spell DC. Fail: charmed for 1 minute. Ends if ordered to harm self. Save again at end of turns, with advantage if damaged. Can only charm one target at a time</li>
+                </ul>
+            </description>
+        </element>
+</elements>
 
 
 
