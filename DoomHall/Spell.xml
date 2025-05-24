@@ -701,7 +701,7 @@
 			<set name="hasVerbalComponent">true</set>
 			<set name="hasSomaticComponent">true</set>
 			<set name="hasMaterialComponent">true</set>
-            <set name="materialComponent">kuşanmış olduğun melee weapon</set>
+            <set name="materialComponent">equiped melee weapon</set>
             <set name="duration">1 turn</set>
             <set name="isConcentration">false</set> 
         </setters>
